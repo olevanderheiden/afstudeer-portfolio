@@ -11,10 +11,10 @@ const Header = () => {
         zIndex: 1000,
         backgroundColor: "#f5f5f5", // Lighter background color for better visibility
         color: "#333", // Darker text color for contrast
-        padding: "10px 20px",
+        padding: "10px 5%",
         display: "flex",
         alignItems: "center", // Align items vertically in the center
-        justifyContent: "center", // Center the navigation horizontally
+        justifyContent: "space-between", // Space between title and navigation
         boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)", // Subtle shadow for better separation
       }}
     >
@@ -24,19 +24,24 @@ const Header = () => {
           fontSize: "1.5rem",
           fontWeight: "bold",
           margin: 0,
-          position: "absolute", // Keep the title fixed to the left
-          left: "20px",
+          flex: "1", // Allow the title to take up available space
         }}
       >
         Afstudeer Portfolio Ole van der Heiden
       </h1>
 
       {/* Navigation Links */}
-      <nav>
+      <nav
+        style={{
+          flex: "1", // Allow the navigation to take up available space
+          textAlign: "right", // Align navigation to the right
+        }}
+      >
         <ul
           style={{
             display: "flex",
-            gap: "20px", // Add spacing between links
+            justifyContent: "flex-center", // Align links to the right
+            gap: "6%", // Use percentage-based spacing between links
             listStyle: "none",
             margin: 0,
             padding: 0,
