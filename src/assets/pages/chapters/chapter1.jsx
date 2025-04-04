@@ -1,20 +1,10 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
+import AudioPlayer from "../../pageElements/audioPlayer"; // Ensure the correct file name casing
 
 export const title = "Test Title 1";
-const Chapter1 = () => {
-  console.log("HomePage component rendered");
-  const navigation = (
-    <>
-      <li>
-        <a href="#chapter1">Chapter 1</a>
-      </li>
-      <li>
-        <a href="#chapter2">Chapter 2</a>
-      </li>
-    </>
-  );
 
+const Chapter1 = () => {
   const sources = (
     <>
       <li>Source 1</li>
@@ -24,12 +14,14 @@ const Chapter1 = () => {
 
   const content = (
     <div>
+      {/* Include the AudioPlayer component here */}
+      <AudioPlayer fileName="test.mp3" title="Chapter 1: Introduction" />
       <h2>Chapter 1</h2>
       <p>Chapter 1 is coming here!</p>
     </div>
   );
 
-  return <Layout navigation={navigation} content={content} sources={sources} />;
+  return <Layout content={content} sources={sources} />;
 };
 
 export default Chapter1;
