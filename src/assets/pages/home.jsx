@@ -3,23 +3,6 @@ import Layout from "../pageElements/Layout";
 
 const HomePage = () => {
   console.log("HomePage component rendered");
-  const navigation = (
-    <>
-      <li>
-        <a href="#chapter1">Chapter 1</a>
-      </li>
-      <li>
-        <a href="#chapter2">Chapter 2</a>
-      </li>
-    </>
-  );
-
-  const sources = (
-    <>
-      <li>Source 1</li>
-      <li>Source 2</li>
-    </>
-  );
 
   const content = (
     <div>
@@ -28,7 +11,7 @@ const HomePage = () => {
     </div>
   );
 
-  return <Layout navigation={navigation} content={content} sources={sources} />;
+  return <Layout content={content} />;
 };
 
 export default HomePage;

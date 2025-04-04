@@ -1,87 +1,87 @@
 import React from "react";
-import Header from "../pageElements/header";
-import Footer from "../pageElements/footer";
-import { useLocation, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const Layout = ({ navigation, content, sources }) => {
-  const location = useLocation();
-
-  const chapters = [
-    { path: "/", name: "Home" },
-    { path: "/chapter1", name: "Chapter 1" },
-    { path: "/chapter2", name: "Chapter 2" },
-    // Add more chapters here
-  ];
-
+const Header = () => {
   return (
-    <div
+    <header
       style={{
+        position: "fixed",
+        top: 0,
+        width: "100%",
+        zIndex: 1000,
+        backgroundColor: "#f5f5f5", // Lighter background color for better visibility
+        color: "#333", // Darker text color for contrast
+        padding: "10px 20px",
         display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-        backgroundColor: "#f9f9f9",
+        alignItems: "center", // Align items vertically in the center
+        justifyContent: "center", // Center the navigation horizontally
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)", // Subtle shadow for better separation
       }}
     >
-      <Header />
-      <div style={{ display: "flex", flex: 1, marginTop: "80px" }}>
-        {/* Navigation on the left */}
-        <aside
-          style={{
-            width: "20%",
-            padding: "10px",
-            backgroundColor: "#333", // Match the header color
-            color: "#fff",
-          }}
-        >
-          <nav>
-            <ul style={{ listStyle: "none", padding: 0 }}>
-              {chapters.map((chapter) => (
-                <li key={chapter.path}>
-                  <Link
-                    to={chapter.path}
-                    style={{
-                      color:
-                        location.pathname === chapter.path ? "#ffcc00" : "#fff",
-                      textDecoration: "none",
-                      padding: "5px 0",
-                      display: "block",
-                    }}
-                  >
-                    {chapter.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </aside>
+      {/* Title */}
+      <h1
+        style={{
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          margin: 0,
+          position: "absolute", // Keep the title fixed to the left
+          left: "20px",
+        }}
+      >
+        Afstudeer Portfolio Ole van der Heiden
+      </h1>
 
-        {/* Main content in the center */}
-        <main
+      {/* Navigation Links */}
+      <nav>
+        <ul
           style={{
-            flex: 1,
-            padding: "20px",
-            backgroundColor: "#fff",
-            marginTop: "80px", // Ensure content is not hidden behind the header
+            display: "flex",
+            gap: "20px", // Add spacing between links
+            listStyle: "none",
+            margin: 0,
+            padding: 0,
           }}
         >
-          {content}
-        </main>
-
-        {/* Sources below the navigation */}
-        <aside
-          style={{
-            width: "20%",
-            padding: "10px",
-            backgroundColor: "#f4f4f4",
-          }}
-        >
-          <h3>Sources</h3>
-          <ul>{sources}</ul>
-        </aside>
-      </div>
-      <Footer />
-    </div>
+          <li>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                fontWeight: "500",
+              }}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <a
+              href="#bronnen"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                fontWeight: "500",
+              }}
+            >
+              Bronnen
+            </a>
+          </li>
+          <li>
+            <a
+              href="#speciale-dank"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                fontWeight: "500",
+              }}
+            >
+              Speciale Dank
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
-export default Layout;
+export default Header;

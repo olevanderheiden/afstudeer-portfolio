@@ -1,15 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./assets/pages/home";
-import Chapter1 from "./assets/pages/chapters/chapter1";
+import { chapters } from "./assets/logic/navLogic"; // Import chapters from navLogic.js
 
 function App() {
   console.log("App component rendered");
   return (
     <Router basename="/afstudeer-portfolio">
       <Routes>
+        {/* Static Home Route */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/chapter1" element={<Chapter1 />} />
+
+        {/* Dynamically Generated Chapter Routes */}
+        {chapters
+          .filter((chapter) => chapter.path !== "/") // Exclude the "Home" entry
+          .map((chapter) => (
+            <Route
+              key={chapter.path}
+              path={chapter.path}
+              element={React.createElement(chapter.component)}
+            />
+          ))}
       </Routes>
     </Router>
   );
