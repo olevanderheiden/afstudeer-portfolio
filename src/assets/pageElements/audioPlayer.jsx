@@ -8,7 +8,7 @@ const AudioPlayer = ({ fileName, title }) => {
   const [volume, setVolume] = useState(1);
 
   // Construct the full path to the audio file
-  const audioSrc = `public/audio/${fileName}`;
+  const audioSrc = `audio/${fileName}`;
 
   const togglePlayPause = () => {
     if (isPlaying) {
