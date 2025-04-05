@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../pageElements/Layout";
 
-export const title = "Pagina niet gevonden";
+export const title = "Ops!";
 
 const NotFound = () => {
   const content = (
@@ -15,7 +15,7 @@ const NotFound = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default NotFound;

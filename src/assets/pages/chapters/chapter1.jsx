@@ -21,7 +21,7 @@ const Chapter1 = () => {
     </div>
   );
 
-  return <Layout content={content} sources={sources} />;
+  return <Layout content={content} sources={sources} pageTitle={title} />;
 };
 
 export default Chapter1;

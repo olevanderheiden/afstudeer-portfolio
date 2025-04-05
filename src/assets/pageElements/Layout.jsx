@@ -2,8 +2,9 @@ import React from "react";
 import Header from "../pageElements/header";
 import Footer from "../pageElements/footer";
 import Nav from "../pageElements/Nav";
-
-const Layout = ({ content, sources }) => {
+import useUpdateTitle from "../../hooks/useUpdateTitle";
+const Layout = ({ content, sources, pageTitle }) => {
+  useUpdateTitle(pageTitle);
   return (
     <div
       style={{
