@@ -7,7 +7,7 @@ const HomePage = () => {
   const content = (
     <div>
       <h2>Welcome to the Home Page</h2>
-      <p>This is the main content for the home page. Version 0.16.4</p>
+      <p>This is the main content for the home page. Version 0.16.5</p>
     </div>
   );
 
