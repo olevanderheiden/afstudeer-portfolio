@@ -5,23 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omleiden...</title>
     <script>
-      // Redirect to the correct route while preserving the URL
-      const basePath = "/afstudeer-portfolio";
-      const currentPath = window.location.pathname;
-
-      // Handle cases where the base path is already included or missing
-      if (currentPath.startsWith(basePath)) {
-        // If the base path is already included, reload the app without redirecting
-        const relativePath = currentPath.replace(basePath, "");
-        window.location.replace(
-          `${window.location.origin}${basePath}${relativePath}`
-        );
-      } else {
-        // If the base path is missing, prepend it to the current path
-        window.location.replace(
-          `${window.location.origin}${basePath}${currentPath}`
-        );
-      }
+      // Redirect to the index.html file while preserving the URL
+      window.location.replace(
+        `${window.location.origin}/afstudeer-portfolio/index.html`
+      );
     </script>
   </head>
   <body>
@@ -29,7 +16,7 @@
       Als je deze pagina ziet, betekent dit dat de website is verplaatst of dat
       de URL die je hebt ingevoerd niet correct is. Je wordt automatisch
       doorgestuurd naar de juiste pagina. Als je niet automatisch wordt
-      doorgestuurd, <a href="/">klik hier</a>.
+      doorgestuurd, <a href="/afstudeer-portfolio/">klik hier</a>.
     </p>
   </body>
 </html>
