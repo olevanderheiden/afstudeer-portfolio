@@ -6,10 +6,22 @@
     <title>Omleiden...</title>
     <script>
       // Redirect to the correct route while preserving the URL
-      const redirectTo = window.location.pathname;
-      window.location.replace(
-        `${window.location.origin}/afstudeer-portfolio${redirectTo}`
-      );
+      const basePath = "/afstudeer-portfolio";
+      const currentPath = window.location.pathname;
+
+      // Handle cases where the base path is already included or missing
+      if (currentPath.startsWith(basePath)) {
+        // If the base path is already included, reload the app without redirecting
+        const relativePath = currentPath.replace(basePath, "");
+        window.location.replace(
+          `${window.location.origin}${basePath}${relativePath}`
+        );
+      } else {
+        // If the base path is missing, prepend it to the current path
+        window.location.replace(
+          `${window.location.origin}${basePath}${currentPath}`
+        );
+      }
     </script>
   </head>
   <body>
