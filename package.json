@@ -10,7 +10,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "prehost": "npm run build",
+    "prehost": "npm run build && cp dist/index.html dist/404.html",
     "host": "gh-pages -d dist"
   },
   "dependencies": {
