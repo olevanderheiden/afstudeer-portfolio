@@ -6,7 +6,7 @@ import { chapters } from "./assets/logic/navLogic"; // Import chapters from navL
 function App() {
   console.log("App component rendered");
   return (
-    <Router basename="/afstudeer-portfolio">
+    <Router basename="/afstudeer-portfolio/">
       <Routes>
         {/* Static Home Route */}
         <Route path="/" element={<HomePage />} />
