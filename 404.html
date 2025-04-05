@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omleiden...</title>
+    <script>
+      // Redirect to the correct route while preserving the URL
+      const redirectTo = window.location.pathname;
+      window.location.replace(
+        `${window.location.origin}/afstudeer-portfolio${redirectTo}`
+      );
+    </script>
+  </head>
+  <body>
+    <p>
+      Als je deze pagina ziet, betekent dit dat de website is verplaatst of dat
+      de URL die je hebt ingevoerd niet correct is. Je wordt automatisch
+      doorgestuurd naar de juiste pagina. Als je niet automatisch wordt
+      doorgestuurd, <a href="/">klik hier</a>.
+    </p>
+  </body>
+</html>
