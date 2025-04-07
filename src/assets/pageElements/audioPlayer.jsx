@@ -83,7 +83,7 @@ const AudioPlayer = ({ fileName, title }) => {
             fontSize: "16px",
           }}
         >
-          {isPlaying ? "Pause" : "Play"}
+          {isPlaying ? "Stop" : "Start"}
         </button>
 
         {/* Current Time / Duration */}
@@ -119,6 +119,7 @@ const AudioPlayer = ({ fileName, title }) => {
           onChange={handleVolumeChange}
           style={{ width: "100px" }}
         />
+        <span style={{ fontSize: "14px" }}>{Math.round(volume * 100)}%</span>
       </div>
     </div>
   );
