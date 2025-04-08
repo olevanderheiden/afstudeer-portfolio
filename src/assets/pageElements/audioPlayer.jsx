@@ -6,6 +6,7 @@ const AudioPlayer = ({ fileName, title }) => {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
   const [volume, setVolume] = useState(1);
+  const [playbackRate, setPlaybackRate] = useState(1); // Default playback speed
 
   // Construct the full path to the audio file
   const audioSrc = `audio/${fileName}`;
@@ -20,7 +21,7 @@ const AudioPlayer = ({ fileName, title }) => {
   };
 
   const handleTimeUpdate = () => {
-    setCurrentTime(audioRef.current.currentTime);
+    setCurrentTime(audioRef.current.currentTime / playbackRate); // Adjust current time based on playback speed
   };
 
   const handleLoadedMetadata = () => {
@@ -30,13 +31,19 @@ const AudioPlayer = ({ fileName, title }) => {
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 100) * duration;
     audioRef.current.currentTime = seekTime;
-    setCurrentTime(seekTime);
+    setCurrentTime(seekTime / playbackRate);
   };
 
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     audioRef.current.volume = newVolume;
     setVolume(newVolume);
+  };
+
+  const handlePlaybackRateChange = (e) => {
+    const newRate = parseFloat(e.target.value);
+    audioRef.current.playbackRate = newRate;
+    setPlaybackRate(newRate);
   };
 
   const formatTime = (time) => {
@@ -46,6 +53,9 @@ const AudioPlayer = ({ fileName, title }) => {
       .padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
+
+  // Adjusted duration based on playback speed
+  const adjustedDuration = duration / playbackRate;
 
   return (
     <div
@@ -86,9 +96,9 @@ const AudioPlayer = ({ fileName, title }) => {
           {isPlaying ? "Stop" : "Start"}
         </button>
 
-        {/* Current Time / Duration */}
+        {/* Current Time / Adjusted Duration */}
         <span style={{ fontSize: "14px" }}>
-          {formatTime(currentTime)} / {formatTime(duration)}
+          {formatTime(currentTime)} / {formatTime(adjustedDuration)}
         </span>
       </div>
 
@@ -97,7 +107,7 @@ const AudioPlayer = ({ fileName, title }) => {
         type="range"
         min="0"
         max="100"
-        value={(currentTime / duration) * 100 || 0}
+        value={(currentTime / adjustedDuration) * 100 || 0} // Adjust seek bar based on playback speed
         onChange={handleSeek}
         style={{
           width: "100%",
@@ -120,6 +130,44 @@ const AudioPlayer = ({ fileName, title }) => {
           style={{ width: "100px" }}
         />
         <span style={{ fontSize: "14px" }}>{Math.round(volume * 100)}%</span>
+      </div>
+
+      {/* Playback Speed Control */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          marginTop: "10px",
+        }}
+      >
+        <label htmlFor="playbackRate" style={{ fontSize: "14px" }}>
+          Afspeel snelheid:
+        </label>
+        <select
+          id="playbackRate"
+          value={playbackRate}
+          onChange={handlePlaybackRateChange}
+          style={{
+            padding: "5px",
+            borderRadius: "5px",
+            border: "1px solid #ddd",
+            fontSize: "14px",
+          }}
+        >
+          <option value="0.25">0.25x</option>
+          <option value="0.5">0.5x</option>
+          <option value="0.75">0.75x</option>
+          <option value="1">1x (Standaard)</option>
+          <option value="1.25">1.25x</option>
+          <option value="1.5">1.5x</option>
+          <option value="1.75">1.75x</option>
+          <option value="2">2x</option>
+          <option value="2.25">2.25x</option>
+          <option value="2.5">2.5x</option>
+          <option value="2.75">2.75x</option>
+          <option value="3">3x</option>
+        </select>
       </div>
     </div>
   );
