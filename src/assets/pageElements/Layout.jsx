@@ -11,9 +11,14 @@ const Layout = ({ content, sources, pageTitle }) => {
 
   const location = useLocation();
 
-  // Find the current chapter and the next chapter
-  const currentIndex = chapters.findIndex((chapter) => chapter.path === location.pathname);
+  // Find the current, previous, and next chapters
+  const currentIndex = chapters.findIndex(
+    (chapter) => chapter.path === location.pathname
+  );
   const nextChapter = chapters[currentIndex + 1];
+  const previousChapter = chapters[currentIndex - 1];
+  // Check if the current page is the Home page
+  const isHomePage = location.pathname === "/";
 
   return (
     <div
@@ -35,13 +40,33 @@ const Layout = ({ content, sources, pageTitle }) => {
             flex: sources ? 1 : 2,
             padding: "20px",
             backgroundColor: "#fff",
-            position: "relative", // Ensure positioning for the "Next" button
+            position: "relative", // Ensure positioning for the buttons
           }}
         >
           {content}
 
+          {/* Previous button */}
+          {previousChapter && (
+            <a
+              href={`/afstudeer-portfolio${previousChapter.path}`} // Correct base path
+              style={{
+                position: "absolute",
+                bottom: "20px",
+                left: "20px",
+                padding: "10px 15px",
+                backgroundColor: "#007bff",
+                color: "#fff",
+                textDecoration: "none",
+                borderRadius: "5px",
+                boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
+              }}
+            >
+              Vorige: {previousChapter.name}
+            </a>
+          )}
+
           {/* Next button */}
-          {nextChapter && (
+          {!isHomePage && nextChapter && (
             <a
               href={`/afstudeer-portfolio${nextChapter.path}`} // Correct base path
               style={{
@@ -56,7 +81,7 @@ const Layout = ({ content, sources, pageTitle }) => {
                 boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
               }}
             >
-              Next: {nextChapter.name}
+              Volgende: {nextChapter.name}
             </a>
           )}
         </main>
