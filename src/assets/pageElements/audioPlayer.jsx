@@ -24,6 +24,12 @@ const AudioPlayer = ({ fileName, title }) => {
     setCurrentTime(audioRef.current.currentTime / playbackRate); // Adjust current time based on playback speed
   };
 
+  const handleAudioEnd = () => {
+    audioRef.current.currentTime = 0; // Reset the audio to the beginning
+    setCurrentTime(0); // Reset the displayed current time
+    setIsPlaying(false); // Set the playing state to false
+  };
+
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
@@ -78,6 +84,7 @@ const AudioPlayer = ({ fileName, title }) => {
         src={audioSrc}
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
+        onEnded={handleAudioEnd}
       />
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         {/* Play/Pause Button */}
