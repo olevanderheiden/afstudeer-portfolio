@@ -57,15 +57,16 @@ const Layout = ({ content, sources, pageTitle }) => {
                 position: "absolute",
                 bottom: "20px",
                 left: "20px",
-                padding: "10px 15px",
+                padding: "8px 12px",
                 backgroundColor: "#007bff",
                 color: "#fff",
                 textDecoration: "none",
                 borderRadius: "5px",
+                fontSize: "14px", // Smaller font size
                 boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
               }}
             >
-              Vorige: {previousChapter.name}
+              Vorige
             </a>
           )}
 
@@ -77,15 +78,16 @@ const Layout = ({ content, sources, pageTitle }) => {
                 position: "absolute",
                 bottom: "20px",
                 right: "20px",
-                padding: "10px 15px",
+                padding: "8px 12px",
                 backgroundColor: "#007bff",
                 color: "#fff",
                 textDecoration: "none",
                 borderRadius: "5px",
+                fontSize: "14px", // Smaller font size
                 boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
               }}
             >
-              Volgende: {nextChapter.name}
+              Volgende
             </a>
           )}
         </main>

@@ -29,7 +29,7 @@ const AudioPlayer = ({ fileName, title }) => {
   };
 
   const handleSeek = (e) => {
-    const seekTime = (e.target.value / 100) * duration;
+    const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / playbackRate);
   };
@@ -106,8 +106,8 @@ const AudioPlayer = ({ fileName, title }) => {
       <input
         type="range"
         min="0"
-        max="100"
-        value={(currentTime / adjustedDuration) * 100 || 0} // Adjust seek bar based on playback speed
+        max="1000"
+        value={(currentTime / adjustedDuration) * 1000 || 0}
         onChange={handleSeek}
         style={{
           width: "100%",
