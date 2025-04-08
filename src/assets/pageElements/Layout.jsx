@@ -15,8 +15,12 @@ const Layout = ({ content, sources, pageTitle }) => {
   const currentIndex = chapters.findIndex(
     (chapter) => chapter.path === location.pathname
   );
-  const nextChapter = chapters[currentIndex + 1];
-  const previousChapter = chapters[currentIndex - 1];
+  const nextChapter =
+    currentIndex !== -1 && currentIndex < chapters.length - 1
+      ? chapters[currentIndex + 1]
+      : null;
+  const previousChapter = currentIndex > 0 ? chapters[currentIndex - 1] : null;
+
   // Check if the current page is the Home page
   const isHomePage = location.pathname === "/";
 

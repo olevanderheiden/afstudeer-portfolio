@@ -1,12 +1,12 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
 
-export const title = "Probleem stelling en onderzoeksvraag";
+export const title = "Digitaal Toegankelijk";
 
-const Chapter1_2 = () => {
+const Chapter1_1 = () => {
   const content = (
     <div>
-      <h2>Probleemstelling & onderzoeksvraag</h2>
+      <h2>Digitaal Toegankelijk</h2>
       <p>Over Digitaal Toegankelijk</p>
     </div>
   );
@@ -14,5 +14,4 @@ const Chapter1_2 = () => {
   return <Layout content={content} />;
 };
 
-export default Chapter1_2;
-//
+export default Chapter1_1;

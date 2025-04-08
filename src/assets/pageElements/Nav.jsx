@@ -59,7 +59,7 @@ const Nav = () => {
                 )}
                 <ul style={{ listStyle: "none", paddingLeft: "20px" }}>
                   {chaptersInGroup
-                    .filter((chapter) => chapter.isSubchapter) // Only subchapters
+                    .filter((chapter) => chapter.isSubchapter)
                     .map((chapter) => (
                       <li key={chapter.path}>
                         <Link

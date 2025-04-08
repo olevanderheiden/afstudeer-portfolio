@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
 
-export const title = "Test Title 2";
+export const title = "Afstudeer competenties";
 
-const Chapter1 = () => {
+const Chapter2_1 = () => {
   const sources = (
     <>
       <li>Source 1</li>
@@ -21,4 +21,4 @@ const Chapter1 = () => {
   return <Layout content={content} sources={sources} />;
 };
 
-export default Chapter1;
+export default Chapter2_1;
