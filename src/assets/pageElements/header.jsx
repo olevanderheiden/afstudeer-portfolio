@@ -61,7 +61,7 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#bronnen"
+              href="bronnen"
               style={{
                 textDecoration: "none",
                 color: "#333",
@@ -73,7 +73,31 @@ const Header = () => {
           </li>
           <li>
             <a
-              href="#speciale-dank"
+              href="begrippen"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                fontWeight: "500",
+              }}
+            >
+              Begrippenlijst
+            </a>
+          </li>
+          <li>
+            <a
+              href="bijlagen"
+              style={{
+                textDecoration: "none",
+                color: "#333",
+                fontWeight: "500",
+              }}
+            >
+              Bijlagen
+            </a>
+          </li>
+          <li>
+            <a
+              href="bedankt"
               style={{
                 textDecoration: "none",
                 color: "#333",
