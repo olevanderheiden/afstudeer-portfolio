@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Samenvating & begrippenlijst";
+export const title = "Samenvating";
 
 const Chapter0_1 = () => {
   const sources = (

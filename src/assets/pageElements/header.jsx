@@ -34,14 +34,14 @@ const Header = () => {
       <nav
         style={{
           flex: "1", // Allow the navigation to take up available space
-          textAlign: "right", // Align navigation to the right
+          textAlign: "left", // Align navigation to the right
         }}
       >
         <ul
           style={{
             display: "flex",
             justifyContent: "flex-center", // Align links to the right
-            gap: "6%", // Use percentage-based spacing between links
+            gap: "2%", // Use percentage-based spacing between links
             listStyle: "none",
             margin: 0,
             padding: 0,
