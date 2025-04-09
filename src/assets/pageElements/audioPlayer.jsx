@@ -20,32 +20,38 @@ const AudioPlayer = ({ fileName, title }) => {
     setIsPlaying(!isPlaying);
   };
 
+  // Update current time based on playback speed
   const handleTimeUpdate = () => {
-    setCurrentTime(audioRef.current.currentTime / playbackRate); // Adjust current time based on playback speed
+    setCurrentTime(audioRef.current.currentTime / playbackRate);
   };
 
+  // Reset the audio when it ends
   const handleAudioEnd = () => {
-    audioRef.current.currentTime = 0; // Reset the audio to the beginning
-    setCurrentTime(0); // Reset the displayed current time
-    setIsPlaying(false); // Set the playing state to false
+    audioRef.current.currentTime = 0;
+    setCurrentTime(0);
+    setIsPlaying(false);
   };
 
+  // Set the duration when the metadata is loaded
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
 
+  //Handle scrolling through the audio
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / playbackRate);
   };
 
+  //Handle volume changes
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     audioRef.current.volume = newVolume;
     setVolume(newVolume);
   };
 
+  //Adjust playback speed changes
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     audioRef.current.playbackRate = newRate;
@@ -63,6 +69,7 @@ const AudioPlayer = ({ fileName, title }) => {
   // Adjusted duration based on playback speed
   const adjustedDuration = duration / playbackRate;
 
+  //Audio player component
   return (
     <div
       style={{
@@ -148,6 +155,7 @@ const AudioPlayer = ({ fileName, title }) => {
           marginTop: "10px",
         }}
       >
+        {/* playback speed buttons */}
         <label htmlFor="playbackRate" style={{ fontSize: "14px" }}>
           Afspeel snelheid:
         </label>

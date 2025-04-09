@@ -33,15 +33,15 @@ const Header = () => {
       {/* Navigation Links */}
       <nav
         style={{
-          flex: "1", // Allow the navigation to take up available space
-          textAlign: "left", // Align navigation to the right
+          flex: "1",
+          textAlign: "left",
         }}
       >
         <ul
           style={{
             display: "flex",
-            justifyContent: "flex-center", // Align links to the right
-            gap: "2%", // Use percentage-based spacing between links
+            justifyContent: "flex-center",
+            gap: "2%",
             listStyle: "none",
             margin: 0,
             padding: 0,

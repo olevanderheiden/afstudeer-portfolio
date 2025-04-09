@@ -25,14 +25,23 @@ const Bijlagen = () => {
         title="Interview Emma 20-02-2025"
       />
       <h3>Begeleiding gesprekken</h3>
-      {/* <AudioPlayer
-        fileName="begeleiding/Begeleiding gesprek 1 (01-04-2025).mp3"
-        title="Begeleiding gesprek 1 (01-04-2025)"
-      /> */}
+      <AudioPlayer
+        fileName="begeleiding/GesprekStageBegeleider(20-03-25).mp3"
+        title="Begeleiding gesprek (20-03-2025)"
+      />
+      <AudioPlayer
+        fileName="begeleiding/Progressie gesprek peter (20-02-25).mp3"
+        title="Progressie geprek met Peter (20-02-2025)"
+      />
+
       <h3>Overige gesprekken:</h3>
       <AudioPlayer
         fileName="overigeGesprekken/super dure consultant onderzoek ideën.mp3"
         title="Super dure consultant onderzoek ideën (01-04-2025)"
+      />
+      <AudioPlayer
+        fileName="overigeGesprekken/Gesprek  pim en jo (07-04-25).mp3"
+        title="Gesprek met Pim en Jo (07-04-2025)"
       />
     </div>
   );
