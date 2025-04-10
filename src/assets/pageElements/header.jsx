@@ -9,25 +9,25 @@ const Header = () => {
         top: 0,
         width: "100%",
         zIndex: 1000,
-        backgroundColor: "#f5f5f5", // Lighter background color for better visibility
-        color: "#333", // Darker text color for contrast
-        padding: "10px 5%",
+        backgroundColor: "#f5f5f5",
+        color: "#333",
+        padding: "1% 1%",
         display: "flex",
-        alignItems: "center", // Align items vertically in the center
-        justifyContent: "space-between", // Space between title and navigation
-        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)", // Subtle shadow for better separation
+        alignItems: "flex-left",
+        justifyContent: "space-between",
+        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
       }}
     >
       {/* Title */}
       <h1
         style={{
-          fontSize: "1.5rem",
+          fontSize: "1.3rem",
           fontWeight: "bold",
           margin: 0,
-          flex: "1", // Allow the title to take up available space
+          flex: "1",
         }}
       >
-        Afstudeer Portfolio Ole van der Heiden
+        Afstudeer Portfolio
       </h1>
 
       {/* Navigation Links */}
@@ -40,7 +40,6 @@ const Header = () => {
         <ul
           style={{
             display: "flex",
-            justifyContent: "flex-center",
             gap: "2%",
             listStyle: "none",
             margin: 0,
@@ -104,7 +103,7 @@ const Header = () => {
                 fontWeight: "500",
               }}
             >
-              Speciale Dank
+              specialedank
             </a>
           </li>
         </ul>
