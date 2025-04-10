@@ -1,28 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../pageElements/header";
 import Footer from "../pageElements/footer";
 import Nav from "../pageElements/Nav";
 import useUpdateTitle from "../../hooks/useUpdateTitle";
-import { chapters } from "../logic/navLogic";
 import { useLocation } from "react-router-dom";
+import SourceList from "./sourceList";
+import sourcesData from "../sources.json";
 
-const Layout = ({ content, sources, pageTitle }) => {
+const Layout = ({ content, pageTitle }) => {
   useUpdateTitle(pageTitle);
 
   const location = useLocation();
+  const [sources, setSources] = useState(null);
 
-  // Find the current, previous, and next chapters
-  const currentIndex = chapters.findIndex(
-    (chapter) => chapter.path === location.pathname
-  );
-  const nextChapter =
-    currentIndex !== -1 && currentIndex < chapters.length - 1
-      ? chapters[currentIndex + 1]
-      : null;
-  const previousChapter = currentIndex > 0 ? chapters[currentIndex - 1] : null;
-
-  // Check if the current page is the Home page
-  const isHomePage = location.pathname === "/";
+  useEffect(() => {
+    // Load sources for the current path
+    const currentSources = sourcesData[location.pathname] || null;
+    setSources(currentSources);
+  }, [location.pathname]);
 
   return (
     <div
@@ -44,52 +39,10 @@ const Layout = ({ content, sources, pageTitle }) => {
             flex: sources ? 1 : 2,
             padding: "20px",
             backgroundColor: "#fff",
-            position: "relative", // Ensure positioning for the buttons
+            position: "relative",
           }}
         >
           {content}
-
-          {/* Previous button */}
-          {previousChapter && (
-            <a
-              href={`/afstudeer-portfolio${previousChapter.path}`} // Correct base path
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                left: "20px",
-                padding: "8px 12px",
-                backgroundColor: "#007bff",
-                color: "#fff",
-                textDecoration: "none",
-                borderRadius: "5px",
-                fontSize: "14px", // Smaller font size
-                boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              Vorige
-            </a>
-          )}
-
-          {/* Next button */}
-          {!isHomePage && nextChapter && (
-            <a
-              href={`/afstudeer-portfolio${nextChapter.path}`} // Correct base path
-              style={{
-                position: "absolute",
-                bottom: "20px",
-                right: "20px",
-                padding: "8px 12px",
-                backgroundColor: "#007bff",
-                color: "#fff",
-                textDecoration: "none",
-                borderRadius: "5px",
-                fontSize: "14px", // Smaller font size
-                boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              Volgende
-            </a>
-          )}
         </main>
 
         {/* Sources on the right (optional) */}
@@ -102,7 +55,7 @@ const Layout = ({ content, sources, pageTitle }) => {
             }}
           >
             <h3>Bronnen lijst</h3>
-            <ul>{sources}</ul>
+            <SourceList sources={sources} />
           </aside>
         )}
       </div>

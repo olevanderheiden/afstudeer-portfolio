@@ -103,7 +103,7 @@ const Header = () => {
                 fontWeight: "500",
               }}
             >
-              specialedank
+              Bedankt
             </a>
           </li>
         </ul>

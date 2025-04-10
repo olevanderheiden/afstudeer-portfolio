@@ -1,0 +1,33 @@
+{
+    "/chapter1": [
+      {
+        "author": "Test Author 1",
+        "year": "2020",
+        "title": "Test 1",
+        "publisher": "test publisher 1",
+        "url": "https://example.com/example1"
+      },
+      {
+        "author": "Test Author 2",
+        "year": "2019",
+        "title": "Test 2",
+        "publisher": "Test publisher 2"
+      }
+    ],
+    "/chapter1.1": [
+      {
+        "author": "Test Author 1",
+        "year": "2020",
+        "title": "Test 1",
+        "publisher": "test publisher 1",
+        "url": "https://example.com/example1"
+      },
+      {
+        "author": "Test Author 3",
+        "year": "2021",
+        "title": "Test 3",
+        "publisher": "Test publisher 3",
+        "url": "https://example.com/test3"
+      }
+    ]
+  }
