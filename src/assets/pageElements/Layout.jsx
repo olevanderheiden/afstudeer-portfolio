@@ -29,14 +29,21 @@ const Layout = ({ content, pageTitle }) => {
       }}
     >
       <Header />
-      <div style={{ display: "flex", flex: 1, marginTop: "80px" }}>
+      <div
+        style={{
+          display: "flex",
+          flex: 1,
+          marginTop: "80px",
+          gap: "20px", // Add spacing between sections
+        }}
+      >
         {/* Navigation on the left */}
         <Nav />
 
         {/* Main content in the center */}
         <main
           style={{
-            flex: sources ? 1 : 2,
+            flex: 1,
             padding: "20px",
             backgroundColor: "#fff",
             position: "relative",
@@ -49,9 +56,11 @@ const Layout = ({ content, pageTitle }) => {
         {sources && (
           <aside
             style={{
-              width: "20%",
+              flex: "0 1 300px", // Allow the sources bar to shrink or grow, with a base width of 300px
+              maxWidth: "400px", // Set a maximum width
               padding: "10px",
               backgroundColor: "#f4f4f4",
+              overflowX: "auto", // Add horizontal scrolling if content overflows
             }}
           >
             <h3>Bronnen lijst</h3>

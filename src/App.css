@@ -33,6 +33,22 @@
   }
 }
 
+@media (max-width: 768px) {
+  aside {
+    flex: 1;
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .layout-container {
+    flex-direction: column;
+  }
+}
+
 .card {
   padding: 2em;
 }
