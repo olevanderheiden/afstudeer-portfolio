@@ -56,11 +56,11 @@ const Layout = ({ content, pageTitle }) => {
         {sources && (
           <aside
             style={{
-              flex: "0 1 300px", // Allow the sources bar to shrink or grow, with a base width of 300px
-              maxWidth: "400px", // Set a maximum width
+              flex: "0 1 300px",
+              maxWidth: "400px",
               padding: "10px",
               backgroundColor: "#f4f4f4",
-              overflowX: "auto", // Add horizontal scrolling if content overflows
+              overflowX: "auto",
             }}
           >
             <h3>Bronnen lijst</h3>
