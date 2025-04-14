@@ -1,12 +1,6 @@
-# React + Vite
+# Afstudeer portfolio Ole van der Heiden
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dis is de code van mijn asfstudeer portfolio. De live versie is hier op ge baseerd en kan je vinden in de gh-pages branch van dit project. Deze live versie wordt ge-update wanneer er nieuwe belangrijke features of content updates zijn toegevoegd en qua functionaliteit zijn getest.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Live versie
+Ga naar de live versie via: https://olevanderheiden.github.io/afstudeer-portfolio
