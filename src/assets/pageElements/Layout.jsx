@@ -47,13 +47,13 @@ const Layout = ({ content, pageTitle }) => {
           display: "flex",
           flex: 1,
           marginTop: "80px",
-          gap: "20px", // Add spacing between sections
+          gap: "20px",
         }}
       >
-        {/* Navigation on the left */}
+        {/* Navigation tab on the left side of the screen to display the chapter selector */}
         <Nav />
 
-        {/* Main content in the center */}
+        {/* Main content determined by the selected page*/}
         <main
           style={{
             flex: 1,
@@ -72,13 +72,13 @@ const Layout = ({ content, pageTitle }) => {
         right: "1%",
         display: "flex",
         justifyContent: "space-between",
-        pointerEvents: "none", // Prevent overlapping issues
+        pointerEvents: "none", 
       }}
     >
       {/* Previous Button */}
       <div
         style={{
-          pointerEvents: "auto", // Enable interaction
+          pointerEvents: "auto",
           position: "absolute",
           bottom: "0",
           left: "0",
@@ -92,7 +92,7 @@ const Layout = ({ content, pageTitle }) => {
       {/* Next Button */}
       <div
         style={{
-          pointerEvents: "auto", // Enable interaction
+          pointerEvents: "auto",
           position: "absolute",
           bottom: "0",
           right: "0",
