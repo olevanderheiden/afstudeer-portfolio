@@ -3,14 +3,16 @@ import Header from "../pageElements/header";
 import Footer from "../pageElements/footer";
 import Nav from "../pageElements/Nav";
 import useUpdateTitle from "../../hooks/useUpdateTitle";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import SourceList from "./sourceList";
 import sourcesData from "../sources.json";
+import { chapters } from "../logic/navLogic";
 
 const Layout = ({ content, pageTitle }) => {
   useUpdateTitle(pageTitle);
 
   const location = useLocation();
+  const navigate = useNavigate();
   const [sources, setSources] = useState(null);
 
   useEffect(() => {
@@ -18,6 +20,17 @@ const Layout = ({ content, pageTitle }) => {
     const currentSources = sourcesData[location.pathname] || null;
     setSources(currentSources);
   }, [location.pathname]);
+
+  // Determine the current chapter and its position
+  const currentChapterIndex = chapters.findIndex(
+    (chapter) => chapter.path === location.pathname
+  );
+  const previousChapter =
+    currentChapterIndex > 0 ? chapters[currentChapterIndex - 1] : null;
+  const nextChapter =
+    currentChapterIndex < chapters.length - 1
+      ? chapters[currentChapterIndex + 1]
+      : null;
 
   return (
     <div
@@ -43,6 +56,47 @@ const Layout = ({ content, pageTitle }) => {
           }}
         >
           {content}
+          {currentChapterIndex !== -1 && (
+    <div
+      style={{
+        position: "absolute",
+        bottom: "1%",
+        left: "1%",
+        right: "1%",
+        display: "flex",
+        justifyContent: "space-between",
+        pointerEvents: "none", // Prevent overlapping issues
+      }}
+    >
+      {/* Previous Button */}
+      <div
+        style={{
+          pointerEvents: "auto", // Enable interaction
+          position: "absolute",
+          bottom: "0",
+          left: "0",
+        }}
+      >
+        {previousChapter && (
+          <button onClick={() => navigate(previousChapter.path)}>Vorige</button>
+        )}
+      </div>
+
+      {/* Next Button */}
+      <div
+        style={{
+          pointerEvents: "auto", // Enable interaction
+          position: "absolute",
+          bottom: "0",
+          right: "0",
+        }}
+      >
+        {nextChapter && (
+          <button onClick={() => navigate(nextChapter.path)}>Volgende</button>
+        )}
+      </div>
+    </div>
+  )}
         </main>
 
         {/* Sources on the right (optional) */}
