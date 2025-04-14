@@ -16,7 +16,7 @@ const SourceList = ({ sources }) => {
           {source.url && (
             <>
               {" "}
-              Retrieved from{" "}
+              Afkomstig van:{" "}
               <a
                 href={source.url}
                 target="_blank"
