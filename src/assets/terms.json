@@ -1,0 +1,36 @@
+[
+    {
+      "term": "Toegankelijkheid",
+      "definition": "Het beschickbaar maken van producten, apparaten, diensten of omgevingen voor mensen met een beperking."
+    },
+    {
+      "term": "Schermlezer of screenreader",
+      "definition": "Een programma op computers smarphones en andere apparaten die de inhoud van een scherm toegankelijk maakt. Dit kan door tekst om te zetten naar spraak of braille. Maar kan ook het aanpassen van kleuren of lettertypes betreffen."
+    },
+    {
+      "term": "NVDA",
+      "definition": "Een scherm lezer voor Windows die gratis te downloaden is. Het is een open source project en wordt onderhouden door vrijwilligers."
+    },
+    {
+      "term": "Jaws",
+      "definition": "Jaws is scherm lezer voor windows dat wordt aangeboden door Freedom Scientific. Een licentie kost $104,50 par jaar. Er kan ook een licentie onbepaalde tijd aangeschaft worden voor $1548. Hoewel deze licentie zelf geen tijd limiet heef, kan de software onafhankelijk van de licentie maar op maximaal 3 apparaten worden geinstalleerd."
+    },
+    {
+      "term": "VoiceOver",
+      "definition": "Een scherm lezer voor Apple producten. Het is standaar inbegrepen met alle Apple telefoons, tablets en computers."
+    },
+    {
+      "term": "Edu tekst",
+      "definition": "Een Microsoft wordt document dat de inhoud van een (school) boek bevat in een tekst formaat. Dit maakt het mogelijk om de tekst te laten voorlezen door een scherm lezer. Edu tekst bestanden bevatten nooit afbeeldingen of andere elementen die enkel visueel zijn. Wel kunnen er vervangende teksten in staan die de inhoud die de van de afbeelding door geeft aan de lezer."
+    },
+    {
+      "term": "semi gestructureerd interview",
+      "definition": "Een interviewvorm waarbij de interviewer een lijst met vragen heeft, maar ook ruimte laat om spontan vragen te stellen. Op die manier kan je dieper ingaan op de antwoorden van de persoon die je interviewt. Hiedoor krijg je meer informatie dan wanneer je bijvoorbeeld een eenquête afneemt.",
+      "page": "2.1 Onderzoken"
+    },
+    {
+      "term": "Digitaal Toegankelijk",
+      "definition": "Een bedrijf gevestigd in Utrech dat zich richt op het toegankelijk maken van websites en apps. Dit doen ze door middel van audits, trainingen en advies.",
+      "page": "1.1 Digitaal Toegankelijk"
+    }
+  ]
