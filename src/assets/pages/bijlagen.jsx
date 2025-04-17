@@ -28,6 +28,10 @@ const Bijlagen = () => {
         fileName = "interviews/Carmen (16-04-2025).mp3"
         title="Interview Carmen 16-04-2025"
       />
+      <AudioPlayer
+        fileName="interviews/Mireille (17-04-2025).mp3"
+        title="Interview Mireille 17-04-2025"
+        />
       <h3>Begeleiding gesprekken</h3>
       <AudioPlayer
         fileName="begeleiding/GesprekStageBegeleider(20-03-25).mp3"
