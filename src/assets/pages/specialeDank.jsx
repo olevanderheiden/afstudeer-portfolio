@@ -38,7 +38,7 @@ const specialeDank = () => {
       <h3>Geinterviewden en testers:</h3>
       <ul>
       <li>Aniek Linders</li>
-      <li>Carmen</li>
+      <li>Carmen Denhaven</li>
       <li>Mireille</li>
       <li>Djan van der Kraan</li>
       <li>Kim Kreeft</li>
