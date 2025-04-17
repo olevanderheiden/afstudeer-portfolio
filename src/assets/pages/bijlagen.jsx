@@ -11,7 +11,7 @@ const Bijlagen = () => {
         onderzoek dat niet in zijn volledighijd op deze site staat. U kunt dit
         hier als nog beluisteren of bekijken.
       </p>
-      <h3>Interviews:</h3>
+      <h3>Interviews (met collega's):</h3>
       <AudioPlayer
         fileName="interviews/Aimee(20-03-2025-9am).mp3"
         title="Interview Aimee 20-02-2025"
@@ -24,6 +24,7 @@ const Bijlagen = () => {
         fileName="interviews/Emma(20-03-2025-2pm).mp3"
         title="Interview Emma 20-02-2025"
       />
+      <h3>Interviews (met audio gebruikers):</h3>
       <AudioPlayer
         fileName = "interviews/Carmen (16-04-2025).mp3"
         title="Interview Carmen 16-04-2025"
