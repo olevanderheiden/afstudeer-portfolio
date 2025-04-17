@@ -4,18 +4,26 @@ import termsData from "../terms.json";
 
 const Begrippenlijst = () => {
   const [terms, setTerms] = useState([]);
-  const [sortBy, setSortBy] = useState("alphabetical"); // Default sorting
+  const [sortBy, setSortBy] = useState("alphabetical"); 
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   useEffect(() => {
     // Load terms from terms.json
     setTerms(termsData);
   }, []);
 
+  // Filter terms based on the search query
+  const filteredTerms = terms.filter(
+    (term) =>
+      term.term.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      (term.page && term.page.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
   // Sort terms based on the selected sorting method
   const sortedTerms =
     sortBy === "alphabetical"
-      ? [...terms].sort((a, b) => a.term.localeCompare(b.term))
-      : [...terms].sort((a, b) =>
+      ? [...filteredTerms].sort((a, b) => a.term.localeCompare(b.term))
+      : [...filteredTerms].sort((a, b) =>
           (a.page || "Other").localeCompare(b.page || "Other") ||
           a.term.localeCompare(b.term)
         );
@@ -35,6 +43,22 @@ const Begrippenlijst = () => {
     <div>
       <h2>Begrippenlijst</h2>
       <p>Hieronder vindt u een lijst van termen en hun uitleg.</p>
+
+      {/* Search Input */}
+      <div style={{ marginBottom: "20px" }}>
+        <input
+          type="text"
+          placeholder="Zoek op term of pagina..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{
+            padding: "10px",
+            width: "100%",
+            maxWidth: "400px",
+            marginBottom: "10px",
+          }}
+        />
+      </div>
 
       {/* Sorting Options */}
       <div style={{ marginBottom: "20px" }}>
