@@ -26,13 +26,17 @@ const Bijlagen = () => {
       />
       <h3>Interviews (met audio gebruikers):</h3>
       <AudioPlayer
-        fileName = "interviews/Carmen (16-04-2025).mp3"
+        fileName="interviews/Carmen (16-04-2025).mp3"
         title="Interview Carmen 16-04-2025"
       />
       <AudioPlayer
         fileName="interviews/Mireille (17-04-2025).mp3"
         title="Interview Mireille 17-04-2025"
-        />
+      />
+      <AudioPlayer
+        fileName="interviews/Kim Kreeft (25-04-2025).mp3"
+        title="Interview Kim Kreeft 25-04-2025"
+      />
       <h3>Begeleiding gesprekken</h3>
       <AudioPlayer
         fileName="begeleiding/GesprekStageBegeleider(20-03-25).mp3"
@@ -51,6 +55,10 @@ const Bijlagen = () => {
       <AudioPlayer
         fileName="overigeGesprekken/Gesprek  pim en jo (07-04-25).mp3"
         title="Gesprek met Pim en Jo (07-04-2025)"
+      />
+      <AudioPlayer
+        fileName="overigeGesprekken/ontwerpSchetsBesprekenPim(25-04-2025).mp3"
+        title="Ontwerp schets bespreken met Pim (25-04-2025)"
       />
     </div>
   );
