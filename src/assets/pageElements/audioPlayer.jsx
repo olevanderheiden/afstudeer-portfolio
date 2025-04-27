@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import { useAudioPlayerContext } from "../../context/AudioPlayerContext";
+import { toggleTranscription } from "../logic/transcriptionLogic";
+import "../../index.css";
 
+// AudioPlayer component
 const AudioPlayer = ({ fileName, title }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -29,68 +32,54 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   }, [globalVolume, globalPlaybackRate]);
 
+  //Mange play and pause state
   const togglePlayPause = () => {
     if (isPlaying) {
-      // Pause the current audio
       audioRef.current.pause();
       setIsPlaying(false);
     } else {
-      // Pause any currently playing audio
       if (currentlyPlayingAudio && currentlyPlayingAudio !== audioRef.current) {
         currentlyPlayingAudio.pause();
-
-        // Reset the isPlaying state of the previously playing audio
-        const previousAudioComponent = currentlyPlayingAudio.parentElement;
-        if (previousAudioComponent) {
-          const previousAudioButton =
-            previousAudioComponent.querySelector("button");
-          if (previousAudioButton) {
-            previousAudioButton.textContent = "Start"; // Reset button text
-            previousAudioButton.style.backgroundColor = "#4caf50"; // Reset button color
-          }
-
-          // Reset the isPlaying state of the previous audio player
-          const previousAudioInstance =
-            previousAudioComponent.__reactFiber$?.return?.stateNode;
-          if (previousAudioInstance) {
-            previousAudioInstance.setIsPlaying(false);
-          }
-        }
+        setCurrentlyPlayingAudio(null);
       }
-
-      // Play the current audio
       audioRef.current.play();
       setCurrentlyPlayingAudio(audioRef.current);
       setIsPlaying(true);
     }
   };
 
+  //Manages the time update and duration of the audio shown in the UI
   const handleTimeUpdate = () => {
     setCurrentTime(audioRef.current.currentTime / globalPlaybackRate);
   };
 
+  //Manages the loaded metadata of the audio file
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
 
+  //Manages the seek/scroll bar of the audio file
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / globalPlaybackRate);
   };
 
+  //Handles the volume change of the audio playback this effects the global volume state
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     setGlobalVolume(newVolume);
     localStorage.setItem("audioPlayerVolume", newVolume);
   };
 
+  //Handles the playback rate change of the audio playback this effects the global playback rate state
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     setGlobalPlaybackRate(newRate);
     localStorage.setItem("audioPlayerPlaybackRate", newRate);
   };
 
+  //Ensures that the displayed time is in the correct format of minutes and seconds
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60)
@@ -99,103 +88,9 @@ const AudioPlayer = ({ fileName, title }) => {
     return `${minutes}:${seconds}`;
   };
 
-  const toggleTranscription = async () => {
-    setShowWarning(true);
-    const userConfirmed = window.confirm(
-      "Let op: De transcriptie-functionaliteit is experimenteel en kan onnauwkeurig zijn. Wilt u doorgaan?"
-    );
-
-    if (!userConfirmed) {
-      setShowWarning(false);
-      return;
-    }
-
-    setIsTranscribing(true);
-    setTranscription("Transscriptie wordt geladen...");
-
-    try {
-      const serverAudioUrl = `https://olevanderheiden.github.io/afstudeer-portfolio/${audioSrc}`;
-
-      const response = await fetch("https://api.assemblyai.com/v2/transcript", {
-        method: "POST",
-        headers: {
-          authorization: import.meta.env.VITE_ASSEMBLYAI_API_KEY,
-          "content-type": "application/json",
-        },
-        body: JSON.stringify({
-          audio_url: serverAudioUrl,
-          language_code: "nl",
-          speaker_labels: true,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error("API Error:", errorData);
-        throw new Error("Failed to start transcription");
-      }
-
-      const data = await response.json();
-      const transcriptId = data.id;
-
-      const pollResponse = await pollTranscriptionResult(transcriptId);
-
-      const formattedTranscription = formatTranscriptionWithSpeakers(
-        pollResponse.utterances
-      );
-      setTranscription(
-        formattedTranscription || "Transscriptie niet beschikbaar."
-      );
-    } catch (error) {
-      console.error("Error transcribing audio:", error);
-      setTranscription("Fout bij het transcriberen van audio.");
-    } finally {
-      setIsTranscribing(false);
-    }
-  };
-
-  const pollTranscriptionResult = async (transcriptId) => {
-    const pollingEndpoint = `https://api.assemblyai.com/v2/transcript/${transcriptId}`;
-    while (true) {
-      const response = await fetch(pollingEndpoint, {
-        headers: {
-          authorization: import.meta.env.VITE_ASSEMBLYAI_API_KEY,
-        },
-      });
-
-      const data = await response.json();
-      if (data.status === "completed") {
-        return data;
-      } else if (data.status === "failed") {
-        throw new Error("Transcription failed");
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 5000));
-    }
-  };
-
-  const formatTranscriptionWithSpeakers = (utterances) => {
-    return utterances
-      .map((utterance) => `${utterance.speaker}:\n${utterance.text}`)
-      .join("\n\n");
-  };
-
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "20px",
-        border: "1px solid #ddd",
-        borderRadius: "10px",
-        backgroundColor: "#f9f9f9",
-        boxShadow: "0 2px 5px rgba(0, 0, 0, 0.1)",
-        maxWidth: "600px",
-        margin: "20px auto",
-      }}
-    >
-      <h3 style={{ marginBottom: "10px" }}>{title}</h3>
+    <div className="media-container">
+      <h3 className="media-title">{title}</h3>
       <audio
         ref={audioRef}
         src={audioSrc}
@@ -203,22 +98,14 @@ const AudioPlayer = ({ fileName, title }) => {
         onLoadedMetadata={handleLoadedMetadata}
         style={{ display: "none" }}
       />
-      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+      <div className="media-controls">
         <button
           onClick={togglePlayPause}
-          style={{
-            padding: "10px",
-            border: "none",
-            borderRadius: "50%",
-            backgroundColor: isPlaying ? "#ff4d4d" : "#4caf50",
-            color: "#fff",
-            cursor: "pointer",
-            fontSize: "16px",
-          }}
+          className={`play-button ${isPlaying ? "stop" : "start"}`}
         >
           {isPlaying ? "Stop" : "Start"}
         </button>
-        <span style={{ fontSize: "14px" }}>
+        <span className="time-display">
           {formatTime(currentTime)} /{" "}
           {formatTime(duration / globalPlaybackRate)}
         </span>
@@ -229,15 +116,10 @@ const AudioPlayer = ({ fileName, title }) => {
         max="1000"
         value={(currentTime / (duration / globalPlaybackRate)) * 1000 || 0}
         onChange={handleSeek}
-        style={{
-          width: "100%",
-          margin: "10px 0",
-        }}
+        className="seek-bar"
       />
-      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        <label htmlFor="volume" style={{ fontSize: "14px" }}>
-          Volume:
-        </label>
+      <div className="volume-controls">
+        <label htmlFor="volume">Volume:</label>
         <input
           id="volume"
           type="range"
@@ -245,33 +127,15 @@ const AudioPlayer = ({ fileName, title }) => {
           max="100"
           value={globalVolume * 100}
           onChange={handleVolumeChange}
-          style={{ width: "100px" }}
         />
-        <span style={{ fontSize: "14px" }}>
-          {Math.round(globalVolume * 100)}%
-        </span>
+        <span>{Math.round(globalVolume * 100)}%</span>
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "10px",
-          marginTop: "10px",
-        }}
-      >
-        <label htmlFor="playbackRate" style={{ fontSize: "14px" }}>
-          Afspeel snelheid:
-        </label>
+      <div className="playback-rate-controls">
+        <label htmlFor="playbackRate">Afspeel snelheid:</label>
         <select
           id="playbackRate"
           value={globalPlaybackRate}
           onChange={handlePlaybackRateChange}
-          style={{
-            padding: "5px",
-            borderRadius: "5px",
-            border: "1px solid #ddd",
-            fontSize: "14px",
-          }}
         >
           <option value="0.25">0.25x</option>
           <option value="0.5">0.5x</option>
@@ -284,52 +148,33 @@ const AudioPlayer = ({ fileName, title }) => {
         </select>
       </div>
       {showWarning && (
-        <div
-          style={{
-            marginTop: "20px",
-            padding: "10px",
-            border: "1px solid #ff9800",
-            borderRadius: "5px",
-            backgroundColor: "#fff3e0",
-            color: "#e65100",
-            textAlign: "center",
-            fontSize: "14px",
-          }}
-        >
-          <strong>Let op:</strong> De transcriptie-functionaliteit is
-          experimenteel en kan onnauwkeurig zijn. Gebruik het alleen als u
-          begrijpt dat de resultaten mogelijk niet betrouwbaar zijn.
+        <div className="warning">
+          <strong>Let op:</strong> Deze transcriptie maakt gebruik van
+          generative AI. Het is hier door niet aleeen potentieel onnauwkeurig,
+          Maar kan ook een grote invloed hebben op het milieu,
+          klimaatverandering en de werkgelegenheid in creative sectoren. De
+          maker van deze website staat niet achter het gebruik van generative AI
+          en is niet verantwoordelijk voor de gevolgen die deze transcriptie kan
+          hebben! Gebruik dit dus op eigen risico.
         </div>
       )}
+      {/*Manages transscription call to the transscription code!*/}
       <button
-        onClick={toggleTranscription}
-        style={{
-          marginTop: "10px",
-          padding: "10px 20px",
-          backgroundColor: isTranscribing ? "#ff9800" : "#2196f3",
-          color: "#fff",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
+        onClick={() =>
+          toggleTranscription(
+            audioSrc,
+            setShowWarning,
+            setIsTranscribing,
+            setTranscription
+          )
+        }
+        className={`transcription-button ${isTranscribing ? "loading" : ""}`}
         disabled={isTranscribing}
       >
-        {isTranscribing
-          ? "Transcriberen..."
-          : "Start Transscriptie (Gebruikt Generative AI: Wordt niet aangeraden)"}
+        {isTranscribing ? "Transcriberen..." : "Start Transscriptie"}
       </button>
       {transcription && (
-        <div
-          style={{
-            marginTop: "20px",
-            padding: "10px",
-            border: "1px solid #ddd",
-            borderRadius: "5px",
-            backgroundColor: "#f9f9f9",
-            width: "100%",
-            whiteSpace: "pre-wrap",
-          }}
-        >
+        <div className="transcription">
           <h4>Transscriptie:</h4>
           <p>{transcription}</p>
         </div>
