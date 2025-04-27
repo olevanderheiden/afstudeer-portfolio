@@ -1,29 +1,72 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
+import { useAudioPlayerContext } from "../../context/AudioPlayerContext";
 
 const AudioPlayer = ({ fileName, title }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
-  const [volume, setVolume] = useState(1);
-  const [playbackRate, setPlaybackRate] = useState(1);
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [transcription, setTranscription] = useState("");
-  const [showWarning, setShowWarning] = useState(false); // State to control the warning message
+  const [showWarning, setShowWarning] = useState(false);
+
+  const {
+    globalVolume,
+    setGlobalVolume,
+    globalPlaybackRate,
+    setGlobalPlaybackRate,
+    currentlyPlayingAudio,
+    setCurrentlyPlayingAudio,
+  } = useAudioPlayerContext();
 
   const audioSrc = `audio/${fileName}`; // Local audio file path
 
+  // Sync volume and playback rate with global state
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = globalVolume;
+      audioRef.current.playbackRate = globalPlaybackRate;
+    }
+  }, [globalVolume, globalPlaybackRate]);
+
   const togglePlayPause = () => {
     if (isPlaying) {
+      // Pause the current audio
       audioRef.current.pause();
+      setIsPlaying(false);
     } else {
+      // Pause any currently playing audio
+      if (currentlyPlayingAudio && currentlyPlayingAudio !== audioRef.current) {
+        currentlyPlayingAudio.pause();
+
+        // Reset the isPlaying state of the previously playing audio
+        const previousAudioComponent = currentlyPlayingAudio.parentElement;
+        if (previousAudioComponent) {
+          const previousAudioButton =
+            previousAudioComponent.querySelector("button");
+          if (previousAudioButton) {
+            previousAudioButton.textContent = "Start"; // Reset button text
+            previousAudioButton.style.backgroundColor = "#4caf50"; // Reset button color
+          }
+
+          // Reset the isPlaying state of the previous audio player
+          const previousAudioInstance =
+            previousAudioComponent.__reactFiber$?.return?.stateNode;
+          if (previousAudioInstance) {
+            previousAudioInstance.setIsPlaying(false);
+          }
+        }
+      }
+
+      // Play the current audio
       audioRef.current.play();
+      setCurrentlyPlayingAudio(audioRef.current);
+      setIsPlaying(true);
     }
-    setIsPlaying(!isPlaying);
   };
 
   const handleTimeUpdate = () => {
-    setCurrentTime(audioRef.current.currentTime / playbackRate);
+    setCurrentTime(audioRef.current.currentTime / globalPlaybackRate);
   };
 
   const handleLoadedMetadata = () => {
@@ -33,19 +76,19 @@ const AudioPlayer = ({ fileName, title }) => {
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
-    setCurrentTime(seekTime / playbackRate);
+    setCurrentTime(seekTime / globalPlaybackRate);
   };
 
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
-    audioRef.current.volume = newVolume;
-    setVolume(newVolume);
+    setGlobalVolume(newVolume);
+    localStorage.setItem("audioPlayerVolume", newVolume);
   };
 
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
-    audioRef.current.playbackRate = newRate;
-    setPlaybackRate(newRate);
+    setGlobalPlaybackRate(newRate);
+    localStorage.setItem("audioPlayerPlaybackRate", newRate);
   };
 
   const formatTime = (time) => {
@@ -57,33 +100,32 @@ const AudioPlayer = ({ fileName, title }) => {
   };
 
   const toggleTranscription = async () => {
-    setShowWarning(true); // Show the warning message
+    setShowWarning(true);
     const userConfirmed = window.confirm(
       "Let op: De transcriptie-functionaliteit is experimenteel en kan onnauwkeurig zijn. Wilt u doorgaan?"
     );
 
     if (!userConfirmed) {
-      setShowWarning(false); // Hide the warning if the user cancels
-      return; // Exit if the user does not confirm
+      setShowWarning(false);
+      return;
     }
 
     setIsTranscribing(true);
     setTranscription("Transscriptie wordt geladen...");
 
     try {
-      // Prepend the server URL to the audioSrc for transcription
       const serverAudioUrl = `https://olevanderheiden.github.io/afstudeer-portfolio/${audioSrc}`;
 
       const response = await fetch("https://api.assemblyai.com/v2/transcript", {
         method: "POST",
         headers: {
-          authorization: import.meta.env.VITE_ASSEMBLYAI_API_KEY, // Use the API key from the .env file
+          authorization: import.meta.env.VITE_ASSEMBLYAI_API_KEY,
           "content-type": "application/json",
         },
         body: JSON.stringify({
-          audio_url: serverAudioUrl, // Use the server URL for transcription
-          language_code: "nl", // Set transcription language to Dutch
-          speaker_labels: true, // Enable speaker diarization
+          audio_url: serverAudioUrl,
+          language_code: "nl",
+          speaker_labels: true,
         }),
       });
 
@@ -96,10 +138,8 @@ const AudioPlayer = ({ fileName, title }) => {
       const data = await response.json();
       const transcriptId = data.id;
 
-      // Poll for transcription results
       const pollResponse = await pollTranscriptionResult(transcriptId);
 
-      // Format the transcription with speaker labels and line breaks
       const formattedTranscription = formatTranscriptionWithSpeakers(
         pollResponse.utterances
       );
@@ -134,7 +174,6 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   };
 
-  // Helper function to format transcription with speaker labels
   const formatTranscriptionWithSpeakers = (utterances) => {
     return utterances
       .map((utterance) => `${utterance.speaker}:\n${utterance.text}`)
@@ -165,7 +204,6 @@ const AudioPlayer = ({ fileName, title }) => {
         style={{ display: "none" }}
       />
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-        {/* Play/Pause Button */}
         <button
           onClick={togglePlayPause}
           style={{
@@ -180,27 +218,22 @@ const AudioPlayer = ({ fileName, title }) => {
         >
           {isPlaying ? "Stop" : "Start"}
         </button>
-
-        {/* Current Time / Adjusted Duration */}
         <span style={{ fontSize: "14px" }}>
-          {formatTime(currentTime)} / {formatTime(duration / playbackRate)}
+          {formatTime(currentTime)} /{" "}
+          {formatTime(duration / globalPlaybackRate)}
         </span>
       </div>
-
-      {/* Seek Bar */}
       <input
         type="range"
         min="0"
         max="1000"
-        value={(currentTime / (duration / playbackRate)) * 1000 || 0}
+        value={(currentTime / (duration / globalPlaybackRate)) * 1000 || 0}
         onChange={handleSeek}
         style={{
           width: "100%",
           margin: "10px 0",
         }}
       />
-
-      {/* Volume Control */}
       <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         <label htmlFor="volume" style={{ fontSize: "14px" }}>
           Volume:
@@ -210,14 +243,14 @@ const AudioPlayer = ({ fileName, title }) => {
           type="range"
           min="0"
           max="100"
-          value={volume * 100}
+          value={globalVolume * 100}
           onChange={handleVolumeChange}
           style={{ width: "100px" }}
         />
-        <span style={{ fontSize: "14px" }}>{Math.round(volume * 100)}%</span>
+        <span style={{ fontSize: "14px" }}>
+          {Math.round(globalVolume * 100)}%
+        </span>
       </div>
-
-      {/* Playback Speed Control */}
       <div
         style={{
           display: "flex",
@@ -231,7 +264,7 @@ const AudioPlayer = ({ fileName, title }) => {
         </label>
         <select
           id="playbackRate"
-          value={playbackRate}
+          value={globalPlaybackRate}
           onChange={handlePlaybackRateChange}
           style={{
             padding: "5px",
@@ -250,8 +283,6 @@ const AudioPlayer = ({ fileName, title }) => {
           <option value="2">2x</option>
         </select>
       </div>
-
-      {/* Warning Message */}
       {showWarning && (
         <div
           style={{
@@ -267,16 +298,9 @@ const AudioPlayer = ({ fileName, title }) => {
         >
           <strong>Let op:</strong> De transcriptie-functionaliteit is
           experimenteel en kan onnauwkeurig zijn. Gebruik het alleen als u
-          begrijpt dat de resultaten mogelijk niet betrouwbaar zijn. Tevens
-          staat de ontwikkelaar van deze website niet achter het gebruik van
-          generative Ai waar deze functie gebruik van maakt. Dit is niet alleen
-          slecht voor planeet en het milieu, maar ook voor mensen die werken in
-          een creatief beroep. Het is dus niet aan te raden om deze functie te
-          gebruiken.
+          begrijpt dat de resultaten mogelijk niet betrouwbaar zijn.
         </div>
       )}
-
-      {/* Transcription Button */}
       <button
         onClick={toggleTranscription}
         style={{
@@ -294,8 +318,6 @@ const AudioPlayer = ({ fileName, title }) => {
           ? "Transcriberen..."
           : "Start Transscriptie (Gebruikt Generative AI: Wordt niet aangeraden)"}
       </button>
-
-      {/* Transcription Display */}
       {transcription && (
         <div
           style={{
