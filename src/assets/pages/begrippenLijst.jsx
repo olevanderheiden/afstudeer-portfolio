@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Layout from "../pageElements/Layout";
 import termsData from "../terms.json";
 
 const Begrippenlijst = () => {
+  const location = useLocation();
   const [terms, setTerms] = useState([]);
-  const [sortBy, setSortBy] = useState("alphabetical"); 
-  const [searchQuery, setSearchQuery] = useState(""); 
+  const [sortBy, setSortBy] = useState("alphabetical"); // Default sorting
+  const [searchQuery, setSearchQuery] = useState(""); // Search query
 
   useEffect(() => {
     // Load terms from terms.json
     setTerms(termsData);
-  }, []);
+
+    // Get the search query from the URL
+    const params = new URLSearchParams(location.search);
+    const query = params.get("search") || "";
+    setSearchQuery(query);
+  }, [location.search]);
 
   // Filter terms based on the search query
   const filteredTerms = terms.filter(

@@ -32,7 +32,7 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   }, [globalVolume, globalPlaybackRate]);
 
-  //Mange play and pause state
+  // Manage play and pause state
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -48,38 +48,38 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   };
 
-  //Manages the time update and duration of the audio shown in the UI
+  // Manage the time update and duration of the audio shown in the UI
   const handleTimeUpdate = () => {
     setCurrentTime(audioRef.current.currentTime / globalPlaybackRate);
   };
 
-  //Manages the loaded metadata of the audio file
+  // Manage the loaded metadata of the audio file
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
 
-  //Manages the seek/scroll bar of the audio file
+  // Manage the seek/scroll bar of the audio file
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / globalPlaybackRate);
   };
 
-  //Handles the volume change of the audio playback this effects the global volume state
+  // Handle the volume change of the audio playback; this affects the global volume state
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     setGlobalVolume(newVolume);
     localStorage.setItem("audioPlayerVolume", newVolume);
   };
 
-  //Handles the playback rate change of the audio playback this effects the global playback rate state
+  // Handle the playback rate change of the audio playback; this affects the global playback rate state
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     setGlobalPlaybackRate(newRate);
     localStorage.setItem("audioPlayerPlaybackRate", newRate);
   };
 
-  //Ensures that the displayed time is in the correct format of minutes and seconds
+  // Ensure that the displayed time is in the correct format of minutes and seconds
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60)
@@ -150,15 +150,15 @@ const AudioPlayer = ({ fileName, title }) => {
       {showWarning && (
         <div className="warning">
           <strong>Let op:</strong> Deze transcriptie maakt gebruik van
-          generative AI. Het is hier door niet aleeen potentieel onnauwkeurig,
-          Maar kan ook een grote invloed hebben op het milieu,
-          klimaatverandering en de werkgelegenheid in creative sectoren. De
+          generative AI. Het is hierdoor niet alleen potentieel onnauwkeurig,
+          maar kan ook een grote invloed hebben op het milieu,
+          klimaatverandering en de werkgelegenheid in creatieve sectoren. De
           maker van deze website staat niet achter het gebruik van generative AI
           en is niet verantwoordelijk voor de gevolgen die deze transcriptie kan
           hebben! Gebruik dit dus op eigen risico.
         </div>
       )}
-      {/*Manages transscription call to the transscription code!*/}
+      {/* Manages transcription call to the transcription code */}
       <button
         onClick={() =>
           toggleTranscription(
@@ -176,7 +176,10 @@ const AudioPlayer = ({ fileName, title }) => {
       {transcription && (
         <div className="transcription">
           <h4>Transscriptie:</h4>
-          <p>{transcription}</p>
+          <div
+            dangerouslySetInnerHTML={{ __html: transcription }}
+            style={{ whiteSpace: "pre-wrap" }}
+          ></div>
         </div>
       )}
     </div>

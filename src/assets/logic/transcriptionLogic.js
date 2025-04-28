@@ -1,3 +1,5 @@
+import terms from "../terms.json";
+
 export const toggleTranscription = async (
   audioSrc,
   setShowWarning,
@@ -37,7 +39,6 @@ export const toggleTranscription = async (
       const errorData = await response.json();
       console.error("API Error:", errorData);
       throw new Error("Failed to start transcription");
-      setTranscription("Oeps het lijkt er op dat de transscriptie niet gestart is. Probeer het opnieuw. Als het probleem aanhoudt neem dan contact op met de ontwikkelaar.");
     }
 
     const data = await response.json();
@@ -80,7 +81,25 @@ const pollTranscriptionResult = async (transcriptId) => {
 };
 
 const formatTranscriptionWithSpeakers = (utterances) => {
+  // Create a map of terms for quick lookup
+  const termMap = terms.reduce((map, term) => {
+    map[term.term.toLowerCase()] = term.term;
+    return map;
+  }, {});
+
   return utterances
-    .map((utterance) => `${utterance.speaker}:\n${utterance.text}`)
-    .join("\n\n");
+    .map((utterance) => {
+      // Replace terms in the text with links
+      const linkedText = utterance.text.replace(
+        new RegExp(`\\b(${Object.keys(termMap).join("|")})\\b`, "gi"),
+        (match) =>
+          `<a href="begrippen?search=${encodeURIComponent(
+            match
+          )}" target="_blank" style="color: #007bff; text-decoration: none;">${termMap[match.toLowerCase()]}</a>`
+      );
+
+      // Return the speaker and the linked text
+      return `<strong>${utterance.speaker}:</strong><br>${linkedText}`;
+    })
+    .join("<br><br>");
 };
