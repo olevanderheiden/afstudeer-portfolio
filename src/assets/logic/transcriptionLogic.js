@@ -37,6 +37,7 @@ export const toggleTranscription = async (
       const errorData = await response.json();
       console.error("API Error:", errorData);
       throw new Error("Failed to start transcription");
+      setTranscription("Oeps het lijkt er op dat de transscriptie niet gestart is. Probeer het opnieuw. Als het probleem aanhoudt neem dan contact op met de ontwikkelaar.");
     }
 
     const data = await response.json();
