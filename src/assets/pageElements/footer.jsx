@@ -1,17 +1,9 @@
 import React from "react";
+import "../../styles/layout.css"; // Import the CSS file
 
 const Footer = () => {
   return (
-    <footer
-      style={{
-        backgroundColor: "#333",
-        color: "#fff",
-        textAlign: "center",
-        padding: "10px",
-        marginTop: "auto",
-        borderTop: "2px solid #ffcc00",
-      }}
-    >
+    <footer className="footer">
       <p>©Ole van der Heiden 2025</p>
     </footer>
   );

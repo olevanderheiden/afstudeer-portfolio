@@ -175,6 +175,11 @@ const AudioPlayer = ({ fileName, title }) => {
       </button>
       {transcription && (
         <div className="transcription">
+          <p>Blauwe linkjes in de transscriptie zijn linkjes die verwijzen naar termonology die
+            wellicht niet voor iedereen duidelijk zijn. 
+            Deze linkjes verwijzen je direct naar de uitleg
+            van dit begrip op de begrippen lijst pagina.
+          </p>
           <h4>Transscriptie:</h4>
           <div
             dangerouslySetInnerHTML={{ __html: transcription }}
