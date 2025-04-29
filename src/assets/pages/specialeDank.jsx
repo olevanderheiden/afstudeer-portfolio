@@ -1,5 +1,8 @@
 import React from "react";
 import Layout from "../pageElements/Layout";
+import { title } from "./begrippenLijst";
+
+export const pageTitle = "Speciale dank";
 
 const specialeDank = () => {
   const content = (
@@ -37,11 +40,11 @@ const specialeDank = () => {
       </ul>
       <h3>Geinterviewden en testers:</h3>
       <ul>
-      <li>Aniek Linders</li>
-      <li>Carmen Denhaven</li>
-      <li>Mireille</li>
-      <li>Djan van der Kraan</li>
-      <li>Kim Kreeft</li>
+        <li>Aniek Linders</li>
+        <li>Carmen Denhaven</li>
+        <li>Mireille</li>
+        <li>Djan van der Kraan</li>
+        <li>Kim Kreeft</li>
       </ul>
       <h3>Overige dank</h3>
       <ul>
@@ -50,7 +53,7 @@ const specialeDank = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={pageTitle} />;
 };
 
 export default specialeDank;

@@ -15,7 +15,7 @@ const Chapter1_1 = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Chapter1_1;

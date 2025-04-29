@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../pageElements/Layout";
 import AudioPlayer from "../pageElements/audioPlayer";
 
+export const title = "Bijlagen";
+
 const Bijlagen = () => {
   const content = (
     <div>
@@ -63,7 +65,7 @@ const Bijlagen = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Bijlagen;

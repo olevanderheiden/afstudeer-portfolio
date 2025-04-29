@@ -14,9 +14,7 @@ const Chapter2_2 = () => {
         tot het overleg proces met mijn stage bedrijf over deze ontwerpen.
       </p>
       <h3>Ontwerp proces portfolio website</h3>
-      <p>
-        Informatie over de portfolio website komt hier....
-      </p>
+      <p>Informatie over de portfolio website komt hier....</p>
       <h3>Ontwerp proces afstudeer project</h3>
       <ImageElement
         src="content/chapter2/prototype1DrawnPrototype.png"
@@ -35,7 +33,7 @@ const Chapter2_2 = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Chapter2_2;

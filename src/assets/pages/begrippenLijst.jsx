@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import Layout from "../pageElements/Layout";
 import termsData from "../terms.json";
 
+export const title = "Begrippenlijst";
+
 const Begrippenlijst = () => {
   const location = useLocation();
   const [terms, setTerms] = useState([]);
@@ -30,9 +32,10 @@ const Begrippenlijst = () => {
   const sortedTerms =
     sortBy === "alphabetical"
       ? [...filteredTerms].sort((a, b) => a.term.localeCompare(b.term))
-      : [...filteredTerms].sort((a, b) =>
-          (a.page || "Other").localeCompare(b.page || "Other") ||
-          a.term.localeCompare(b.term)
+      : [...filteredTerms].sort(
+          (a, b) =>
+            (a.page || "Other").localeCompare(b.page || "Other") ||
+            a.term.localeCompare(b.term)
         );
 
   // Group terms by page when sorting by page
@@ -117,7 +120,7 @@ const Begrippenlijst = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Begrippenlijst;
