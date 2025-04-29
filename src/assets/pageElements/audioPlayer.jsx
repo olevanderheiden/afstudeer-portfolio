@@ -3,7 +3,6 @@ import { useAudioPlayerContext } from "../../context/AudioPlayerContext";
 import { toggleTranscription } from "../logic/transcriptionLogic";
 import "../../index.css";
 
-// AudioPlayer component
 const AudioPlayer = ({ fileName, title }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -12,6 +11,7 @@ const AudioPlayer = ({ fileName, title }) => {
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [transcription, setTranscription] = useState("");
   const [showWarning, setShowWarning] = useState(false);
+  const [isTranscriptionVisible, setIsTranscriptionVisible] = useState(false);
 
   const {
     globalVolume,
@@ -22,9 +22,8 @@ const AudioPlayer = ({ fileName, title }) => {
     setCurrentlyPlayingAudio,
   } = useAudioPlayerContext();
 
-  const audioSrc = `audio/${fileName}`; // Local audio file path
+  const audioSrc = `audio/${fileName}`;
 
-  // Sync volume and playback rate with global state
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = globalVolume;
@@ -32,7 +31,6 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   }, [globalVolume, globalPlaybackRate]);
 
-  // Manage play and pause state
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -48,44 +46,50 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   };
 
-  // Manage the time update and duration of the audio shown in the UI
   const handleTimeUpdate = () => {
     setCurrentTime(audioRef.current.currentTime / globalPlaybackRate);
   };
 
-  // Manage the loaded metadata of the audio file
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
 
-  // Manage the seek/scroll bar of the audio file
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / globalPlaybackRate);
   };
 
-  // Handle the volume change of the audio playback; this affects the global volume state
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     setGlobalVolume(newVolume);
     localStorage.setItem("audioPlayerVolume", newVolume);
   };
 
-  // Handle the playback rate change of the audio playback; this affects the global playback rate state
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     setGlobalPlaybackRate(newRate);
     localStorage.setItem("audioPlayerPlaybackRate", newRate);
   };
 
-  // Ensure that the displayed time is in the correct format of minutes and seconds
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60)
       .toString()
       .padStart(2, "0");
     return `${minutes}:${seconds}`;
+  };
+
+  const handleTranscription = async () => {
+    await toggleTranscription(
+      audioSrc,
+      setShowWarning,
+      setIsTranscribing,
+      (transcriptionText) => {
+        setTranscription(transcriptionText);
+        setIsTranscriptionVisible(true); // Automatically show transcription
+      }
+    );
   };
 
   return (
@@ -158,34 +162,52 @@ const AudioPlayer = ({ fileName, title }) => {
           hebben! Gebruik dit dus op eigen risico.
         </div>
       )}
-      {/* Manages transcription call to the transcription code */}
-      <button
-        onClick={() =>
-          toggleTranscription(
-            audioSrc,
-            setShowWarning,
-            setIsTranscribing,
-            setTranscription
-          )
-        }
-        className={`transcription-button ${isTranscribing ? "loading" : ""}`}
-        disabled={isTranscribing}
-      >
-        {isTranscribing ? "Transcriberen..." : "Start Transscriptie"}
-      </button>
-      {transcription && (
+      {!transcription && (
+        <button
+          onClick={handleTranscription}
+          className={`transcription-button ${isTranscribing ? "loading" : ""}`}
+          disabled={isTranscribing}
+        >
+          {isTranscribing ? "Transcriberen..." : "Start Transscriptie"}
+        </button>
+      )}
+      {transcription && isTranscriptionVisible && (
         <div className="transcription">
-          <p>Blauwe linkjes in de transscriptie zijn linkjes die verwijzen naar termonology die
-            wellicht niet voor iedereen duidelijk zijn. 
-            Deze linkjes verwijzen je direct naar de uitleg
-            van dit begrip op de begrippen lijst pagina.
-          </p>
-          <h4>Transscriptie:</h4>
+          <button
+            onClick={() => setIsTranscriptionVisible(false)}
+            style={{
+              backgroundColor: "#333",
+              color: "#fff",
+              border: "none",
+              padding: "5px 10px",
+              borderRadius: "5px",
+              cursor: "pointer",
+              marginBottom: "10px",
+            }}
+          >
+            Sluit Transscriptie
+          </button>
           <div
             dangerouslySetInnerHTML={{ __html: transcription }}
             style={{ whiteSpace: "pre-wrap" }}
           ></div>
         </div>
+      )}
+      {transcription && !isTranscriptionVisible && (
+        <button
+          onClick={() => setIsTranscriptionVisible(true)}
+          style={{
+            backgroundColor: "#333",
+            color: "#fff",
+            border: "none",
+            padding: "5px 10px",
+            borderRadius: "5px",
+            cursor: "pointer",
+            marginTop: "10px",
+          }}
+        >
+          Toon Transscriptie
+        </button>
       )}
     </div>
   );

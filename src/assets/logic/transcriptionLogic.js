@@ -16,6 +16,14 @@ export const toggleTranscription = async (
     return;
   }
 
+  // Check if transcription exists in local storage
+  const storedTranscription = localStorage.getItem(audioSrc);
+  if (storedTranscription) {
+    setTranscription(storedTranscription);
+    setShowWarning(false);
+    return;
+  }
+
   setIsTranscribing(true);
   setTranscription("Transscriptie wordt geladen...");
 
@@ -49,6 +57,10 @@ export const toggleTranscription = async (
     const formattedTranscription = formatTranscriptionWithSpeakers(
       pollResponse.utterances
     );
+
+    // Save transcription in local storage
+    localStorage.setItem(audioSrc, formattedTranscription);
+
     setTranscription(
       formattedTranscription || "Transscriptie niet beschikbaar."
     );
@@ -95,7 +107,9 @@ const formatTranscriptionWithSpeakers = (utterances) => {
         (match) =>
           `<a href="begrippen?search=${encodeURIComponent(
             match
-          )}" target="_blank" style="color: #007bff; text-decoration: none;">${termMap[match.toLowerCase()]}</a>`
+          )}" target="_blank" style="color: #007bff; text-decoration: none;">${
+            termMap[match.toLowerCase()]
+          }</a>`
       );
 
       // Return the speaker and the linked text

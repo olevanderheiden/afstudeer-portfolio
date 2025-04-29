@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../pageElements/Layout";
 import { title } from "./begrippenLijst";
 
-export const pageTitle = "Speciale dank";
+export const pageTitle = "Bedankt";
 
 const specialeDank = () => {
   const content = (
