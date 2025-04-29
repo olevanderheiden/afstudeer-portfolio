@@ -14,6 +14,20 @@
       "publisher": "Test publisher 2"
     }
   ],
+  "/chapter2.1": [
+    {
+      "author": "Oogvereniging",
+      "year": "2023, februari 13",
+      "title": "Leber congenitale amaurosis (LCA)—Oogvereniging.",
+      "url": "https://www.oogvereniging.nl/oogziekte/leber-congenitale-amaurosis-lca/, https://www.oogvereniging.nl/oogziekte/leber-congenitale-amaurosis-lca/"
+    },
+    {
+      "author": "Oogvereniging",
+      "year": "2022, oktober 24",
+      "title": "Oogvereniging LOA/LHON - Oogvereniging",
+      "url": "https://www.oogvereniging.nl/groep/oogvereniging-loa-lhon/, https://www.oogvereniging.nl/groep/oogvereniging-loa-lhon/"
+    }
+  ],
   "/chapter1.1": [
     {
       "author": "Digitaal Toegankelijk",

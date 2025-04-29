@@ -18,8 +18,8 @@ const Chapter2_1 = () => {
         title="Introductie onderzoek opset, vragenlijst en mail format"
       />
       <AudioPlayer
-        fileName="content/chapter2/2.1Introductie geinterviewden (incomplete versie 23-04-2025).mp3"
-        title="Introductie geinterviewden en vragen over gebruikte hulpmiddelen (Interviews tot 23-04-2025)"
+        fileName="content/chapter2/2.1Introductie geinterviewden (incomplete versie 29-04-2025).mp3"
+        title="Introductie geinterviewden en vragen over gebruikte hulpmiddelen (Interviews tot 29-04-2025)"
       />
     </div>
   );

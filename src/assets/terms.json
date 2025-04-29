@@ -1,36 +1,61 @@
 [
-    {
-      "term": "Toegankelijkheid",
-      "definition": "Het beschickbaar maken van producten, apparaten, diensten of omgevingen voor mensen met een beperking."
-    },
-    {
-      "term": "Schermlezer of screenreader",
-      "definition": "Een programma op computers smarphones en andere apparaten die de inhoud van een scherm toegankelijk maakt. Dit kan door tekst om te zetten naar spraak of braille. Maar kan ook het aanpassen van kleuren of lettertypes betreffen."
-    },
-    {
-      "term": "NVDA",
-      "definition": "Een scherm lezer voor Windows die gratis te downloaden is. Het is een open source project en wordt onderhouden door vrijwilligers."
-    },
-    {
-      "term": "Jaws",
-      "definition": "Jaws is scherm lezer voor windows dat wordt aangeboden door Freedom Scientific. Een licentie kost $104,50 par jaar. Er kan ook een licentie onbepaalde tijd aangeschaft worden voor $1548. Hoewel deze licentie zelf geen tijd limiet heef, kan de software onafhankelijk van de licentie maar op maximaal 3 apparaten worden geinstalleerd."
-    },
-    {
-      "term": "VoiceOver",
-      "definition": "Een scherm lezer voor Apple producten. Het is standaar inbegrepen met alle Apple telefoons, tablets en computers."
-    },
-    {
-      "term": "Edu tekst",
-      "definition": "Een Microsoft wordt document dat de inhoud van een (school) boek bevat in een tekst formaat. Dit maakt het mogelijk om de tekst te laten voorlezen door een scherm lezer. Edu tekst bestanden bevatten nooit afbeeldingen of andere elementen die enkel visueel zijn. Wel kunnen er vervangende teksten in staan die de inhoud die de van de afbeelding door geeft aan de lezer."
-    },
-    {
-      "term": "semi gestructureerd interview",
-      "definition": "Een interviewvorm waarbij de interviewer een lijst met vragen heeft, maar ook ruimte laat om spontan vragen te stellen. Op die manier kan je dieper ingaan op de antwoorden van de persoon die je interviewt. Hiedoor krijg je meer informatie dan wanneer je bijvoorbeeld een eenquête afneemt.",
-      "page": "2.1 Onderzoken"
-    },
-    {
-      "term": "Digitaal Toegankelijk",
-      "definition": "Een bedrijf gevestigd in Utrech dat zich richt op het toegankelijk maken van websites en apps. Dit doen ze door middel van audits, trainingen en advies.",
-      "page": "1.1 Digitaal Toegankelijk"
-    }
-  ]
+  {
+    "term": "Toegankelijkheid",
+    "definition": "Het beschikbaar maken van producten, apparaten, diensten of omgevingen voor mensen met een beperking."
+  },
+  {
+    "term": "Schermlezer of screenreader",
+    "definition": "Een programma op computers smarphones en andere apparaten die de inhoud van een scherm toegankelijk maakt. Dit kan door tekst om te zetten naar spraak of braille. Maar kan ook het aanpassen van kleuren of lettertypes betreffen."
+  },
+  {
+    "term": "NVDA",
+    "definition": "Een scherm lezer voor Windows die gratis te downloaden is. Het is een open source project en wordt onderhouden door vrijwilligers."
+  },
+  {
+    "term": "Jaws",
+    "definition": "Jaws is scherm lezer voor windows dat wordt aangeboden door Freedom Scientific. Een licentie kost $104,50 par jaar. Er kan ook een licentie onbepaalde tijd aangeschaft worden voor $1548. Hoewel deze licentie zelf geen tijd limiet heef, kan de software onafhankelijk van de licentie maar op maximaal 3 apparaten worden geinstalleerd."
+  },
+  {
+    "term": "VoiceOver",
+    "definition": "Een scherm lezer voor Apple producten. Het is standaar inbegrepen met alle Apple telefoons, tablets en computers."
+  },
+  {
+    "term": "Edu tekst",
+    "definition": "Een Microsoft wordt document dat de inhoud van een (school) boek bevat in een tekst formaat. Dit maakt het mogelijk om de tekst te laten voorlezen door een scherm lezer. Edu tekst bestanden bevatten nooit afbeeldingen of andere elementen die enkel visueel zijn. Wel kunnen er vervangende teksten in staan die de inhoud die de van de afbeelding door geeft aan de lezer."
+  },
+  {
+    "term": "Semi gestructureerd interview",
+    "definition": "Een interviewvorm waarbij de interviewer een lijst met vragen heeft, maar ook ruimte laat om spontan vragen te stellen. Op die manier kan je dieper ingaan op de antwoorden van de persoon die je interviewt. Hiedoor krijg je meer informatie dan wanneer je bijvoorbeeld een eenquête afneemt.",
+    "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "SBO",
+    "definition": "Een school voor speciaal basisonderwijs. Op deze scholen kan men goed omgaan met kinderen met gedragsproblemen of leerproblemen. Dit zijn kinderen die niet goed kunnen meekomen in het reguliere onderwijs, maar die ook geen speciaal onderwijs nodig hebben.",
+    "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "SO",
+    "definition": "Speciaal Onderwijs. Dit is een type onderwijs dat speciaal is ingericht voor kinderen met een beperking. Dit kan een lichamelijke beperking zijn, een verstandelijke beperkingen, een zintuiglijke beperking of een combinatie hiervan. Ook leerlingen met ernstige gedragsproblemen of langdurige ziekte kunnen terecht op het speciaal onderwijs.",
+    "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "Digitaal Toegankelijk",
+    "definition": "Een bedrijf gevestigd in Utrech dat zich richt op het toegankelijk maken van websites en apps. Dit doen ze door middel van audits, trainingen en advies.",
+    "page": "1.1 Digitaal Toegankelijk"
+  },
+  {
+    "term": "Laber",
+    "definition": "Laber LOA, LHON of de ziekte van laber is een erfelijke aandoening die door schade aan oog zenuwen zichts problemen veroorzaakt. Dit kan variëren van verminderd zicht tot complete blindheid. Ongeveer 2,3 op de 100.000 mensen in Nederland heeft deze aandoening. Voor onduidelijke redenen kan alleen de moeder het gen doorgeven (ook als de vader het gen heeft). Dit betekent dat alleen kinderen van moeders met deze aandoening het ook kunnen krijgen.",
+    "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "Amaurosis congenita van Leber",
+    "definition": "Amaurosis congenita van Leber of LCA is een erfelijke aandoening die vaak bij de geboorte al zichtbaar is. Het kan leiden tot een ernstige visuele beperking of zelfs blindheid. Het netvlies werkt niet naar behoren waar door het zicht ernstig kan worden aangetast. In de meeste gevallen krijgt men deze aandoening wanneer beide ouders het gen doorgeven. Helaas is LCA nog niet te genezen.",
+    "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "Alt Tekst",
+    "definition": "Een vervangende tekst die wordt voorgelezen door een scherm lezer. Op die manier kan informatie die in een afbeelding staat toch worden overgebracht aan bijvoorbeeld braille gebruikers. Alt tekst wordt ook weergegeven wanneer een afbeelding niet kan worden geladen. En zoekmachines zoals Google gebruiken het ook om de inhoud van een afbeelding te begrijpen.",
+    "page": "2.2 Ontwerpen"
+  }
+]
