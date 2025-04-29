@@ -78,6 +78,36 @@
   position: relative;
 }
 
+/* Styling for the sources list container */
+.layout-sources {
+  padding: 0; /* Remove padding */
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Styling for the unordered list */
+.layout-sources ul {
+  padding: 0;
+  margin: 0;
+}
+
+/* Styling for each list item */
+.layout-sources li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Styling for links in the sources list */
+.layout-sources a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.layout-sources a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
 /* Chapter navigation buttons container */
 .chapter-navigation {
   position: absolute;
