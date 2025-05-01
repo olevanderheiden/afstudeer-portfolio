@@ -57,18 +57,18 @@
 
 /* Dropdown styling for playback rate */
 .playback-rate-controls select {
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 5px; /* Rounded corners */
-  padding: 5px; /* Add padding */
-  font-size: 14px; /* Font size */
-  cursor: pointer; /* Pointer cursor */
+  background-color: #000;
+  color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  padding: 5px; 
+  font-size: 14px; 
+  cursor: pointer; 
 }
 
 .playback-rate-controls select:focus {
-  outline: none; /* Remove default focus outline */
-  border-color: #4caf50; /* Green border on focus */
+  outline: none; 
+  border-color: #4caf50; 
 }
 
 .warning {
@@ -123,10 +123,10 @@
   max-width: 600px; 
   margin: 20px auto; 
   border: 1px solid #ddd; 
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  overflow: hidden; /* Ensure no overflow */
+  border-radius: 10px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
 }
 
 .table-container table {
@@ -147,4 +147,16 @@
   font-weight: bold;
   text-align: center; 
   vertical-align: middle; 
+}
+
+/* Styling for the bronnen lijst */
+.layout-sources ul {
+  list-style: none; 
+  padding: 0; 
+  margin: 0; 
+}
+
+.layout-sources li {
+  margin-bottom: 10px; 
+  line-height: 1.5; 
 }
