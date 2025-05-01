@@ -110,40 +110,39 @@
 
 /* Chapter navigation buttons container */
 .chapter-navigation {
-  position: relative; 
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px; 
-  padding-top: 10px; 
+  justify-content: space-between; /* Space between the buttons */
+  margin: 40px auto 20px; /* Add spacing above and below */
+  padding: 0; /* Remove padding */
+  width: 80%; /* Align with the main content width */
+  max-width: 800px; /* Limit the width to match the main content */
 }
 
 /* Previous and Next buttons */
-.chapter-navigation-button {
-  pointer-events: auto;
-  position: static; 
-}
-
-.chapter-navigation-button.left {
-  margin-right: auto; 
-}
-
-.chapter-navigation-button.right {
-  margin-left: auto; 
-}
-
 .chapter-navigation-button button {
-  padding: 10px 20px; 
-  font-size: 16px; 
-  background-color: #333; 
-  color: #fff; 
-  border: none; 
-  border-radius: 5px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .chapter-navigation-button button:hover {
-  background-color: #555; 
+  background-color: #555;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto;
+  border-top: 2px solid #ffcc00;
+  width: 100%; /* Ensure the footer spans the full width of the page */
 }
 
 /* Sources section */

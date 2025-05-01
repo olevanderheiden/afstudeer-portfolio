@@ -33,16 +33,26 @@ const Layout = ({ content, pageTitle }) => {
       ? chapters[currentChapterIndex + 1]
       : null;
 
-  return (
-    <div className="layout-container">
-      <Header />
-      <div className="layout-main">
-        {/* Navigation tab on the left side of the screen */}
-        <Nav className="layout-nav" />
-
-        {/* Main content determined by the selected page */}
-        <main className="layout-content">
-          {content}
+      return (
+        <div className="layout-container">
+          <Header />
+          <div className="layout-main">
+            {/* Navigation tab on the left side of the screen */}
+            <Nav className="layout-nav" />
+      
+            {/* Main content determined by the selected page */}
+            <main className="layout-content">{content}</main>
+      
+            {/* Sources on the right (optional) */}
+            {sources && (
+              <aside className="layout-sources">
+                <h3>Bronnen lijst</h3>
+                <SourceList sources={sources} />
+              </aside>
+            )}
+          </div>
+      
+          {/* Chapter navigation buttons */}
           {currentChapterIndex !== -1 && (
             <div className="chapter-navigation">
               {/* Previous Button */}
@@ -53,7 +63,7 @@ const Layout = ({ content, pageTitle }) => {
                   </button>
                 )}
               </div>
-
+      
               {/* Next Button */}
               <div className="chapter-navigation-button right">
                 {nextChapter && (
@@ -64,19 +74,10 @@ const Layout = ({ content, pageTitle }) => {
               </div>
             </div>
           )}
-        </main>
-
-        {/* Sources on the right (optional) */}
-        {sources && (
-          <aside className="layout-sources">
-            <h3>Bronnen lijst</h3>
-            <SourceList sources={sources} />
-          </aside>
-        )}
-      </div>
-      <Footer />
-    </div>
-  );
+      
+          <Footer />
+        </div>
+      );
 };
 
 export default Layout;
