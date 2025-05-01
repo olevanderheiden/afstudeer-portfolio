@@ -31,6 +31,24 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   }, [globalVolume, globalPlaybackRate]);
 
+  useEffect(() => {
+    const handleAudioEnded = () => {
+      setIsPlaying(false);
+      setCurrentTime(0); // Reset the current time to the beginning
+    };
+
+    const audioElement = audioRef.current;
+    if (audioElement) {
+      audioElement.addEventListener("ended", handleAudioEnded);
+    }
+
+    return () => {
+      if (audioElement) {
+        audioElement.removeEventListener("ended", handleAudioEnded);
+      }
+    };
+  }, []);
+
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -38,8 +56,18 @@ const AudioPlayer = ({ fileName, title }) => {
     } else {
       if (currentlyPlayingAudio && currentlyPlayingAudio !== audioRef.current) {
         currentlyPlayingAudio.pause();
+  
+        // Reset the play button state of the previously playing audio
+        if (currentlyPlayingAudio.dataset) {
+          const previousAudioPlayer = currentlyPlayingAudio.dataset.audioPlayer;
+          if (previousAudioPlayer) {
+            previousAudioPlayer.isPlaying = false; // Reset the state
+          }
+        }
+  
         setCurrentlyPlayingAudio(null);
       }
+  
       audioRef.current.play();
       setCurrentlyPlayingAudio(audioRef.current);
       setIsPlaying(true);
@@ -172,26 +200,18 @@ const AudioPlayer = ({ fileName, title }) => {
         </button>
       )}
       {transcription && isTranscriptionVisible && (
-        <div className="transcription">
-          <button
-            onClick={() => setIsTranscriptionVisible(false)}
-            style={{
-              backgroundColor: "#333",
-              color: "#fff",
-              border: "none",
-              padding: "5px 10px",
-              borderRadius: "5px",
-              cursor: "pointer",
-              marginBottom: "10px",
-            }}
-          >
-            Sluit Transscriptie
-          </button>
-          <div
-            dangerouslySetInnerHTML={{ __html: transcription }}
-            style={{ whiteSpace: "pre-wrap" }}
-          ></div>
-        </div>
+<div className="transcription">
+  <button
+    onClick={() => setIsTranscriptionVisible(false)}
+    className="transcription-button"
+  >
+    Sluit Transscriptie
+  </button>
+  <div
+    dangerouslySetInnerHTML={{ __html: transcription }}
+    className="transcription"
+  ></div>
+</div>
       )}
       {transcription && !isTranscriptionVisible && (
         <button

@@ -80,7 +80,7 @@
 
 /* Styling for the sources list container */
 .layout-sources {
-  padding: 0; /* Remove padding */
+  padding: 0;
   overflow: hidden;
   white-space: normal;
   word-wrap: break-word;
@@ -100,53 +100,50 @@
 
 /* Styling for links in the sources list */
 .layout-sources a {
-  color: #007bff; /* Blue link color */
-  text-decoration: none; /* Remove underline */
+  color: #007bff; 
+  text-decoration: none; 
 }
 
 .layout-sources a:hover {
-  text-decoration: underline; /* Add underline on hover */
+  text-decoration: underline; 
 }
 
 /* Chapter navigation buttons container */
 .chapter-navigation {
-  position: absolute;
-  bottom: 1%;
-  left: 1%;
-  right: 1%;
+  position: relative; 
   display: flex;
   justify-content: space-between;
-  pointer-events: none;
+  margin-top: 20px; 
+  padding-top: 10px; 
 }
 
 /* Previous and Next buttons */
 .chapter-navigation-button {
   pointer-events: auto;
-  position: absolute;
-  bottom: 0;
+  position: static; 
 }
 
 .chapter-navigation-button.left {
-  left: 0;
+  margin-right: auto; 
 }
 
 .chapter-navigation-button.right {
-  right: 0;
+  margin-left: auto; 
 }
 
 .chapter-navigation-button button {
-  padding: 10px 20px; /* Add padding for size */
-  font-size: 16px; /* Restore font size */
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor */
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  padding: 10px 20px; 
+  font-size: 16px; 
+  background-color: #333; 
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; /
+  transition: background-color 0.3s ease; 
 }
 
 .chapter-navigation-button button:hover {
-  background-color: #555; /* Slightly lighter dark background on hover */
+  background-color: #555; 
 }
 
 /* Sources section */

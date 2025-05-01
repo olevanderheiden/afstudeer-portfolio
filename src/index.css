@@ -55,6 +55,25 @@
   margin-top: 10px;
 }
 
+/*Transcription styles*/
+.transcription {
+  white-space: pre-wrap;
+}
+
+.transcription-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.transcription-button:hover {
+  background-color: #555;
+}
+
 /* Dropdown styling for playback rate */
 .playback-rate-controls select {
   background-color: #000;
