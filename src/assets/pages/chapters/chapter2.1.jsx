@@ -13,6 +13,7 @@ const Chapter2_1 = () => {
         mijn onderzoek. Ik introduceer hier ook de geïnterviewden en tevens mijn
         onderzoek methode
       </p>
+      <h3>Audio gebruiker interviews</h3>
       <AudioPlayer
         fileName="content/chapter2/2.1introInterviewAudioGebruikers.mp3"
         title="Introductie onderzoek opset, vragenlijst en mail format"
