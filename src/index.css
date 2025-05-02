@@ -16,6 +16,7 @@
   margin-bottom: 10px;
   font-size: 18px;
   font-weight: bold;
+  text-align: center;
 }
 
 /* AudioPlayer-specific styles */
@@ -55,7 +56,7 @@
   margin-top: 10px;
 }
 
-/*Transcription styles*/
+/* Transcription styles */
 .transcription {
   white-space: pre-wrap;
 }
@@ -101,35 +102,6 @@
   font-size: 14px;
 }
 
-.transcription-button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  color: #fff;
-  background-color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.transcription-button.loading {
-  background-color: #555;
-}
-
-.transcription-button:not(.loading):hover {
-  background-color: #444;
-}
-
-.transcription {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
-  width: 100%;
-  white-space: pre-wrap;
-}
-
 /* ImageElement-specific styles */
 .image-element {
   max-width: 100%;
@@ -145,7 +117,6 @@
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
 }
 
 .table-container table {
@@ -159,6 +130,7 @@
 .table-container td {
   border: 1px solid #ddd;
   padding: 8px;
+  word-wrap: break-word; /* Ensure text wraps within cells */
 }
 
 .table-container th {
@@ -173,9 +145,64 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%; /* Ensure the list takes full width */
 }
 
 .layout-sources li {
   margin-bottom: 10px;
   line-height: 1.5;
+  word-wrap: break-word; /* Ensure text wraps within list items */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  /* Adjust table for smaller screens */
+  .table-container {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  .table-container table {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .table-container th,
+  .table-container td {
+    padding: 6px; /* Reduce padding for smaller cells */
+  }
+
+  .table-container th {
+    font-size: 12px; /* Smaller font size for headers */
+  }
+
+  /* Ensure lists scale properly */
+  .layout-sources ul {
+    padding: 0 10px; /* Add padding for smaller screens */
+  }
+
+  .layout-sources li {
+    font-size: 14px; /* Reduce font size for list items */
+  }
+
+  /* Adjust media container */
+  .media-container {
+    padding: 10px;
+    max-width: 100%; /* Full width for smaller screens */
+  }
+
+  .media-title {
+    font-size: 16px;
+  }
+
+  /* Chapter navigation buttons */
+  .chapter-navigation {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chapter-navigation button {
+    width: 100%;
+    font-size: 14px;
+  }
 }
