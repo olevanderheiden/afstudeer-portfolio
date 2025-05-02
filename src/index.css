@@ -110,35 +110,32 @@
 }
 
 /* Table styling */
-.table-container {
-  display: block; /* Allow the container to shrink with its content */
-  width: 100%; /* Ensure the table container takes the full width of its parent */
-  margin: 0 auto; /* Center the table container */
+table {
+  display: block; /* Allow the table to shrink with its parent */
+  width: 100%; /* Ensure the table takes the full width of its parent */
+  max-width: 600px; /* Match the width of the AudioPlayer */
+  margin: 20px auto; /* Center the table */
+  border-collapse: collapse;
+  font-size: 16px;
+  text-align: left;
+  table-layout: fixed; /* Allow columns to shrink proportionally */
+  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
-  max-width: 100%; /* Prevent the table from exceeding the container width */
   box-sizing: border-box; /* Include padding and border in width calculations */
 }
 
-.table-container table {
-  width: 100%; /* Ensure the table scales to fit the container */
-  border-collapse: collapse;
-  font-size: 16px;
-  text-align: left;
-  table-layout: auto; /* Allow columns to adjust dynamically */
-}
-
-.table-container th,
-.table-container td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 8px;
-  word-wrap: break-word; /* Ensure text wraps within cells */
+  word-break: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word; /* Ensure text wraps within cells */
 }
 
-.table-container th {
+th {
   background-color: #f4f4f4;
   font-weight: bold;
   text-align: center;
@@ -147,31 +144,21 @@
 
 /* Responsive styles for the table */
 @media (max-width: 768px) {
-  .table-container {
-    margin: 10px; /* Reduce margin for smaller screens */
+  table {
+    font-size: 14px; /* Reduce font size for smaller screens */
+    max-width: 100%; /* Allow the table to take full width on smaller screens */
     border-radius: 5px;
     box-shadow: none;
   }
 
-  .table-container table {
-    font-size: 14px; /* Reduce font size for smaller screens */
-  }
-
-  .table-container th,
-  .table-container td {
+  th,
+  td {
     padding: 6px; /* Reduce padding for smaller cells */
   }
 
-  .table-container th {
+  th {
     font-size: 12px; /* Smaller font size for headers */
   }
-}
-/* Styling for the bronnen lijst */
-.layout-sources ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%; /* Ensure the list takes full width */
 }
 
 .layout-sources li {
