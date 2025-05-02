@@ -9,15 +9,15 @@ const Chapter1_3 = () => {
     "Stakeholder",
     "Belang",
     "Impact",
-    "Prioriteit",
+    "Invloed",
     "Bijdrage",
   ];
 
   const headerDescriptions = [
     "De groep of persoon die betrokken is bij het project",
-    "Een lijst van dingen die belangrijk zijn voor deze stakeholder",
-    "Hoeveel invloed dit project heeft op de stakeholder",
-    "Hoe belangrijk deze stakeholder is voor het project",
+    "Zaken die belangrijk zijn voor deze stakeholder",
+    "Hoeveel invloed heeft dit project op de stakeholder",
+    "Hoeveel invloed heeft de stakeholder op het project",
     "Hoe deze stakeholder kan bijdragen aan het project",
   ];
 
@@ -25,10 +25,10 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Digitaal Toegankelijk",
       impact: "Hoog",
-      prioriteit: "Middel",
+      invloed: "Middel",
       details: [
         {
-          belang: "Bedrijf goed neerzetten",
+          belang: "Bedrijf goed presenteren",
           bijdrage: "Feedback geven op ontwerpen",
         },
         {
@@ -44,7 +44,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Audio gebruikers",
       impact: "Middel",
-      prioriteit: "Hoog",
+      invloed: "Hoog",
       details: [
         {
           belang: "Site kunnen navigeren",
@@ -63,7 +63,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Ziende gebruikers",
       impact: "Middel",
-      prioriteit: "Middel",
+      invloed: "Middel",
       details: [
         {
           belang: "Website navigeren zonder dingen te missen",
@@ -78,7 +78,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Klanten van DT",
       impact: "Hoog",
-      prioriteit: "Hoog",
+      invloed: "Hoog",
       details: [
         {
           belang: "Zien welke waarde audiogebruik kan hebben",
@@ -98,7 +98,7 @@ const Chapter1_3 = () => {
         <td rowSpan={row.details.length}>{row.stakeholder}</td>
         <td>{row.details[0].belang}</td>
         <td rowSpan={row.details.length}>{row.impact}</td>
-        <td rowSpan={row.details.length}>{row.prioriteit}</td>
+        <td rowSpan={row.details.length}>{row.invloed}</td>
         <td>{row.details[0].bijdrage}</td>
       </tr>
       {row.details.slice(1).map((detail, index) => (
