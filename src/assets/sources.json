@@ -1,17 +1,22 @@
 {
-  "/chapter1": [
+  "/chapter1.3": [
     {
-      "author": "Test Author 1",
-      "year": "2020",
-      "title": "Test 1",
-      "publisher": "test publisher 1",
-      "url": "https://example.com/example1"
+      "year": "2015, maart 9",
+      "title": "Stakeholder Analysis Matrix Template. Tools4dev.",
+      "Author": "Bullen, P. B.",
+      "url": "https://tools4dev.org/resources/stakeholder-analysis-matrix-template/"
     },
     {
-      "author": "Test Author 2",
-      "year": "2019",
-      "title": "Test 2",
-      "publisher": "Test publisher 2"
+      "Author": "Nielsen Norman Group.",
+      "year": "Geraadpleegd 2 mei 2025",
+      "title": "Stakeholder Analysis for UX Projects. (z.d.).",
+      "url": "https://www.nngroup.com/articles/stakeholder-analysis/"
+    },
+    {
+      "Author": "Scrum.org",
+      "year": "Geraadpleegd 2 mei 2025",
+      "title": "Stakeholder Analysis and Mapping: Part 2 of 4 Steps of Stakeholder Engagement",
+      "url": "https://www.scrum.org/resources/blog/stakeholder-analysis-and-mapping-part-2-4-steps-stakeholder-engagement"
     }
   ],
   "/chapter2.1": [
