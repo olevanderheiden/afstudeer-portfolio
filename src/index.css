@@ -111,8 +111,7 @@
 
 /* Table styling */
 .table-container {
-  display: flex;
-  justify-content: center; /* Center the table within its container */
+  display: block; /* Allow the container to shrink with its content */
   width: 100%; /* Ensure the table container takes the full width of its parent */
   margin: 0 auto; /* Center the table container */
   border: 1px solid #ddd;
@@ -129,7 +128,7 @@
   border-collapse: collapse;
   font-size: 16px;
   text-align: left;
-  table-layout: fixed; /* Ensure columns scale proportionally */
+  table-layout: auto; /* Allow columns to adjust dynamically */
 }
 
 .table-container th,
