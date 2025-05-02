@@ -25,7 +25,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Digitaal Toegankelijk",
       impact: "Hoog",
-      invloed: "Middel",
+      invloed: "Hoog",
       details: [
         {
           belang: "Bedrijf goed presenteren",
@@ -44,7 +44,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Audio gebruikers",
       impact: "Middel",
-      invloed: "Hoog",
+      invloed: "Middel",
       details: [
         {
           belang: "Site kunnen navigeren",
@@ -62,8 +62,8 @@ const Chapter1_3 = () => {
     },
     {
       stakeholder: "Ziende gebruikers",
-      impact: "Middel",
-      invloed: "Middel",
+      impact: "Laag",
+      invloed: "Laag",
       details: [
         {
           belang: "Website navigeren zonder dingen te missen",
@@ -78,7 +78,7 @@ const Chapter1_3 = () => {
     {
       stakeholder: "Klanten van DT",
       impact: "Hoog",
-      invloed: "Hoog",
+      invloed: "Medium",
       details: [
         {
           belang: "Zien welke waarde audiogebruik kan hebben",

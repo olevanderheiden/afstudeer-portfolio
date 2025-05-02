@@ -111,11 +111,11 @@
 /* Chapter navigation buttons container */
 .chapter-navigation {
   display: flex;
-  justify-content: space-between; /* Space between the buttons */
-  margin: 40px auto 20px; /* Add spacing above and below */
-  padding: 0; /* Remove padding */
-  width: 80%; /* Align with the main content width */
-  max-width: 800px; /* Limit the width to match the main content */
+  justify-content: space-between;
+  margin: 40px auto 20px;
+  padding: 0;
+  width: 80%;
+  max-width: 800px;
 }
 
 /* Previous and Next buttons */
@@ -142,7 +142,7 @@
   padding: 10px;
   margin-top: auto;
   border-top: 2px solid #ffcc00;
-  width: 100%; /* Ensure the footer spans the full width of the page */
+  width: 100%;
 }
 
 /* Sources section */

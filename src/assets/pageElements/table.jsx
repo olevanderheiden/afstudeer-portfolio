@@ -1,5 +1,5 @@
 import React from "react";
-import "../../index.css"; // Use consistent styles
+import "../../index.css";
 
 const Table = ({ headers, rows, renderRow }) => {
   return (

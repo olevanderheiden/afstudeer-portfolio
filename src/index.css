@@ -8,8 +8,10 @@
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  width: 100%; /* Allow it to scale with the main content */
+  max-width: 1200px; /* Match the max-width of other elements */
   margin: 20px auto;
+  box-sizing: border-box;
 }
 
 .media-title {
@@ -104,35 +106,38 @@
 
 /* ImageElement-specific styles */
 .image-element {
-  max-width: 100%;
-  height: auto;
+  display: block;
+  width: 100%; /* Ensure the image scales with the main content */
+  max-width: 1200px; /* Match the width of the main content */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 5px;
+  margin: 20px auto; /* Center the image */
 }
 
 /* Table styling */
 table {
   display: block;
-  width: 100%;
-  max-width: 630px;
-  margin: 20px auto;
+  width: 100%; /* Ensure the table takes the full width of its parent */
+  max-width: 1200px; /* Match the width of the main content */
+  margin: 20px auto; /* Center the table */
   border-collapse: collapse;
   font-size: 16px;
   text-align: left;
-  table-layout: fixed;
-  overflow-x: auto;
+  table-layout: fixed; /* Allow columns to shrink proportionally */
+  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding and border in width calculations */
 }
 
 th,
 td {
   border: 1px solid #ddd;
   padding: 8px;
-  word-break: break-word;
-  overflow-wrap: break-word;
+  word-break: break-word; /* Ensure text wraps within cells */
+  overflow-wrap: break-word; /* Prevent overflow */
 }
 
 th {
@@ -142,67 +147,43 @@ th {
   vertical-align: middle;
 }
 
-/* Responsive styles for the table */
-@media (max-width: 768px) {
-  table {
-    font-size: 14px;
-    max-width: 100%;
-    border-radius: 5px;
-    box-shadow: none;
-  }
-
-  th,
-  td {
-    padding: 6px;
-  }
-
-  th {
-    font-size: 12px;
-  }
+/* Styling for the bronnenlijst */
+.layout-sources ul {
+  list-style: none; /* Disable the dots from the unordered list */
+  padding: 0;
+  margin: 0;
 }
 
 .layout-sources li {
   margin-bottom: 10px;
   line-height: 1.5;
-  word-wrap: break-word;
+  word-wrap: break-word; /* Ensure text wraps within list items */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  /* Adjust table for smaller screens */
-  .table-container {
-    margin: 10px;
-    border-radius: 5px;
-    box-shadow: none;
+  .media-container,
+  table,
+  .image-element {
+    max-width: 100%; /* Allow elements to take full width on smaller screens */
+    padding: 10px; /* Add padding for smaller screens */
   }
 
-  .table-container table {
-    font-size: 14px;
+  th,
+  td {
+    padding: 6px; /* Reduce padding for smaller cells */
   }
 
-  .table-container th,
-  .table-container td {
-    padding: 6px;
+  th {
+    font-size: 12px; /* Smaller font size for headers */
   }
 
-  .table-container th {
-    font-size: 12px;
-  }
-
-  /* Ensure lists scale properly */
   .layout-sources ul {
-    padding: 0 10px;
-    list-style: none;
+    padding: 0 10px; /* Add padding for smaller screens */
   }
 
   .layout-sources li {
-    font-size: 14px;
-  }
-
-  /* Adjust media container */
-  .media-container {
-    padding: 10px;
-    max-width: 100%;
+    font-size: 14px; /* Reduce font size for list items */
   }
 
   .media-title {
