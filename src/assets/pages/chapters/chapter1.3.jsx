@@ -60,36 +60,6 @@ const Chapter1_3 = () => {
         },
       ],
     },
-    {
-      stakeholder: "Ziende gebruikers",
-      impact: "Middel",
-      prioriteit: "Middel",
-      details: [
-        {
-          belang: "Website navigeren zonder dingen te missen",
-          bijdrage: "Feedback geven op ontwerp",
-        },
-        {
-          belang: "Informatie opdoen over DT",
-          bijdrage: "Promotie van de website",
-        },
-      ],
-    },
-    {
-      stakeholder: "Klanten van DT",
-      impact: "Hoog",
-      prioriteit: "Hoog",
-      details: [
-        {
-          belang: "Zien welke waarde audiogebruik kan hebben",
-          bijdrage: "Samenwerken aan casestudies",
-        },
-        {
-          belang: "Informatie opdoen over DT",
-          bijdrage: "Feedback geven op inhoud",
-        },
-      ],
-    },
   ];
 
   const renderRow = (row) => (
@@ -114,28 +84,30 @@ const Chapter1_3 = () => {
     <div>
       <h2>Doelgroep & Stakeholders</h2>
       <p>Hier vind je alles over mijn stakeholder en doelgroep onderzoek.</p>
-      <div className="table-container">
-        <table>
-          <thead>
-            <tr>
-              {tableHeaders.map((header, index) => (
-                <th key={index}>
-                  {header}
-                  <p
-                    style={{
-                      fontSize: "0.9em",
-                      margin: "5px 0 0",
-                      color: "#555",
-                    }}
-                  >
-                    {headerDescriptions[index]}
-                  </p>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
-        </table>
+      <div className="media-container">
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                {tableHeaders.map((header, index) => (
+                  <th key={index}>
+                    {header}
+                    <p
+                      style={{
+                        fontSize: "0.9em",
+                        margin: "5px 0 0",
+                        color: "#555",
+                      }}
+                    >
+                      {headerDescriptions[index]}
+                    </p>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
+          </table>
+        </div>
       </div>
       <AudioPlayer fileName={"test.mp3"} title={"Test voorbeeld"} />
     </div>

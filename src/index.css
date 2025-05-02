@@ -111,19 +111,25 @@
 
 /* Table styling */
 .table-container {
-  max-width: 630px;
-  margin: 20px auto;
+  display: flex;
+  justify-content: center; /* Center the table within its container */
+  width: 100%; /* Ensure the table container takes the full width of its parent */
+  margin: 0 auto; /* Center the table container */
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
+  max-width: 100%; /* Prevent the table from exceeding the container width */
+  box-sizing: border-box; /* Include padding and border in width calculations */
 }
 
 .table-container table {
-  width: 100%;
+  width: 100%; /* Ensure the table scales to fit the container */
   border-collapse: collapse;
   font-size: 16px;
   text-align: left;
+  table-layout: fixed; /* Ensure columns scale proportionally */
 }
 
 .table-container th,
@@ -140,6 +146,27 @@
   vertical-align: middle;
 }
 
+/* Responsive styles for the table */
+@media (max-width: 768px) {
+  .table-container {
+    margin: 10px; /* Reduce margin for smaller screens */
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  .table-container table {
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .table-container th,
+  .table-container td {
+    padding: 6px; /* Reduce padding for smaller cells */
+  }
+
+  .table-container th {
+    font-size: 12px; /* Smaller font size for headers */
+  }
+}
 /* Styling for the bronnen lijst */
 .layout-sources ul {
   list-style: none;
