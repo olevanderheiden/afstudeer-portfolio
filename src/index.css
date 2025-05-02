@@ -111,28 +111,28 @@
 
 /* Table styling */
 table {
-  display: block; /* Allow the table to shrink with its parent */
-  width: 100%; /* Ensure the table takes the full width of its parent */
-  max-width: 600px; /* Match the width of the AudioPlayer */
-  margin: 20px auto; /* Center the table */
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
   border-collapse: collapse;
   font-size: 16px;
   text-align: left;
-  table-layout: fixed; /* Allow columns to shrink proportionally */
-  overflow-x: auto; /* Enable horizontal scrolling if the table overflows */
+  table-layout: fixed;
+  overflow-x: auto;
   border: 1px solid #ddd;
   border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Include padding and border in width calculations */
+  box-sizing: border-box;
 }
 
 th,
 td {
   border: 1px solid #ddd;
   padding: 8px;
-  word-break: break-word; /* Break long words to prevent overflow */
-  overflow-wrap: break-word; /* Ensure text wraps within cells */
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 th {
@@ -145,26 +145,26 @@ th {
 /* Responsive styles for the table */
 @media (max-width: 768px) {
   table {
-    font-size: 14px; /* Reduce font size for smaller screens */
-    max-width: 100%; /* Allow the table to take full width on smaller screens */
+    font-size: 14px;
+    max-width: 100%;
     border-radius: 5px;
     box-shadow: none;
   }
 
   th,
   td {
-    padding: 6px; /* Reduce padding for smaller cells */
+    padding: 6px;
   }
 
   th {
-    font-size: 12px; /* Smaller font size for headers */
+    font-size: 12px;
   }
 }
 
 .layout-sources li {
   margin-bottom: 10px;
   line-height: 1.5;
-  word-wrap: break-word; /* Ensure text wraps within list items */
+  word-wrap: break-word;
 }
 
 /* Responsive styles */
@@ -177,31 +177,32 @@ th {
   }
 
   .table-container table {
-    font-size: 14px; /* Reduce font size for smaller screens */
+    font-size: 14px;
   }
 
   .table-container th,
   .table-container td {
-    padding: 6px; /* Reduce padding for smaller cells */
+    padding: 6px;
   }
 
   .table-container th {
-    font-size: 12px; /* Smaller font size for headers */
+    font-size: 12px;
   }
 
   /* Ensure lists scale properly */
   .layout-sources ul {
-    padding: 0 10px; /* Add padding for smaller screens */
+    padding: 0 10px;
+    list-style: none;
   }
 
   .layout-sources li {
-    font-size: 14px; /* Reduce font size for list items */
+    font-size: 14px;
   }
 
   /* Adjust media container */
   .media-container {
     padding: 10px;
-    max-width: 100%; /* Full width for smaller screens */
+    max-width: 100%;
   }
 
   .media-title {
