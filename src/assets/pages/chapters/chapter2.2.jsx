@@ -22,7 +22,7 @@ const Chapter2_2 = () => {
         alt="Een afbeelding die de algemene layout van de overons pagina laat zien. Er is nog geen gebruik gemaakt van kleuren echte foto's. Er is een balk met navigatie opties aanwezig. Daar onder zijn er velden om afbeeldingen van verschillende afdelingen binnen digitaal toegankelijk te laten zien. Onder deze sectie vind je een twee afbeeldingen naast elkaar die het kantoor van Digitaal toegankelijk laten zien. Zowel de onder als boven verdieping. Als laatste sectie boven de footer vind je nog twee afbeeldingen die het werk van Digitaal toegankelijk laten zien met een voor en na afbeelding."
       />
       <AudioPlayer
-        fileName="content/chapter2/2.2FeedbackOntwerpSchets1Pim.mp3"
+        fileName="content/chapter2/2.2InterviewPim.mp3"
         title="Feedback op schets 1"
       />
       <ImageElement
