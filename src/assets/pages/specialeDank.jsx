@@ -40,11 +40,11 @@ const specialeDank = () => {
       </ul>
       <h3>Geinterviewden en testers:</h3>
       <ul>
-        <li>Aniek Linders</li>
         <li>Carmen Denhaven</li>
         <li>Mireille</li>
-        <li>Djan van der Kraan</li>
+        <li>Sanne Brand</li>
         <li>Kim Kreeft</li>
+        <li>Mauro</li>
       </ul>
       <h3>Overige dank</h3>
       <ul>
