@@ -18,6 +18,14 @@ const Chapter1_2 = () => {
       </p>
       <h3>Onderzoeksvraag en deel vragen</h3>
       <p>De hoofdvraag van mijn onderzoek is: Hoe kunnen we klanten (van Digitaal Toegankelijk) laten ervaren hoe een super goed vormgegeven site/app voor audiogebruikers klinkt?</p>
+      <h3>Deel vragen</h3>
+      <ul>
+        <li>Wat houd een "goed vormgegeven site/app voor audio gebruikers" in?</li>
+        <li>Welke alternatieven voor deze audio ervaring zijn er all? En Wat kunnen we van hen leren?</li>
+        <li>Voegt een goede audio ervaring daadwerkelijk iets toe wat huidige hulpmiddelen niet bieden?</li>
+        <li>Hoe kunnen we de audio ervaring zo presenteren, zodat het als inspirerend voorbeeld kan dienen voor bedrijven?</li> 
+        <li>Welke pagina of type paginas kunnen het best gebruikt worden voor een audio ervaring?</li>
+      </ul>
     </div>
   );
 
