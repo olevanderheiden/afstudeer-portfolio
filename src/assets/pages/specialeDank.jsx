@@ -15,37 +15,37 @@ const specialeDank = () => {
       </p>
       <h3>Stage begeleiding:</h3>
       <ul>
-        <li>Annelies Verhelst</li>
         <li>Peter Teunis</li>
+        <li>Annelies Verhelst</li>
       </ul>
       <h3>Studenten en docenten:</h3>
       <ul>
-        <li>Mees Muller</li>
-        <li>Dieuwertje Schuur</li>
         <li>Roel Hooiring</li>
+        <li>Mees Muller</li>
         <li>Leo Remijn</li>
+        <li>Dieuwertje Schuur</li>
       </ul>
       <h3>Parental support:</h3>
       <ul>
-        <li>Jantien Walraad</li>
         <li>Kalle van der Heiden</li>
+        <li>Jantien Walraad</li>
       </ul>
       <h3>Digitale en physieke toegankelijkheid:</h3>
       <ul>
+        <li>Aimee</li>
+        <li>Dana</li>
+        <li>Emma</li>
         <li>Jo</li>
         <li>Pim</li>
-        <li>Emma</li>
-        <li>Dana</li>
-        <li>Aimee</li>
       </ul>
       <h3>Geinterviewden en testers:</h3>
       <ul>
-        <li>Carmen Denhaven</li>
-        <li>Mireille</li>
         <li>Sanne Brand</li>
+        <li>Carmen Denhaven</li>
         <li>Kim Kreeft</li>
         <li>Mauro</li>
-      </ul>
+        <li>Mireille</li>
+    </ul>
       <h3>Overige dank</h3>
       <ul>
         <li>Ron Wolgen</li>
