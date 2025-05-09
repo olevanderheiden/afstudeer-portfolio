@@ -14,6 +14,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: rgb(0, 123, 255); 
+  text-decoration: none;
+}
+
 .media-title {
   margin-bottom: 10px;
   font-size: 18px;

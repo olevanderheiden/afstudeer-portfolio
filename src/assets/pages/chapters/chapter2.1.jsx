@@ -8,6 +8,14 @@ const Chapter2_1 = () => {
   const content = (
     <div>
       <h2>Onderzoek</h2>
+      <ul>
+        <li>
+          Onderzoeken: Je onderbouwt je analyse en relevantie van het praktijkprobleem met data vanuit verschillende beargumenteerde soorten betrouwbare bronnen en onderzoeksmethoden.
+        </li>
+        <li>
+          Analyseren: Je voert een kritische evaluatie uit en verbindt hiermee de verschillende onderzoeksuitkomsten waarmee je antwoord geeft op de deelvragen en hoofdvraag.
+        </li>
+      </ul>
       <p>
         In dit deel hoofdstuk vind u alle bevindingen die ik gedaan heb tijdens
         mijn onderzoek. Ik introduceer hier ook de geïnterviewden en tevens mijn

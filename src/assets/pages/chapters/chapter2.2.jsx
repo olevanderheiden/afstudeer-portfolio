@@ -9,6 +9,14 @@ const Chapter2_2 = () => {
   const content = (
     <div>
       <h2>Ontwerp proces</h2>
+      <ul>
+        <li>
+          Conceptualiseren: Je brengt samen met de doelgroep, door middel van verschillende methodes, hun waarden en behoeftes in kaart. Deze gebruik je om op de doelgroep afgestemde concepten te ontwerpen.
+        </li>
+        <li>
+          Ontwerpen en prototypen: Je test een onderbouwd concept in verschillende iteraties bij de doelgroep, waardoor je bij elke iteratie een verbeterde versie genereert wat tot een eindontwerp leidt.
+        </li>
+      </ul>
       <p>
         Hier vind je alles over mijn ontwerp proces. Van mijn gemaakte ontwerpen
         tot het overleg proces met mijn stage bedrijf over deze ontwerpen.

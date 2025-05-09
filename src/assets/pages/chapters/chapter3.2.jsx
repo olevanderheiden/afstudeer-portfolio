@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = 'Wat is een goed ontwerp voor audio gebruikers?';
+export const title = 'Voegt de audio ervaring iets toe?';
 
-const Chapter3_1 = () => {
+const Chapter3_2 = () => {
   const sources = (
     <>
       <li>Source 1</li>
@@ -17,11 +17,11 @@ const Chapter3_1 = () => {
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer fileName="test.mp3" title="Introducties" />
-      <p>Info over deel vraag 1 komt hier</p>
+      <p>Info over deel vraag 2 komt hier</p>
     </div>
   );
 
   return <Layout content={content} sources={sources} pageTitle={title} />;
 };
 
-export default Chapter3_1;
+export default Chapter3_2;

@@ -107,7 +107,7 @@ const formatTranscriptionWithSpeakers = (utterances) => {
         (match) =>
           `<a href="begrippen?search=${encodeURIComponent(
             match
-          )}" target="_blank" style="color: #007bff; text-decoration: none;">${
+          )}" target="_blank">${
             termMap[match.toLowerCase()]
           }</a>`
       );
