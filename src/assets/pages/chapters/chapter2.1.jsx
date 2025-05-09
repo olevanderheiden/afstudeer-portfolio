@@ -10,10 +10,14 @@ const Chapter2_1 = () => {
       <h2>Onderzoek</h2>
       <ul>
         <li>
-          Onderzoeken: Je onderbouwt je analyse en relevantie van het praktijkprobleem met data vanuit verschillende beargumenteerde soorten betrouwbare bronnen en onderzoeksmethoden.
+          Onderzoeken: Je onderbouwt je analyse en relevantie van het
+          praktijkprobleem met data vanuit verschillende beargumenteerde soorten
+          betrouwbare bronnen en onderzoeksmethoden.
         </li>
         <li>
-          Analyseren: Je voert een kritische evaluatie uit en verbindt hiermee de verschillende onderzoeksuitkomsten waarmee je antwoord geeft op de deelvragen en hoofdvraag.
+          Analyseren: Je voert een kritische evaluatie uit en verbindt hiermee
+          de verschillende onderzoeksuitkomsten waarmee je antwoord geeft op de
+          deelvragen en hoofdvraag.
         </li>
       </ul>
       <p>
@@ -27,8 +31,8 @@ const Chapter2_1 = () => {
         title="Introductie onderzoek opset, vragenlijst en mail format"
       />
       <AudioPlayer
-        fileName="content/chapter2/2.1Introductie geinterviewden (incomplete versie 29-04-2025).mp3"
-        title="Introductie geinterviewden en vragen over gebruikte hulpmiddelen (Interviews tot 29-04-2025)"
+        fileName="content/chapter2/2.1Introductie geinterviewden  (Complete versie 09-05-2025).mp3"
+        title="Introductie geinterviewden 09-05-2025"
       />
     </div>
   );
