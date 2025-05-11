@@ -34,6 +34,10 @@ const Chapter2_1 = () => {
         fileName="content/chapter2/2.1Introductie geinterviewden  (Complete versie 09-05-2025).mp3"
         title="Introductie geinterviewden 09-05-2025"
       />
+      <AudioPlayer
+        fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"
+        title="Inzichten uit de interviews met gebruikers 11-05-2025"
+      />
     </div>
   );
 
