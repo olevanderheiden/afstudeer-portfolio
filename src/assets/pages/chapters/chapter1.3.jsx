@@ -41,6 +41,25 @@ const Chapter1_3 = () => {
         },
       ],
     },
+        {
+      stakeholder: "Arbeids zoekende",
+      impact: "Hoog",
+      invloed: "Middel",
+      details: [
+        {
+          belang: "Site kunnen navigeren",
+          bijdrage: "Testen van de website/pagina zowel op gebruikviendelijkheid als effectiviteit is het overbrengen van de bedrijf visie en cultuur",
+        },
+        {
+          belang: "Een goed beeld krijgen van de sfeer, cultuur en het team van DT",
+          bijdrage: "Feedback geven verstrekte informatie",
+        },
+        {
+          belang: "Een beeld vormen van of DT bij hun past als werkgever",
+          bijdrage: "Voorstellen van verbetingen en aanvullingen",
+        },
+      ],
+    },
     {
       stakeholder: "Audio gebruikers",
       impact: "Middel",
@@ -137,7 +156,7 @@ const Chapter1_3 = () => {
           <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
         </table>
       </div>
-      <AudioPlayer fileName={"test.mp3"} title={"Test voorbeeld"} />
+      <AudioPlayer fileName={"test.mp3"} title={"Extre verduidelijking en beargumentering bij de stakholder tabel"} />
     </div>
   );
 

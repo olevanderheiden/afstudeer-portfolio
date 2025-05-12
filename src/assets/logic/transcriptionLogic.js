@@ -74,7 +74,7 @@ export const toggleTranscription = async (
     console.error("Error transcribing audio:", error);
     setTranscription(
       error.message === "Audio file not found on the server"
-        ? "Transcriptie is niet beschickbaar omdat het bestand niet kan worden gevoden op de server."
+        ? "Transcriptie is niet beschickbaar omdat het bestand niet kan worden gevonden op de server."
         : "Fout bij het transcriberen van audio."
     );
   } finally {
