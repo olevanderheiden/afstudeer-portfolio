@@ -38,6 +38,10 @@ const Chapter2_1 = () => {
         fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"
         title="Inzichten uit de interviews met gebruikers 11-05-2025"
       />
+      <h3>Desk research</h3>
+      <p>
+        Hier vind je al mijn desk research. Je vind hier de conclusies die ik hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere deelvraag op een individuele basis.
+      </p>
     </div>
   );
 

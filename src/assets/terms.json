@@ -16,6 +16,10 @@
     "definition": "Jaws is scherm lezer voor windows dat wordt aangeboden door Freedom Scientific. Een licentie kost $104,50 par jaar. Er kan ook een licentie onbepaalde tijd aangeschaft worden voor $1548. Hoewel deze licentie zelf geen tijd limiet heef, kan de software onafhankelijk van de licentie maar op maximaal 3 apparaten worden geinstalleerd."
   },
   {
+    "term": "Supernova",
+    "definition": "Een scherm lezer voor Windows die wordt aangeboden door Dolphin Computer Access. Het is een betaalde software die ook een braille vertaler bevat. De prijs is afhankelijk van de versie die je kiest. De goedkoopste versie kost $ 1.200 en de duurste versie kost $ 2.500."
+  },
+  {
     "term": "VoiceOver",
     "definition": "Een scherm lezer voor Apple producten. Het is standaar inbegrepen met alle Apple telefoons, tablets en computers."
   },
@@ -57,6 +61,10 @@
     "term": "Amaurosis congenita van Laber",
     "definition": "Amaurosis congenita van Leber of LCA is een erfelijke aandoening die vaak bij de geboorte al zichtbaar is. Het kan leiden tot een ernstige visuele beperking of zelfs blindheid. Het netvlies werkt niet naar behoren waar door het zicht ernstig kan worden aangetast. In de meeste gevallen krijgt men deze aandoening wanneer beide ouders het gen doorgeven. Helaas is LCA nog niet te genezen.",
     "page": "2.1 Onderzoken"
+  },
+  {
+    "term": "WCAG",
+    "definition": "De Web Content Accessibility Guidelines zijn richtlijnen die zijn opgesteld door het W3C (World Wide Web Consortium). Deze richtlijnen zijn bedoeld om ervoor te zorgen dat websites en apps toegankelijk zijn voor iedereen, ongeacht hun beperking. De richtlijnen zijn onderverdeeld in 4 hoofddoelen: waarneembaar, bedienbaar, begrijpelijk en robuust. Voor veel regels die onderdeel zijn van de EAA is de WCAG als basis gebruikt."
   },
   {
     "term": "Alt Tekst",

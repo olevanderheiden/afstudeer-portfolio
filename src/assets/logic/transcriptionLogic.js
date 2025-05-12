@@ -25,10 +25,16 @@ export const toggleTranscription = async (
   }
 
   setIsTranscribing(true);
-  setTranscription("Transscriptie wordt geladen...");
+  setTranscription("Transscriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft...");
 
   try {
     const serverAudioUrl = `https://olevanderheiden.github.io/afstudeer-portfolio/${audioSrc}`;
+
+    // Check if the file exists on the server
+    const headResponse = await fetch(serverAudioUrl, { method: "HEAD" });
+    if (!headResponse.ok) {
+      throw new Error("Audio file not found on the server");
+    }
 
     const response = await fetch("https://api.assemblyai.com/v2/transcript", {
       method: "POST",
@@ -66,7 +72,11 @@ export const toggleTranscription = async (
     );
   } catch (error) {
     console.error("Error transcribing audio:", error);
-    setTranscription("Fout bij het transcriberen van audio.");
+    setTranscription(
+      error.message === "Audio file not found on the server"
+        ? "Transcriptie is niet beschickbaar omdat het bestand niet kan worden gevoden op de server."
+        : "Fout bij het transcriberen van audio."
+    );
   } finally {
     setIsTranscribing(false);
   }
