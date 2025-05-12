@@ -27,6 +27,14 @@ const Chapter2_2 = () => {
         fileName="content/chapter2/2.2PortfolioSiteTour.mp3"
         title="Porfolio website tour en uitleg van design keuzes"
       />
+      <ImageElement
+        src="content/chapter2/PortfolioSiteEersteOntwerpSchets.png"
+        title="Portfolio website ontwerp schets gemaakt April 2025"
+        alt="Dit is de ontwerp schets die ik gemaakt heb voor mijn porfolio website. Het is een hele ruwe schets zonder kleur of content op de website. Er is een menu balk bovenin met pagina's zoals: Home, Bronnen en begrippen, Aan
+        de linker kant is een lijst van hoofstukken te zien waar mee je naar de verschillende hoofdstukken van het portfolio kan nagiveren.
+        Het middelste gedeelte van de pagina is waar de daadwerkelijke content van de pagina te zien is. Dit kunnen afbeeldingen, teksten of audio bestanden zijn.
+        De rechter kant bevat een lijst van gebruikte bronnen bij ieder hoofstuk. Als laatste de sectie onder aan de pagina is de footer met hier in vooral een copyright icon en referenctie wie dze site heeft gemaakt. "
+      />
       <h3>Ontwerp proces afstudeer project</h3>
       <AudioPlayer
         fileName="content/chapter2/2.2uitLegOnwerpSchets1.mp3"
