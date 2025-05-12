@@ -156,7 +156,7 @@ const Chapter1_3 = () => {
           <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
         </table>
       </div>
-      <AudioPlayer fileName={"test.mp3"} title={"Extre verduidelijking en beargumentering bij de stakholder tabel"} />
+      <AudioPlayer fileName={"test.mp3"} title={"Extre verduidelijking en beargumentering bij de stakholder tabel (comingsoon)"} />
     </div>
   );
 

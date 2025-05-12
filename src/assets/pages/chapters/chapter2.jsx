@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
+import AudioPlayer from "../../pageElements/audioPlayer";
 
 export const title = "Afstudeer competenties";
 
@@ -15,6 +16,7 @@ const Chapter2_1 = () => {
     <div>
       <h2>Chapter 2</h2>
       <p>Chapter 2 is coming here!</p>
+      <AudioPlayer fileName={"test.mp3"} title={"Introductie Hoofdstuk 2 (comingsoon)"} />
     </div>
   );
 

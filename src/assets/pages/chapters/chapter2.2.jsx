@@ -25,7 +25,7 @@ const Chapter2_2 = () => {
       <p>Informatie over de portfolio website komt hier....</p>
       <AudioPlayer
         fileName="content/chapter2/2.2PortfolioSiteTour.mp3"
-        title="Porfolio website tour en uitleg van design keuzes"
+        title="Porfolio website tour en uitleg van design keuzes (coming soon)"
       />
       <ImageElement
         src="content/chapter2/PortfolioSiteEersteOntwerpSchets.png"
@@ -38,7 +38,7 @@ const Chapter2_2 = () => {
       <h3>Ontwerp proces afstudeer project</h3>
       <AudioPlayer
         fileName="content/chapter2/2.2uitLegOnwerpSchets1.mp3"
-        title="Uitleg van mijn gedachte proces tijdesn het maken van de eerste schets"
+        title="Uitleg van mijn gedachte proces tijdens het maken van de eerste schets (coming soon)"
       />
       <ImageElement
         src="content/chapter2/prototype1DrawnPrototype.png"
