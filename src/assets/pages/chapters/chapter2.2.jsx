@@ -45,9 +45,17 @@ const Chapter2_2 = () => {
         title="Prototype 1 low fidelity prototype 1 (figma pagina ontwerp)"
         alt="Een afbeelding die de algemene layout van de overons pagina laat zien. Er is nog geen gebruik gemaakt van kleuren echte foto's. Er is een balk met navigatie opties aanwezig. Daar onder zijn er velden om afbeeldingen van verschillende afdelingen binnen digitaal toegankelijk te laten zien. Onder deze sectie vind je een twee afbeeldingen naast elkaar die het kantoor van Digitaal toegankelijk laten zien. Zowel de onder als boven verdieping. Als laatste sectie boven de footer vind je nog twee afbeeldingen die het werk van Digitaal toegankelijk laten zien met een voor en na afbeelding."
       />
+      <h4>Feedback ontvangen tijdens terug kom dag</h4>
+      <p>
+        Na het maken van dit eerste prototype heb ik de mogelijkheid gehad tijdens een school terugkomdag mijn concept met een van de docenten
+        te bespreken. Dit was een erg waardevolle ervaring. Ik kreeg hier door de tip om te kijken naar websites die meer content tonen terwijl je scrolt.
+        Iets vergelijkbaars zou ik namelijk ook kunnen doen met mijn audio ervaring, door meer content te tonen terwijl de audio naar verschillende setcties 
+        van de audio ervaring scrolt. Hoe haalbaar dit is zal nog moeten blijken, maar het is wel een idee dat zowel mij als mijn stage bedrijf erg aanspreekt.
+        Het voorbeeld wat hier als inspiratie diende vind u in de bronnen lijst aan de rechter kant van deze pagina.
+      </p>
       <AudioPlayer
         fileName="content/chapter2/2.2InterviewPim.mp3"
-        title="Feedback op schets 1"
+        title="Feedback op schets 1 door Pim"
       />
       <ImageElement
         src="content/chapter2/prototype2DrawnPrototype.png"

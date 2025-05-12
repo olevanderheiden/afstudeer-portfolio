@@ -22,6 +22,7 @@ const specialeDank = () => {
       <ul>
         <li>Roel Hooiring</li>
         <li>Mees Muller</li>
+        <li>Bob Pikaar</li>
         <li>Leo Remijn</li>
         <li>Dieuwertje Schuur</li>
       </ul>
