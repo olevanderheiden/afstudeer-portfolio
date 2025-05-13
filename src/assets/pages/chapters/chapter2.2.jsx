@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 import ImageElement from "../../pageElements/imageElement";
+import IframeElement from "../../pageElements/iframeElement";
 
 export const title = "Ontwerpen";
 
@@ -11,10 +12,15 @@ const Chapter2_2 = () => {
       <h2>Ontwerp proces</h2>
       <ul>
         <li>
-          Conceptualiseren: Je brengt samen met de doelgroep, door middel van verschillende methodes, hun waarden en behoeftes in kaart. Deze gebruik je om op de doelgroep afgestemde concepten te ontwerpen.
+          Conceptualiseren: Je brengt samen met de doelgroep, door middel van
+          verschillende methodes, hun waarden en behoeftes in kaart. Deze
+          gebruik je om op de doelgroep afgestemde concepten te ontwerpen.
         </li>
         <li>
-          Ontwerpen en prototypen: Je test een onderbouwd concept in verschillende iteraties bij de doelgroep, waardoor je bij elke iteratie een verbeterde versie genereert wat tot een eindontwerp leidt.
+          Ontwerpen en prototypen: Je test een onderbouwd concept in
+          verschillende iteraties bij de doelgroep, waardoor je bij elke
+          iteratie een verbeterde versie genereert wat tot een eindontwerp
+          leidt.
         </li>
       </ul>
       <p>
@@ -47,11 +53,16 @@ const Chapter2_2 = () => {
       />
       <h4>Feedback ontvangen tijdens terug kom dag</h4>
       <p>
-        Na het maken van dit eerste prototype heb ik de mogelijkheid gehad tijdens een school terugkomdag mijn concept met een van de docenten
-        te bespreken. Dit was een erg waardevolle ervaring. Ik kreeg hier door de tip om te kijken naar websites die meer content tonen terwijl je scrolt.
-        Iets vergelijkbaars zou ik namelijk ook kunnen doen met mijn audio ervaring, door meer content te tonen terwijl de audio naar verschillende setcties 
-        van de audio ervaring scrolt. Hoe haalbaar dit is zal nog moeten blijken, maar het is wel een idee dat zowel mij als mijn stage bedrijf erg aanspreekt.
-        Het voorbeeld wat hier als inspiratie diende vind u in de bronnen lijst aan de rechter kant van deze pagina.
+        Na het maken van dit eerste prototype heb ik de mogelijkheid gehad
+        tijdens een school terugkomdag mijn concept met een van de docenten te
+        bespreken. Dit was een erg waardevolle ervaring. Ik kreeg hier door de
+        tip om te kijken naar websites die meer content tonen terwijl je scrolt.
+        Iets vergelijkbaars zou ik namelijk ook kunnen doen met mijn audio
+        ervaring, door meer content te tonen terwijl de audio naar verschillende
+        setcties van de audio ervaring scrolt. Hoe haalbaar dit is zal nog
+        moeten blijken, maar het is wel een idee dat zowel mij als mijn stage
+        bedrijf erg aanspreekt. Het voorbeeld wat hier als inspiratie diende
+        vind u in de bronnen lijst aan de rechter kant van deze pagina.
       </p>
       <AudioPlayer
         fileName="content/chapter2/2.2InterviewPim.mp3"
@@ -62,6 +73,7 @@ const Chapter2_2 = () => {
         title="Prototype 2 low fidelity prototype 2 (figma pagina ontwerp) Aangepast na feedback"
         alt="Een afbeelding die de geupdate layout laat zien die is ontstaan na de feedback van pim. De sectie over verschillende afdelingen is vervangen door secties over verschillende leden van Digitaal Toegankelijk. Dit maakt de ervaring meer persoonlijk. Ook de sectie over projecten is vervangen door een segment over de filosofie van Digitaal Toegankelijk. De layout is ander zijds onverranderd. Lees de alt tekst van de vorige versie voor meer uitleg."
       />
+      <IframeElement src="prototype1" title="klikbare prototype 1" />
     </div>
   );
 

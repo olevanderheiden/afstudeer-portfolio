@@ -1,0 +1,108 @@
+/* General Page Styling */
+.page-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Ensure content starts below the header */
+  min-height: 100vh;
+  text-align: center;
+  position: relative;
+  padding-top: 80px; /* Add spacing for the fixed header */
+  box-sizing: border-box;
+}
+
+/* Back Button */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Header */
+.header {
+  margin-bottom: 40px;
+  width: 100%;
+  position: fixed; /* Fix the header at the top */
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000; /* Ensure it stays above other content */
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+.header button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto; /* Push the footer to the bottom */
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  color: #333; /* Ensure text is readable */
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}

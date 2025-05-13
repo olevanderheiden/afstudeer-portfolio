@@ -15,7 +15,7 @@
 }
 
 a {
-  color: rgb(0, 123, 255); 
+  color: rgb(0, 123, 255);
   text-decoration: none;
 }
 
@@ -205,4 +205,15 @@ th {
     width: 100%;
     font-size: 14px;
   }
+}
+
+/* Styling for iframe elements */
+.iframe-element {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
