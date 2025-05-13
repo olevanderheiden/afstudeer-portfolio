@@ -8,6 +8,7 @@ import Begrippenlijst from "./assets/pages/begrippenLijst";
 import Bijlagen from "./assets/pages/bijlagen";
 import SpecialeDank from "./assets/pages/specialeDank";
 import BronnenLijst from "./assets/pages/bronnenLijst";
+import AudioEmbedPage from "./assets/pages/hidden/audioEmbedPage";
 
 function App() {
   console.log("App component rendered");
@@ -23,6 +24,7 @@ function App() {
           <Route path="/bronnen" element={<BronnenLijst />} />
           <Route path="/bijlagen" element={<Bijlagen />} />
           <Route path="/bedankt" element={<SpecialeDank />} />
+          <Route path="/audio-embed" element={<AudioEmbedPage />} />
 
           {/* Dynamically Generated Chapter Routes */}
           {chapters
