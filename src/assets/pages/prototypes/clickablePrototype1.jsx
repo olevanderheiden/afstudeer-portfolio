@@ -4,8 +4,11 @@ import "../../../styles/prototype1.css";
 
 const ClickablePrototype1 = () => {
   const [isInIframe, setIsInIframe] = useState(false);
+  const [isTourLoading, setIsTourLoading] = useState(false);
+  const [activeCard, setActiveCard] = useState(null);
   const navigate = useNavigate();
   const audioRefs = useRef([]);
+  const cardRefs = useRef([]);
 
   const items = [
     "Aimee",
@@ -25,20 +28,61 @@ const ClickablePrototype1 = () => {
     setIsInIframe(inIframe);
   }, []);
 
-  const playAudio = (index) => {
-    if (audioRefs.current[index]) {
-      audioRefs.current[index].play();
-    }
+  const checkAudioExists = (src) => {
+    return new Promise((resolve) => {
+      const audio = new window.Audio();
+      audio.src = src;
+      audio.addEventListener("canplaythrough", () => resolve(true), {
+        once: true,
+      });
+      audio.addEventListener("error", () => resolve(false), { once: true });
+    });
   };
 
-  const playAllAudio = async () => {
-    for (let i = 0; i < items.length; i++) {
-      if (audioRefs.current[i]) {
-        await audioRefs.current[i].play();
-        await new Promise((resolve) => {
-          audioRefs.current[i].onended = resolve;
-        });
+  // Play all available audio files in order, scroll and focus to each card
+  const handleTourStart = async () => {
+    setIsTourLoading(true);
+    const audioSources = items.map((name, idx) => {
+      if (idx < 6 || idx >= 8) {
+        return `audio/prototype/${name.toLowerCase().replace(/ /g, "_")}.wav`;
+      } else {
+        return `audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`;
       }
+    });
+
+    const existenceChecks = await Promise.all(
+      audioSources.map((src) => checkAudioExists(src))
+    );
+    const playableIndexes = audioSources
+      .map((src, idx) => (existenceChecks[idx] ? idx : null))
+      .filter((idx) => idx !== null);
+
+    for (const idx of playableIndexes) {
+      // Scroll and focus to the card
+      const card = cardRefs.current[idx];
+      if (card) {
+        setActiveCard(idx);
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.focus({ preventScroll: true });
+      }
+      // Play audio
+      const audio = new window.Audio(audioSources[idx]);
+      await new Promise((resolve) => {
+        audio.play();
+        audio.onended = resolve;
+        audio.onerror = resolve;
+      });
+    }
+    setActiveCard(null);
+    setIsTourLoading(false);
+  };
+
+  const playAudio = (index) => {
+    setActiveCard(index);
+    if (audioRefs.current[index]) {
+      audioRefs.current[index].play();
+      audioRefs.current[index].onended = () => setActiveCard(null);
+      audioRefs.current[index].onerror = () => setActiveCard(null);
     }
   };
 
@@ -61,6 +105,17 @@ const ClickablePrototype1 = () => {
         </div>
       </header>
 
+      {/* Tour Starten Button */}
+      <div className="tour-starten-bar">
+        <button
+          className="tour-starten-btn"
+          onClick={handleTourStart}
+          disabled={isTourLoading}
+        >
+          {isTourLoading ? "Tour wordt gestart..." : "Tour starten"}
+        </button>
+      </div>
+
       {/* Back Button */}
       {!isInIframe && (
         <button className="back-button" onClick={() => navigate("/")}>
@@ -74,7 +129,12 @@ const ClickablePrototype1 = () => {
           <h2>Ons team</h2>
           <div className="section-content">
             {items.slice(0, 6).map((name, index) => (
-              <div key={index} className="card">
+              <div
+                key={index}
+                className={`card${activeCard === index ? " active-card" : ""}`}
+                tabIndex={-1}
+                ref={(el) => (cardRefs.current[index] = el)}
+              >
                 <img
                   src={`images/prototype/${name
                     .toLowerCase()
@@ -84,8 +144,6 @@ const ClickablePrototype1 = () => {
                 <p>{name}</p>
                 <button onClick={() => playAudio(index)}>Afspelen</button>
                 <audio
-                  //test since audio is nog displaying thge right url
-                  // src={`audio/prototype${name.toLowerCase().replace(/ /g, "_")}.wav`}
                   ref={(el) => (audioRefs.current[index] = el)}
                   src={`audio/prototype/${name
                     .toLowerCase()
@@ -100,7 +158,14 @@ const ClickablePrototype1 = () => {
           <h2>Over het Kantoor</h2>
           <div className="section-content">
             {items.slice(6, 8).map((name, index) => (
-              <div key={index + 6} className="card">
+              <div
+                key={index + 6}
+                className={`card${
+                  activeCard === index + 6 ? " active-card" : ""
+                }`}
+                tabIndex={-1}
+                ref={(el) => (cardRefs.current[index + 6] = el)}
+              >
                 <img
                   src={`images/prototype/${name
                     .toLowerCase()
@@ -122,7 +187,14 @@ const ClickablePrototype1 = () => {
           <h2>Onze filosofie</h2>
           <div className="section-content">
             {items.slice(8).map((name, index) => (
-              <div key={index + 8} className="card">
+              <div
+                key={index + 8}
+                className={`card${
+                  activeCard === index + 8 ? " active-card" : ""
+                }`}
+                tabIndex={-1}
+                ref={(el) => (cardRefs.current[index + 8] = el)}
+              >
                 <img
                   src={`images/prototype/${name
                     .toLowerCase()
@@ -145,7 +217,7 @@ const ClickablePrototype1 = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <p>© Ole van der Heiden 2025</p>
+        <p>Social media links will be put here</p>
       </footer>
     </div>
   );
