@@ -25,14 +25,16 @@ const IframeElement = ({ src, title }) => {
 
   return (
     <div className="media-container">
-      <h3 className="media-title">{title}</h3>
+      <h3 className="media-title">
+        <a href={src} target="_blank" rel="noopener noreferrer">
+          {title}
+        </a>
+      </h3>
       <iframe
         ref={iframeRef}
         src={src}
         title={title}
         className="iframe-element"
-        frameBorder="0"
-        scrolling="no" // Disable internal scrolling
         allowFullScreen
       ></iframe>
     </div>
