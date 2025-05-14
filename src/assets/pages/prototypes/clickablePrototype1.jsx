@@ -49,7 +49,7 @@ const ClickablePrototype1 = () => {
         <div className="header-content">
           <div className="logo">Logo</div>
           <nav className="nav-links">
-            <a href="#">Trainingen</a>
+            <a>Trainingen</a>
             <a href="#">Audit</a>
             <a href="#">Advies</a>
             <a href="#">Nieuws</a>
@@ -85,7 +85,9 @@ const ClickablePrototype1 = () => {
                 <button onClick={() => playAudio(index)}>Afspelen</button>
                 <audio
                   ref={(el) => (audioRefs.current[index] = el)}
-                  src={`audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`}
+                  src={`audio/prototype/${name
+                    .toLowerCase()
+                    .replace(/ /g, "_")}.wav`}
                 />
               </div>
             ))}
