@@ -133,7 +133,9 @@ const ClickablePrototype1 = () => {
                 <button onClick={() => playAudio(index + 8)}>Afspelen</button>
                 <audio
                   ref={(el) => (audioRefs.current[index + 8] = el)}
-                  src={`audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`}
+                  src={`audio/prototype/${name
+                    .toLowerCase()
+                    .replace(/ /g, "_")}.wav`}
                 />
               </div>
             ))}
