@@ -84,6 +84,8 @@ const ClickablePrototype1 = () => {
                 <p>{name}</p>
                 <button onClick={() => playAudio(index)}>Afspelen</button>
                 <audio
+                  //test since audio is nog displaying thge right url
+                  // src={`audio/prototype${name.toLowerCase().replace(/ /g, "_")}.wav`}
                   ref={(el) => (audioRefs.current[index] = el)}
                   src={`audio/prototype/${name
                     .toLowerCase()
