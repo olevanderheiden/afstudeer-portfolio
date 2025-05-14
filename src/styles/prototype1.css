@@ -1,22 +1,61 @@
 /* General Page Styling */
 .page-container {
   font-family: Arial, sans-serif;
-  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* Ensure content starts below the header */
   min-height: 100vh;
   text-align: center;
-  position: relative;
-  padding-top: 80px; /* Add spacing for the fixed header */
-  box-sizing: border-box;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Light gray background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 20px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  flex: 0 0 auto; /* Keep the logo on the left */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Spread out the links evenly */
+  justify-content: center; /* Center the links */
+  flex: 1; /* Take up the remaining space */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000; /* Black text */
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f8f9fa; /* Match header background */
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #e0e0e0; /* Slightly darker gray on hover */
 }
 
 /* Back Button */
 .back-button {
   position: absolute;
-  top: 10px;
+  top: 70px;
   left: 10px;
   padding: 10px 20px;
   background-color: #007bff;
@@ -24,36 +63,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: block;
-  z-index: 1000; /* Ensure it stays above other elements */
-}
-
-/* Header */
-.header {
-  margin-bottom: 40px;
-  width: 100%;
-  position: fixed; /* Fix the header at the top */
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  z-index: 1000; /* Ensure it stays above other content */
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
-}
-
-.header button {
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  z-index: 1000;
 }
 
 /* Section Styling */
 .section {
-  margin-bottom: 40px;
+  margin: 100px auto 40px;
   width: 100%;
 }
 
@@ -98,11 +113,11 @@
 
 /* Footer */
 .footer {
-  margin-top: auto; /* Push the footer to the bottom */
+  margin-top: auto;
   text-align: center;
   padding: 10px 0;
   background-color: #f8f9fa;
-  color: #333; /* Ensure text is readable */
+  color: #333;
   width: 100%;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
