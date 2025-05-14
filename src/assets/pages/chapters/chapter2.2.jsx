@@ -1,8 +1,6 @@
-import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 import ImageElement from "../../pageElements/imageElement";
-import IframeElement from "../../pageElements/iframeElement";
 
 export const title = "Ontwerpen";
 
@@ -73,7 +71,6 @@ const Chapter2_2 = () => {
         title="Prototype 2 low fidelity prototype 2 (figma pagina ontwerp) Aangepast na feedback"
         alt="Een afbeelding die de geupdate layout laat zien die is ontstaan na de feedback van pim. De sectie over verschillende afdelingen is vervangen door secties over verschillende leden van Digitaal Toegankelijk. Dit maakt de ervaring meer persoonlijk. Ook de sectie over projecten is vervangen door een segment over de filosofie van Digitaal Toegankelijk. De layout is ander zijds onverranderd. Lees de alt tekst van de vorige versie voor meer uitleg."
       />
-      <IframeElement src="prototype1" title="klikbare prototype 1" />
     </div>
   );
 
