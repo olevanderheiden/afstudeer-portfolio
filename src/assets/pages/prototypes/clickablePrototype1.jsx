@@ -1,11 +1,13 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, use } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../styles/prototype1.css";
+import useUpdateTitle from "../../../hooks/useUpdateTitle";
 
-export const title = "Clickable Prototype 1";
+const title = "Clickable Prototype 1";
 
 // ClickablePrototype1 component
 const ClickablePrototype1 = () => {
+  useUpdateTitle(title);
   const [isInIframe, setIsInIframe] = useState(false);
   const [isTourLoading, setIsTourLoading] = useState(false);
   const [activeCard, setActiveCard] = useState(null);

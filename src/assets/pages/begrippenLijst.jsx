@@ -28,7 +28,7 @@ const Begrippenlijst = () => {
       (term.page && term.page.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
-  // Sort terms based on the selected sorting method
+  // Sort terms based on the selected sorting method (alphabetical or per page)
   const sortedTerms =
     sortBy === "alphabetical"
       ? [...filteredTerms].sort((a, b) => a.term.localeCompare(b.term))

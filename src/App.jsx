@@ -15,10 +15,10 @@ function App() {
   return (
     <AudioPlayerProvider>
       {" "}
-      {/* Wrap the entire app with the provider */}
+      {/* Wrap the entire app with the Router wrapper*/}
       <Router basename="/afstudeer-portfolio/">
         <Routes>
-          {/* Static Home Route */}
+          {/* Routes that don't fall into the category of being either a chapter of sub chapter. They will not appear in the navigation bar on the left*/}
           <Route path="/" element={<HomePage />} />
           <Route path="/begrippen" element={<Begrippenlijst />} />
           <Route path="/bronnen" element={<BronnenLijst />} />
@@ -26,16 +26,15 @@ function App() {
           <Route path="/bedankt" element={<SpecialeDank />} />
           <Route path="/prototype1" element={<ClickablePrototype1 />} />
 
-          {/* Dynamically Generated Chapter Routes */}
-          {chapters
-            .filter((chapter) => chapter.path !== "/") // Exclude the "Home" entry
-            .map((chapter) => (
-              <Route
-                key={chapter.path}
-                path={chapter.path}
-                element={React.createElement(chapter.component)}
-              />
-            ))}
+          {/* Dynamically Generated routes (for chapters and sub chapters)
+           Will be adde automatically as long as the file for it exhists in the apropiat folder*/}
+          {chapters.map((chapter) => (
+            <Route
+              key={chapter.path}
+              path={chapter.path}
+              element={React.createElement(chapter.component)}
+            />
+          ))}
 
           {/* Fallback Route for 404 Not Found */}
           <Route path="*" element={<NotFound />} />
