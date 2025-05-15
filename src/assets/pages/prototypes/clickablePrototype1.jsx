@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, use } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../styles/prototype1.css";
 import useUpdateTitle from "../../../hooks/useUpdateTitle";
@@ -14,6 +14,7 @@ const ClickablePrototype1 = () => {
   const [tourAbortController, setTourAbortController] = useState(null);
   const [playingAudioIndex, setPlayingAudioIndex] = useState(null);
   const [pausedAudioIndex, setPausedAudioIndex] = useState(null);
+  const [audioExists, setAudioExists] = useState([]);
   const navigate = useNavigate();
   const audioRefs = useRef([]);
   const cardRefs = useRef([]);
@@ -38,6 +39,18 @@ const ClickablePrototype1 = () => {
     setIsInIframe(inIframe);
   }, []);
 
+  // Helper to get audio source for each index
+  const getAudioSrc = (idx) => {
+    if (idx < 6 || idx >= 8) {
+      return `audio/prototype/${items[idx]
+        .toLowerCase()
+        .replace(/ /g, "_")}.wav`;
+    } else {
+      return `audio/${items[idx].toLowerCase().replace(/ /g, "_")}.mp3`;
+    }
+  };
+
+  // Check if an audio file exists
   const checkAudioExists = (src) => {
     return new Promise((resolve) => {
       const audio = new window.Audio();
@@ -48,6 +61,18 @@ const ClickablePrototype1 = () => {
       audio.addEventListener("error", () => resolve(false), { once: true });
     });
   };
+
+  // On mount, check all audio files and store their existence
+  useEffect(() => {
+    const checkAllAudio = async () => {
+      const checks = await Promise.all(
+        items.map((_, idx) => checkAudioExists(getAudioSrc(idx)))
+      );
+      setAudioExists(checks);
+    };
+    checkAllAudio();
+    // eslint-disable-next-line
+  }, []);
 
   // Play all available audio files in order, scroll and focus to each card
   const handleTourStart = async () => {
@@ -68,13 +93,7 @@ const ClickablePrototype1 = () => {
     const abortController = new AbortController();
     setTourAbortController(abortController);
 
-    const audioSources = items.map((name, idx) => {
-      if (idx < 6 || idx >= 8) {
-        return `audio/prototype/${name.toLowerCase().replace(/ /g, "_")}.wav`;
-      } else {
-        return `audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`;
-      }
-    });
+    const audioSources = items.map((_, idx) => getAudioSrc(idx));
 
     const existenceChecks = await Promise.all(
       audioSources.map((src) => checkAudioExists(src))
@@ -205,6 +224,7 @@ const ClickablePrototype1 = () => {
           className="tour-starten-btn"
           onClick={handleTourStart}
           aria-pressed={isTourLoading}
+          disabled={isTourLoading || playingAudioIndex !== null}
         >
           {isTourLoading ? "Tour stoppen" : "Tour starten"}
         </button>
@@ -242,7 +262,9 @@ const ClickablePrototype1 = () => {
                   onClick={() => playAudio(index)}
                   disabled={
                     isTourLoading ||
-                    (playingAudioIndex !== null && playingAudioIndex !== index)
+                    (playingAudioIndex !== null &&
+                      playingAudioIndex !== index) ||
+                    audioExists[index] === false
                   }
                 >
                   {/* Play/Pause/Continue button */}
@@ -291,7 +313,8 @@ const ClickablePrototype1 = () => {
                   disabled={
                     isTourLoading ||
                     (playingAudioIndex !== null &&
-                      playingAudioIndex !== index + 6)
+                      playingAudioIndex !== index + 6) ||
+                    audioExists[index + 6] === false // Disable if file doesn't exist
                   }
                 >
                   {playingAudioIndex === index + 6 &&
@@ -335,7 +358,8 @@ const ClickablePrototype1 = () => {
                   disabled={
                     isTourLoading ||
                     (playingAudioIndex !== null &&
-                      playingAudioIndex !== index + 8)
+                      playingAudioIndex !== index + 8) ||
+                    audioExists[index + 8] === false // Disable if file doesn't exist
                   }
                 >
                   {playingAudioIndex === index + 8 &&
