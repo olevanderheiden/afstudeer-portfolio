@@ -88,7 +88,7 @@
 .back-button {
   position: fixed;
   top: 80px;
-  left: 24px;
+  right: 24px;
   padding: 8px 18px;
   background: var(--dt-light);
   color: var(--dt-dark);
