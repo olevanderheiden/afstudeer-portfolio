@@ -40,7 +40,25 @@ const Chapter2_1 = () => {
       />
       <h3>Desk research</h3>
       <p>
-        Hier vind je al mijn desk research. Je vind hier de conclusies die ik hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere deelvraag op een individuele basis.
+        Hier vind je al mijn desk research. Je vind hier de conclusies die ik
+        hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere
+        deelvraag op een individuele basis.
+      </p>
+      <h4>Voegt de audio ervaring iets toe?</h4>
+      <p>
+        Om de vraag te beantwoorden ben ik op zoek gegaan naar bedrijven en
+        instanties die en speciale audio ervaring aanbieden. Deze heb ik
+        gevonden in de corspondent. Ik had all eens gehoord tijdens mijn minor
+        journalistiek over het feit dat de corspondent, veel van hun artikelen
+        ook in audio vorm aanbieden. Ook niet onbelangrijk is echter dat ze dit
+        doen door het te laten voorlezen dor de persoon die het artikel
+        geschreven heeft. Dit lijkt dus veel op de audio ervaring die we aan het
+        bedenken zijn bij DT. Ik heb een aantal artikelen geluisterd die de
+        corspondent aanbied. Je kan ze terug vinden in de bronnenlijst aan de
+        rechter kant. De corspondent geef aan op hun website dat artikelen die
+        in audio vorm beschickbaar zijn vaker worden gelezen dan artikelen die
+        alleen in tekstvorm zijn. Dit is een belangrijke bevinding, en zecht
+        iets over de toegevoegde waardie die een aurdio ervaring kan hebben.
       </p>
     </div>
   );
