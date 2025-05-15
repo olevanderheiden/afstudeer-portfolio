@@ -33,51 +33,51 @@ const Layout = ({ content, pageTitle }) => {
       ? chapters[currentChapterIndex + 1]
       : null;
 
-      return (
-        <div className="layout-container">
-          <Header />
-          <div className="layout-main">
-            {/* Navigation tab on the left side of the screen */}
-            <Nav className="layout-nav" />
-      
-            {/* Main content determined by the selected page */}
-            <main className="layout-content">{content}</main>
-      
-            {/* Sources on the right (optional) */}
-            {sources && (
-              <aside className="layout-sources">
-                <h3>Bronnen lijst</h3>
-                <SourceList sources={sources} />
-              </aside>
+  return (
+    <div className="layout-container">
+      <Header />
+      <div className="layout-main">
+        {/* Navigation tab on the left side of the screen */}
+        <Nav className="layout-nav" />
+
+        {/* Main content determined by the selected page */}
+        <main className="layout-content">{content}</main>
+
+        {/* Sources on the right (optional) */}
+        {sources && (
+          <aside className="layout-sources">
+            <h3>Bronnen lijst</h3>
+            <SourceList sources={sources} />
+          </aside>
+        )}
+      </div>
+
+      {/* Chapter navigation buttons */}
+      {currentChapterIndex !== -1 && (
+        <div className="chapter-navigation">
+          {/* Previous Button */}
+          <div className="chapter-navigation-button left">
+            {previousChapter && (
+              <button onClick={() => navigate(previousChapter.path)}>
+                Vorige
+              </button>
             )}
           </div>
-      
-          {/* Chapter navigation buttons */}
-          {currentChapterIndex !== -1 && (
-            <div className="chapter-navigation">
-              {/* Previous Button */}
-              <div className="chapter-navigation-button left">
-                {previousChapter && (
-                  <button onClick={() => navigate(previousChapter.path)}>
-                    Vorige
-                  </button>
-                )}
-              </div>
-      
-              {/* Next Button */}
-              <div className="chapter-navigation-button right">
-                {nextChapter && (
-                  <button onClick={() => navigate(nextChapter.path)}>
-                    Volgende
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-      
-          <Footer />
+
+          {/* Next Button */}
+          <div className="chapter-navigation-button right">
+            {nextChapter && (
+              <button onClick={() => navigate(nextChapter.path)}>
+                Volgende
+              </button>
+            )}
+          </div>
         </div>
-      );
+      )}
+
+      <Footer />
+    </div>
+  );
 };
 
 export default Layout;

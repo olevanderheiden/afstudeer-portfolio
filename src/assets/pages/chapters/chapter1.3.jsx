@@ -41,17 +41,19 @@ const Chapter1_3 = () => {
         },
       ],
     },
-        {
+    {
       stakeholder: "Arbeids zoekende",
       impact: "Hoog",
       invloed: "Middel",
       details: [
         {
           belang: "Site kunnen navigeren",
-          bijdrage: "Testen van de website/pagina zowel op gebruikviendelijkheid als effectiviteit is het overbrengen van de bedrijf visie en cultuur",
+          bijdrage:
+            "Testen van de website/pagina zowel op gebruikviendelijkheid als effectiviteit is het overbrengen van de bedrijf visie en cultuur",
         },
         {
-          belang: "Een goed beeld krijgen van de sfeer, cultuur en het team van DT",
+          belang:
+            "Een goed beeld krijgen van de sfeer, cultuur en het team van DT",
           bijdrage: "Feedback geven verstrekte informatie",
         },
         {
@@ -133,6 +135,15 @@ const Chapter1_3 = () => {
     <div>
       <h2>Doelgroep & Stakeholders</h2>
       <p>Hier vind je alles over mijn stakeholder en doelgroep onderzoek.</p>
+      <h3>Primaire doelgroep</h3>
+      <p>
+        De primaire doelgroep van dit product zijn werkzoekenden die wellicht
+        bij Digitaal Toegankelijk willen werken. De overons pagina geeft deze
+        mensen een goed beeld van de sfeer, cultuur en het team van Digitaal
+        Toegankelijk. En deze informatie op deze manier presenteren toont aan
+        hoe veel waarde Digitaal Toegankelijk hecht aan toegankelijkheid.
+      </p>
+      <h3>Stakeholder Tabel</h3>
       <div className="table-container">
         <table>
           <thead>
@@ -156,7 +167,12 @@ const Chapter1_3 = () => {
           <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
         </table>
       </div>
-      <AudioPlayer fileName={"test.mp3"} title={"Extre verduidelijking en beargumentering bij de stakholder tabel (comingsoon)"} />
+      <AudioPlayer
+        fileName={"test.mp3"}
+        title={
+          "Extre verduidelijking en beargumentering bij de stakholder tabel (comingsoon)"
+        }
+      />
     </div>
   );
 

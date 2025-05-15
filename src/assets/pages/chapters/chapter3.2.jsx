@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = 'Voegt de audio ervaring iets toe?';
+export const title = "Voegt de audio ervaring iets toe?";
 
 const Chapter3_2 = () => {
   const sources = (
@@ -16,7 +16,10 @@ const Chapter3_2 = () => {
     <div>
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
-      <AudioPlayer fileName="test.mp3" title="Antwoord deelvraag 2 (coming soon" />
+      <AudioPlayer
+        fileName="test.mp3"
+        title="Antwoord deelvraag 2 (coming soon"
+      />
       <p>Info over deel vraag 2 komt hier</p>
     </div>
   );

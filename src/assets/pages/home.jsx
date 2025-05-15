@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../pageElements/Layout";
-import AudioPlayer from "../pageElements/AudioPlayer";
+import AudioPlayer from "../pageElements/audioPlayer";
 
 const HomePage = () => {
   const content = (

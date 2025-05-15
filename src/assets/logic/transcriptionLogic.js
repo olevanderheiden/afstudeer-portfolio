@@ -25,7 +25,9 @@ export const toggleTranscription = async (
   }
 
   setIsTranscribing(true);
-  setTranscription("Transscriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft...");
+  setTranscription(
+    "Transscriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft..."
+  );
 
   try {
     const serverAudioUrl = `https://olevanderheiden.github.io/afstudeer-portfolio/${audioSrc}`;
@@ -117,9 +119,7 @@ const formatTranscriptionWithSpeakers = (utterances) => {
         (match) =>
           `<a href="begrippen?search=${encodeURIComponent(
             match
-          )}" target="_blank">${
-            termMap[match.toLowerCase()]
-          }</a>`
+          )}" target="_blank">${termMap[match.toLowerCase()]}</a>`
       );
 
       // Return the speaker and the linked text
