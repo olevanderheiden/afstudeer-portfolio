@@ -26,6 +26,67 @@ const Chapter1_2 = () => {
         <li>Hoe kunnen we de audio ervaring zo presenteren, zodat het als inspirerend voorbeeld kan dienen voor bedrijven?</li> 
         <li>Welke pagina of type paginas kunnen het best gebruikt worden voor een audio ervaring?</li>
       </ul>
+      <h3>
+        Ontwerp criteria (moscow principe)
+      </h3>
+      <h4>
+        Must
+      </h4>
+      <ul>
+        <li>
+          De applicatie of website is een vergevorderd prototype. 
+          Dit houdt in dat het een realistische ervaring is dat als voorbeeld kan dienen voor het eindproduct. 
+          Technisch hoeft het niet nog te werken. 
+        </li>
+        <li>
+          De applicatie of website moet door ziende gebruikers gebruikt kunnen worden
+        </li>
+        <li>
+          Er wordt gebruik gemaakt van menselijke stemmen voor de ervaring
+        </li>
+        <li>
+          Het volume van verschillende audio-elementen binnen de applicatie moeten kunnen worden aangepast door de gebruiker
+        </li>
+        <li>
+          Het prototype is online deelbaar, bijvoorbeeld over sociale mediakanalen. Mensen kunnen erbij en kunnen ermee interacteren.
+        </li>
+      </ul>
+      <h4>
+        Should
+      </h4>
+      <ul>
+        <li>
+          De applicatie werkt op zowel mobiel/tablet als desktop.
+        </li>
+        <li>
+          Er wordt een duidelijke uitleg gegeven in de applicatie zelf over de werking en besturing.
+        </li>
+      </ul>
+      <h4>
+        Could
+      </h4>
+      <ul>
+        <li>
+          De applicatie of website is beschikbaar in meer talen dan alleen Nederlands zoals Engels, Duits of Frans.
+        </li>
+        <li>
+          Er worden keuzemogelijkheden geboden voor verschillende stemmen.
+        </li>
+        <li>
+          Voor de stem(men) word(en) professionele voorlezers en/of stemacteurs gebruikt.
+        </li>
+      </ul>
+      <h4>
+        Won't
+      </h4>
+      <ul>
+        <li>
+          Compatible maken met alle mogelijke sites als plug-in of overlay.
+        </li>
+        <li>
+          Maken van volledig nieuwe audio API/tools
+        </li>
+      </ul>
     </div>
   );
 
