@@ -3,6 +3,7 @@ import { useAudioPlayerContext } from "../../context/AudioPlayerContext";
 import { toggleTranscription } from "../logic/transcriptionLogic";
 import "../../index.css";
 
+//Consttants and usestate variable used in the AudioPlayer component
 const AudioPlayer = ({ fileName, title }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -13,6 +14,7 @@ const AudioPlayer = ({ fileName, title }) => {
   const [showWarning, setShowWarning] = useState(false);
   const [isTranscriptionVisible, setIsTranscriptionVisible] = useState(false);
 
+  //Make it possible to let the volume and playback rate be set globally
   const {
     globalVolume,
     setGlobalVolume,
@@ -22,8 +24,10 @@ const AudioPlayer = ({ fileName, title }) => {
     setCurrentlyPlayingAudio,
   } = useAudioPlayerContext();
 
+  //Get the audio file name from the props
   const audioSrc = `audio/${fileName}`;
 
+  //Handle the volume and playback rate when the component mounts
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.volume = globalVolume;
@@ -31,10 +35,11 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   }, [globalVolume, globalPlaybackRate]);
 
+  //Handle the audio ended event to reset the play button state
   useEffect(() => {
     const handleAudioEnded = () => {
       setIsPlaying(false);
-      setCurrentTime(0); // Reset the current time to the beginning
+      setCurrentTime(0);
     };
 
     const audioElement = audioRef.current;
@@ -49,6 +54,7 @@ const AudioPlayer = ({ fileName, title }) => {
     };
   }, []);
 
+  //Handle play and pause events
   const togglePlayPause = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -74,6 +80,7 @@ const AudioPlayer = ({ fileName, title }) => {
     }
   };
 
+  //Make sure the correct time is displayed when the audio is played
   const handleTimeUpdate = () => {
     setCurrentTime(audioRef.current.currentTime / globalPlaybackRate);
   };
@@ -82,24 +89,28 @@ const AudioPlayer = ({ fileName, title }) => {
     setDuration(audioRef.current.duration);
   };
 
+  //Allow the user to scroll through the audio using the slider
   const handleSeek = (e) => {
     const seekTime = (e.target.value / 1000) * duration;
     audioRef.current.currentTime = seekTime;
     setCurrentTime(seekTime / globalPlaybackRate);
   };
 
+  //Update the volume when the user changes it
   const handleVolumeChange = (e) => {
     const newVolume = e.target.value / 100;
     setGlobalVolume(newVolume);
     localStorage.setItem("audioPlayerVolume", newVolume);
   };
 
+  //Update the playback rate when the user changes it
   const handlePlaybackRateChange = (e) => {
     const newRate = parseFloat(e.target.value);
     setGlobalPlaybackRate(newRate);
     localStorage.setItem("audioPlayerPlaybackRate", newRate);
   };
 
+  //Format the time to be displayed in the audio player so that it can be understood by the user
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60)
@@ -108,6 +119,7 @@ const AudioPlayer = ({ fileName, title }) => {
     return `${minutes}:${seconds}`;
   };
 
+  //Make call to the transcription function when the user clicks on the button
   const handleTranscription = async () => {
     await toggleTranscription(
       audioSrc,
@@ -150,6 +162,7 @@ const AudioPlayer = ({ fileName, title }) => {
         onChange={handleSeek}
         className="seek-bar"
       />
+      {/* Volume controls */}
       <div className="volume-controls">
         <label htmlFor="volume">Volume:</label>
         <input
@@ -162,6 +175,8 @@ const AudioPlayer = ({ fileName, title }) => {
         />
         <span>{Math.round(globalVolume * 100)}%</span>
       </div>
+
+      {/* Playback rate controls*/}
       <div className="playback-rate-controls">
         <label htmlFor="playbackRate">Afspeel snelheid:</label>
         <select
@@ -179,6 +194,7 @@ const AudioPlayer = ({ fileName, title }) => {
           <option value="2">2x</option>
         </select>
       </div>
+      {/* Show warning message if transcription is available */}
       {showWarning && (
         <div className="warning">
           <strong>Let op:</strong> Deze transcriptie maakt gebruik van
@@ -213,6 +229,7 @@ const AudioPlayer = ({ fileName, title }) => {
           ></div>
         </div>
       )}
+      {/* Show button to toggle transcription visibility */}
       {transcription && !isTranscriptionVisible && (
         <button
           onClick={() => setIsTranscriptionVisible(true)}

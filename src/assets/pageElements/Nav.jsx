@@ -16,6 +16,7 @@ const Nav = () => {
     return acc;
   }, {});
 
+  //Set up the navigation bar with the chapters and subchapters
   return (
     <aside
       style={{

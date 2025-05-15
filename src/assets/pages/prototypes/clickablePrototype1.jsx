@@ -2,6 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../../styles/prototype1.css";
 
+export const title = "Clickable Prototype 1";
+
 // ClickablePrototype1 component
 const ClickablePrototype1 = () => {
   const [isInIframe, setIsInIframe] = useState(false);

@@ -1,7 +1,9 @@
 import React from "react";
 import Layout from "../pageElements/Layout";
 
-export const title = "Ops!";
+//This page is called when ever a page does not exist on the website
+//This replaces the default 404 page that in this current configuation serves a different purpose (see copy404.js)
+export const title = "Oops!";
 
 const NotFound = () => {
   const content = (

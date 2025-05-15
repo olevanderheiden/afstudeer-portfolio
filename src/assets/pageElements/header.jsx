@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/layout.css"; // Import the CSS file
+import "../../styles/layout.css";
 
 const Header = () => {
   return (
     <header className="header">
-      {/* Title */}
       <h1>Afstudeer Portfolio</h1>
-
-      {/* Navigation Links */}
       <nav>
         <ul>
           <li>

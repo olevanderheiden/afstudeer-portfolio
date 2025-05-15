@@ -16,7 +16,7 @@ export const toggleTranscription = async (
     return;
   }
 
-  // Check if transcription exists in local storage
+  // Check if transcription exists in local storage an if so, use that instead of making a new request
   const storedTranscription = localStorage.getItem(audioSrc);
   if (storedTranscription) {
     setTranscription(storedTranscription);
@@ -24,11 +24,13 @@ export const toggleTranscription = async (
     return;
   }
 
+  // If no stored transcription, proceed with the API call
   setIsTranscribing(true);
   setTranscription(
     "Transscriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft..."
   );
 
+  // Check if the audio file exists on the server (audio files can only be transsribed if they are included in the build on GitHub Pages, local files won't work)
   try {
     const serverAudioUrl = `https://olevanderheiden.github.io/afstudeer-portfolio/${audioSrc}`;
 
@@ -38,6 +40,7 @@ export const toggleTranscription = async (
       throw new Error("Audio file not found on the server");
     }
 
+    // Proceed with the transcription request (uses a API key froma AsemblyAI that is stored in the .env file)
     const response = await fetch("https://api.assemblyai.com/v2/transcript", {
       method: "POST",
       headers: {
@@ -73,6 +76,7 @@ export const toggleTranscription = async (
       formattedTranscription || "Transscriptie niet beschikbaar."
     );
   } catch (error) {
+    //Handle errors in such a way that the users can understand what went wrong. This means informing them in the UI and not just in the console
     console.error("Error transcribing audio:", error);
     setTranscription(
       error.message === "Audio file not found on the server"
@@ -84,6 +88,7 @@ export const toggleTranscription = async (
   }
 };
 
+// Function to poll the transcription result from AssemblyAI
 const pollTranscriptionResult = async (transcriptId) => {
   const pollingEndpoint = `https://api.assemblyai.com/v2/transcript/${transcriptId}`;
   while (true) {
@@ -113,7 +118,7 @@ const formatTranscriptionWithSpeakers = (utterances) => {
 
   return utterances
     .map((utterance) => {
-      // Replace terms in the text with links
+      // Replace terms in the text with links in case that the text contains terms that are in the terms.json file
       const linkedText = utterance.text.replace(
         new RegExp(`\\b(${Object.keys(termMap).join("|")})\\b`, "gi"),
         (match) =>
