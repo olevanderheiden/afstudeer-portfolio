@@ -44,6 +44,24 @@ const Chapter2_1 = () => {
         hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere
         deelvraag op een individuele basis.
       </p>
+      <h4>Wat is een goed ontwerp voor audio gebruikers?</h4>
+      <p>
+        Zoals je hebt kunnen horen in de interviews. Zijn er een aantal dingen
+        die belangrijkzijn voor audio gebruikers. War er belangrijk wordt
+        gevonden verschilt per persoon. Maar is ook afhankelijk van wat voor
+        audio ervaring je aanbied. Zo is het overbrengen van enkel informatie
+        vaak makkelijker te doen in tekstvorm. Dit heeft te maken met het feit
+        dat het lastiger is om precieze segmenten ten vinden in een audio
+        bestand. Echter voor het overbrengen van emotie, sfeer en persoonlijke
+        verhalen is audio vell geschikter. OOk word er doro alle geinterviewden
+        voorkeur gegeven aan menselijke stemmen. Text to speech heeft zo zijn
+        plaats, maar zeker niet bij een persoonlijk verhaal. AI daar in tegen
+        word als onprettig ervaren door iedere geinterviewde. Zo wordt het als
+        onpersoonlijk, vlak en niet authentiek ervaren. Bovendien is de uistraap
+        van AI vaak niet logisch omdat het niet altijd op een zin of alinea
+        basis wordt gedaan maar per klank. Dit vinden de geinterviewden niet
+        pretig!
+      </p>
       <h4>Voegt de audio ervaring iets toe?</h4>
       <p>
         Om de vraag te beantwoorden ben ik op zoek gegaan naar bedrijven en
@@ -59,6 +77,23 @@ const Chapter2_1 = () => {
         in audio vorm beschickbaar zijn vaker worden gelezen dan artikelen die
         alleen in tekstvorm zijn. Dit is een belangrijke bevinding, en zecht
         iets over de toegevoegde waardie die een aurdio ervaring kan hebben.
+      </p>
+      <h4>Welke alternatieven bestaan er en wat leren we ervan?</h4>
+      <p>
+        Eén van de alternatieven is al genoemd tijdens de interviews. Dit zijn{" "}
+        <a href="begrippen?=SCREENREADER">schermlezers </a>zoals:{" "}
+        <a href="begrippen?search=JAWS">Jaws</a>,{" "}
+        <a href="begrippen?search=NVDA">NVDA</a>,{" en"}
+        <a href="begrippen?search=VoiceOver">VoiceOver</a>. Dit zijn programma's
+        die de tekst op een scherm voorlezen. Dit is dus absoluute een concurent
+        van de audio ervaring die ik aan het ontwikkelen ben. Dit heeft echter
+        heel andere doeleinden. Het overbrengen van emotie en sfeer is namelijk
+        niet mogelijk met een schermlezer. Dit komt doordat er gebruik wordt
+        gemaakt van text to speech(een computer stem). En dit soort stemmen zijn
+        niet bedoeld om emotie over te brengen. Dit wordt niet alleen bevestigd
+        door mein eigen ervaringen met het gebruiken van schermlezers die ik heb
+        gehad in het verleden. Maar de mensen die ik heb geinterviewd die
+        gebruik maken van schermlezers bevestigen dit ook.
       </p>
     </div>
   );
