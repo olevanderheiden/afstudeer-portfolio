@@ -95,6 +95,49 @@ const Chapter2_1 = () => {
         gehad in het verleden. Maar de mensen die ik heb geinterviewd die
         gebruik maken van schermlezers bevestigen dit ook.
       </p>
+      <h4>Welke pagina's zijn geschikt voor een audio ervaring?</h4>
+      <p>
+        Tijdens mijn ontwikkel proces heb ik meerdere pagina's overwogen als
+        demonstratie van de audio ervaring.
+      </p>
+      <ul>
+        <li>
+          Blog/Nieuws pagina: Digitaal toegankelijk heef een blog dus dit zou
+          technisch gezien makkelijk kunnen.
+        </li>
+        <li>
+          Overons pagina: Dit is een pagina die informatie over Digitaal
+          toegankelijk en haar medewerkers geeft. Dit is erg geschickt voor een
+          audio ervagin omdat het de mogelijkheid biedt om mensen een idee te
+          geven van de toon, sfeer en filosofie van Digitaal Toegankelijk.
+        </li>
+        <li>
+          De hele website: Dit maakt de audio ervaring een beshickbaar over de
+          hele website en dus bruikbaar voor wie dan ook de site bezoekt.
+        </li>
+        <li>
+          Gesymuleeerde webshop: Dit zou een losse demo zijn om het nut van de
+          audio ervaring te laten zien. Dit is echter niet een daadwerkelijke
+          toepassing die door iedereen die digitaal toegankelijk bzoekt
+          grootschalig gebruikt of toegepast kan worden.
+        </li>
+      </ul>
+      <p>
+        Na het bespreken van de diverse mogelijheden met Pim kwamen we tot de
+        conclusie dat het meest ligsch zou zijn om de pagina er een te laten zij
+        die ook daadwerkelijk door DT gbruikt kon worden. Hier door viel de
+        gesimuleerde webshop af. Ook was het al snel duidelijk tijdens
+        gesprekken dat de hele website deze feature geven veel te ambitieus zou
+        zijn. Dit was niet alleen door een gebrek aan tijd die ik heb voor mijn
+        stage project. Maar ook omdat dit de beschickbare middelen voor het
+        maken van dit product ernstig zou beperken. Dit komt doordat DT voor hun
+        website Wordpress gebruikt. En hoewel dit erg geschickt is voor het
+        maken van een website. Is het niet het meest flexibele CMS(content
+        management systeem) dat er is. Met het oog hier op heb ik samen met Pim
+        besloten dat ik voor nu mijn audio ervaring zal maken in een systeem
+        waar mee ik goed bekend ben. De pagina zal voor nu een op zich zelf
+        staande pagina zijn.
+      </p>
     </div>
   );
 
