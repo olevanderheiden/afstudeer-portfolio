@@ -1,0 +1,27 @@
+.planning-week {
+  color: #b3d1ff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 1em;
+  display: block;
+}
+.planning-done {
+  text-decoration: line-through;
+  color: #888;
+}
+.planning-missed {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.planning-level-0 {
+  margin-bottom: 1em;
+}
+.planning-level-1 {
+  margin-left: 1.5em;
+}
+.planning-level-2 {
+  margin-left: 2.5em;
+}
+.planning-level-3 {
+  margin-left: 3.5em;
+}
