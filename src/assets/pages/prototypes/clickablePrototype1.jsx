@@ -5,7 +5,29 @@ import useUpdateTitle from "../../../hooks/useUpdateTitle";
 
 const title = "Clickable Prototype 1";
 
-// ClickablePrototype1 component
+const people = [
+  "Aimee",
+  "Annelies",
+  "Emma",
+  "Laure",
+  "Peter",
+  "Pim",
+  "Sanne",
+  "Petra",
+  "Roel",
+  "David",
+];
+
+const office = ["Benedenverdieping", "Bovenverdieping"];
+const philosophy = ["Belang Toegankelijkheid", "B Corp"];
+const items = [...people, ...office, ...philosophy];
+
+// Helper: get possible audio sources for an item
+const getPossibleAudioSrcs = (name) => [
+  `audio/prototype/${name.toLowerCase().replace(/ /g, "_")}.wav`,
+  `audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`,
+];
+
 const ClickablePrototype1 = () => {
   useUpdateTitle(title);
   const [isInIframe, setIsInIframe] = useState(false);
@@ -14,41 +36,16 @@ const ClickablePrototype1 = () => {
   const [tourAbortController, setTourAbortController] = useState(null);
   const [playingAudioIndex, setPlayingAudioIndex] = useState(null);
   const [pausedAudioIndex, setPausedAudioIndex] = useState(null);
+  // Store for each item: { exists: true/false, src: string or null }
   const [audioExists, setAudioExists] = useState([]);
   const navigate = useNavigate();
   const audioRefs = useRef([]);
   const cardRefs = useRef([]);
 
-  // List of items to be displayed in the tour
-  // The items are used to create the audio and image file names
-  const items = [
-    "Aimee",
-    "Annelies",
-    "Emma",
-    "Laure",
-    "Peter",
-    "Pim",
-    "Benedenverdieping",
-    "Bovenverdieping",
-    "Belang Toegankelijkheid",
-    "B Corp",
-  ];
-
   useEffect(() => {
     const inIframe = window.self !== window.top;
     setIsInIframe(inIframe);
   }, []);
-
-  // Helper to get audio source for each index
-  const getAudioSrc = (idx) => {
-    if (idx < 6 || idx >= 8) {
-      return `audio/prototype/${items[idx]
-        .toLowerCase()
-        .replace(/ /g, "_")}.wav`;
-    } else {
-      return `audio/${items[idx].toLowerCase().replace(/ /g, "_")}.mp3`;
-    }
-  };
 
   // Check if an audio file exists
   const checkAudioExists = (src) => {
@@ -62,11 +59,19 @@ const ClickablePrototype1 = () => {
     });
   };
 
-  // On mount, check all audio files and store their existence
+  // On mount, check all possible audio files for each item and pick the first that exists
   useEffect(() => {
     const checkAllAudio = async () => {
       const checks = await Promise.all(
-        items.map((_, idx) => checkAudioExists(getAudioSrc(idx)))
+        items.map(async (name) => {
+          const srcs = getPossibleAudioSrcs(name);
+          for (let src of srcs) {
+            if (await checkAudioExists(src)) {
+              return { exists: true, src };
+            }
+          }
+          return { exists: false, src: null };
+        })
       );
       setAudioExists(checks);
     };
@@ -74,10 +79,13 @@ const ClickablePrototype1 = () => {
     // eslint-disable-next-line
   }, []);
 
+  // Helper: get the audio src for an index (returns null if not found)
+  const getAudioSrc = (idx) =>
+    audioExists[idx] && audioExists[idx].exists ? audioExists[idx].src : null;
+
   // Play all available audio files in order, scroll and focus to each card
   const handleTourStart = async () => {
     if (isTourLoading) {
-      // Stop the tour if already running
       if (tourAbortController) {
         tourAbortController.abort();
       }
@@ -93,19 +101,13 @@ const ClickablePrototype1 = () => {
     const abortController = new AbortController();
     setTourAbortController(abortController);
 
-    const audioSources = items.map((_, idx) => getAudioSrc(idx));
-
-    const existenceChecks = await Promise.all(
-      audioSources.map((src) => checkAudioExists(src))
-    );
-    const playableIndexes = audioSources
-      .map((src, idx) => (existenceChecks[idx] ? idx : null))
+    const playableIndexes = audioExists
+      .map((info, idx) => (info && info.exists ? idx : null))
       .filter((idx) => idx !== null);
 
     for (const idx of playableIndexes) {
       if (abortController.signal.aborted) break;
 
-      // Scroll and focus to the card
       const card = cardRefs.current[idx];
       if (card) {
         setActiveCard(idx);
@@ -115,8 +117,9 @@ const ClickablePrototype1 = () => {
       setPlayingAudioIndex(idx);
       setPausedAudioIndex(null);
 
-      //Check if audio is available and play it during the tour
-      const audio = new window.Audio(audioSources[idx]);
+      const src = getAudioSrc(idx);
+      if (!src) continue;
+      const audio = new window.Audio(src);
       await new Promise((resolve) => {
         audio.play();
         audio.onended = () => {
@@ -139,7 +142,6 @@ const ClickablePrototype1 = () => {
         );
       });
     }
-    // Reset state after tour ends
     setActiveCard(null);
     setPlayingAudioIndex(null);
     setPausedAudioIndex(null);
@@ -149,25 +151,18 @@ const ClickablePrototype1 = () => {
 
   // Play/pause/continue logic for individual audio buttons
   const playAudio = (index) => {
-    if (isTourLoading) return; // Block manual play during tour
-
+    if (isTourLoading) return;
     const audio = audioRefs.current[index];
     if (!audio) return;
-
-    // If another audio is playing, block all except the current
     if (playingAudioIndex !== null && playingAudioIndex !== index) {
       return;
     }
-
-    // If this audio is already playing, pause it
     if (playingAudioIndex === index && !audio.paused) {
       audio.pause();
       setPausedAudioIndex(index);
       setPlayingAudioIndex(null);
       return;
     }
-
-    // If this audio was paused, continue it
     if (pausedAudioIndex === index) {
       audio.play();
       setPlayingAudioIndex(index);
@@ -182,8 +177,6 @@ const ClickablePrototype1 = () => {
       };
       return;
     }
-
-    // Otherwise, play from start
     audio.currentTime = 0;
     audio.play();
     setActiveCard(index);
@@ -242,15 +235,13 @@ const ClickablePrototype1 = () => {
         <section className="section">
           <h2>Ons team</h2>
           <div className="section-content">
-            {items.slice(0, 6).map((name, index) => (
-              // Create a card for each site tour item
+            {people.map((name, index) => (
               <div
                 key={index}
                 className={`card${activeCard === index ? " active-card" : ""}`}
                 tabIndex={-1}
                 ref={(el) => (cardRefs.current[index] = el)}
               >
-                {/* Image and name of tour element */}
                 <img
                   src={`images/prototype/${name
                     .toLowerCase()
@@ -264,10 +255,9 @@ const ClickablePrototype1 = () => {
                     isTourLoading ||
                     (playingAudioIndex !== null &&
                       playingAudioIndex !== index) ||
-                    audioExists[index] === false
+                    !audioExists[index]?.exists
                   }
                 >
-                  {/* Play/Pause/Continue button */}
                   {playingAudioIndex === index &&
                   audioRefs.current[index] &&
                   !audioRefs.current[index].paused
@@ -276,108 +266,108 @@ const ClickablePrototype1 = () => {
                     ? "Doorgaan"
                     : "Afspelen"}
                 </button>
-                {/* Audio element for each card */}
                 <audio
                   ref={(el) => (audioRefs.current[index] = el)}
-                  src={`audio/prototype/${name
-                    .toLowerCase()
-                    .replace(/ /g, "_")}.wav`}
+                  src={getAudioSrc(index) || ""}
                 />
               </div>
             ))}
           </div>
         </section>
 
-        {/* Additional sections for office and philosophy  uses the same elements as the ones for employees*/}
         <section className="section">
           <h2>Over het Kantoor</h2>
           <div className="section-content">
-            {items.slice(6, 8).map((name, index) => (
-              <div
-                key={index + 6}
-                className={`card${
-                  activeCard === index + 6 ? " active-card" : ""
-                }`}
-                tabIndex={-1}
-                ref={(el) => (cardRefs.current[index + 6] = el)}
-              >
-                <img
-                  src={`images/prototype/${name
-                    .toLowerCase()
-                    .replace(/ /g, "_")}.png`}
-                  alt={`Afbeelding van ${name}`}
-                />
-                <p>{name}</p>
-                <button
-                  onClick={() => playAudio(index + 6)}
-                  disabled={
-                    isTourLoading ||
-                    (playingAudioIndex !== null &&
-                      playingAudioIndex !== index + 6) ||
-                    audioExists[index + 6] === false // Disable if file doesn't exist
-                  }
+            {office.map((name, i) => {
+              const index = people.length + i;
+              return (
+                <div
+                  key={index}
+                  className={`card${
+                    activeCard === index ? " active-card" : ""
+                  }`}
+                  tabIndex={-1}
+                  ref={(el) => (cardRefs.current[index] = el)}
                 >
-                  {playingAudioIndex === index + 6 &&
-                  audioRefs.current[index + 6] &&
-                  !audioRefs.current[index + 6].paused
-                    ? "Pauzeer"
-                    : pausedAudioIndex === index + 6
-                    ? "Doorgaan"
-                    : "Afspelen"}
-                </button>
-                <audio
-                  ref={(el) => (audioRefs.current[index + 6] = el)}
-                  src={`audio/${name.toLowerCase().replace(/ /g, "_")}.mp3`}
-                />
-              </div>
-            ))}
+                  <img
+                    src={`images/prototype/${name
+                      .toLowerCase()
+                      .replace(/ /g, "_")}.png`}
+                    alt={`Afbeelding van ${name}`}
+                  />
+                  <p>{name}</p>
+                  <button
+                    onClick={() => playAudio(index)}
+                    disabled={
+                      isTourLoading ||
+                      (playingAudioIndex !== null &&
+                        playingAudioIndex !== index) ||
+                      !audioExists[index]?.exists
+                    }
+                  >
+                    {playingAudioIndex === index &&
+                    audioRefs.current[index] &&
+                    !audioRefs.current[index].paused
+                      ? "Pauzeer"
+                      : pausedAudioIndex === index
+                      ? "Doorgaan"
+                      : "Afspelen"}
+                  </button>
+                  <audio
+                    ref={(el) => (audioRefs.current[index] = el)}
+                    src={getAudioSrc(index) || ""}
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
 
         <section className="section">
           <h2>Onze filosofie</h2>
           <div className="section-content">
-            {items.slice(8).map((name, index) => (
-              <div
-                key={index + 8}
-                className={`card${
-                  activeCard === index + 8 ? " active-card" : ""
-                }`}
-                tabIndex={-1}
-                ref={(el) => (cardRefs.current[index + 8] = el)}
-              >
-                <img
-                  src={`images/prototype/${name
-                    .toLowerCase()
-                    .replace(/ /g, "_")}.png`}
-                  alt={`Afbeelding van ${name}`}
-                />
-                <p>{name}</p>
-                <button
-                  onClick={() => playAudio(index + 8)}
-                  disabled={
-                    isTourLoading ||
-                    (playingAudioIndex !== null &&
-                      playingAudioIndex !== index + 8) ||
-                    audioExists[index + 8] === false // Disable if file doesn't exist
-                  }
+            {philosophy.map((name, i) => {
+              const index = people.length + office.length + i;
+              return (
+                <div
+                  key={index}
+                  className={`card${
+                    activeCard === index ? " active-card" : ""
+                  }`}
+                  tabIndex={-1}
+                  ref={(el) => (cardRefs.current[index] = el)}
                 >
-                  {playingAudioIndex === index + 8 &&
-                  audioRefs.current[index + 8] &&
-                  !audioRefs.current[index + 8].paused
-                    ? "Pauzeer"
-                    : pausedAudioIndex === index + 8
-                    ? "Doorgaan"
-                    : "Afspelen"}
-                </button>
-                <audio
-                  ref={(el) => (audioRefs.current[index + 8] = el)}
-                  src={`audio/prototype/${name
-                    .toLowerCase()
-                    .replace(/ /g, "_")}.wav`}
-                />
-              </div>
-            ))}
+                  <img
+                    src={`images/prototype/${name
+                      .toLowerCase()
+                      .replace(/ /g, "_")}.png`}
+                    alt={`Afbeelding van ${name}`}
+                  />
+                  <p>{name}</p>
+                  <button
+                    onClick={() => playAudio(index)}
+                    disabled={
+                      isTourLoading ||
+                      (playingAudioIndex !== null &&
+                        playingAudioIndex !== index) ||
+                      !audioExists[index]?.exists
+                    }
+                  >
+                    {playingAudioIndex === index &&
+                    audioRefs.current[index] &&
+                    !audioRefs.current[index].paused
+                      ? "Pauzeer"
+                      : pausedAudioIndex === index
+                      ? "Doorgaan"
+                      : "Afspelen"}
+                  </button>
+                  <audio
+                    ref={(el) => (audioRefs.current[index] = el)}
+                    src={getAudioSrc(index) || ""}
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </main>
