@@ -255,6 +255,13 @@ main {
   }
 }
 
+.unavailable-btn {
+  background: #eee !important;
+  color: #aaa !important;
+  border: 1px solid #e5e5e5 !important;
+  cursor: not-allowed !important;
+}
+
 @media (max-width: 600px) {
   .header-content,
   main {

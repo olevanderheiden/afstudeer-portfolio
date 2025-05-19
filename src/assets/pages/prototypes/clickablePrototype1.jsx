@@ -192,6 +192,24 @@ const ClickablePrototype1 = () => {
     };
   };
 
+  // Helper for button content
+  const getButtonContent = (index) => {
+    if (!audioExists[index]?.exists) {
+      return "Niet beschikbaar";
+    }
+    if (
+      playingAudioIndex === index &&
+      audioRefs.current[index] &&
+      !audioRefs.current[index].paused
+    ) {
+      return "Pauzeer";
+    }
+    if (pausedAudioIndex === index) {
+      return "Doorgaan";
+    }
+    return "Afspelen";
+  };
+
   return (
     <div className="page-container">
       {/* Header */}
@@ -257,14 +275,11 @@ const ClickablePrototype1 = () => {
                       playingAudioIndex !== index) ||
                     !audioExists[index]?.exists
                   }
+                  className={
+                    !audioExists[index]?.exists ? "unavailable-btn" : ""
+                  }
                 >
-                  {playingAudioIndex === index &&
-                  audioRefs.current[index] &&
-                  !audioRefs.current[index].paused
-                    ? "Pauzeer"
-                    : pausedAudioIndex === index
-                    ? "Doorgaan"
-                    : "Afspelen"}
+                  {getButtonContent(index)}
                 </button>
                 <audio
                   ref={(el) => (audioRefs.current[index] = el)}
@@ -304,14 +319,11 @@ const ClickablePrototype1 = () => {
                         playingAudioIndex !== index) ||
                       !audioExists[index]?.exists
                     }
+                    className={
+                      !audioExists[index]?.exists ? "unavailable-btn" : ""
+                    }
                   >
-                    {playingAudioIndex === index &&
-                    audioRefs.current[index] &&
-                    !audioRefs.current[index].paused
-                      ? "Pauzeer"
-                      : pausedAudioIndex === index
-                      ? "Doorgaan"
-                      : "Afspelen"}
+                    {getButtonContent(index)}
                   </button>
                   <audio
                     ref={(el) => (audioRefs.current[index] = el)}
@@ -352,14 +364,11 @@ const ClickablePrototype1 = () => {
                         playingAudioIndex !== index) ||
                       !audioExists[index]?.exists
                     }
+                    className={
+                      !audioExists[index]?.exists ? "unavailable-btn" : ""
+                    }
                   >
-                    {playingAudioIndex === index &&
-                    audioRefs.current[index] &&
-                    !audioRefs.current[index].paused
-                      ? "Pauzeer"
-                      : pausedAudioIndex === index
-                      ? "Doorgaan"
-                      : "Afspelen"}
+                    {getButtonContent(index)}
                   </button>
                   <audio
                     ref={(el) => (audioRefs.current[index] = el)}
