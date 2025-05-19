@@ -26,13 +26,17 @@ export const planning = [
         title: "Interviews met audio gebruikers uitzetten.",
         children: [
           { title: "Eigen contacten benaderen", done: true },
-          { title: "Contacten van digitaal toegankelijk benaderen." },
+          {
+            title: "Contacten van digitaal toegankelijk benaderen.",
+            missed: true,
+          },
         ],
       },
       {
         title: "Onderzoeksmethode vaststellen.",
+        done: true,
         children: [
-          { title: "Inlezen over onderzoeksmethodes", done: true },
+          { title: "Inlezen over onderzoeksmethodes" },
           { title: "Onderzoeksmethode kiezen" },
         ],
       },
@@ -42,18 +46,31 @@ export const planning = [
     title: "Week 14-04 tot 20-04",
     isWeek: true,
     children: [
-      { title: "Onderzoeksmethode schrijven" },
-      { title: "Interview vragen vaststellen" },
+      { title: "Onderzoeksmethode schrijven", done: true },
+      { title: "Interview vragen vaststellen", done: true },
       { title: "Stakeholder analyse doen", done: true },
       {
         title: "Interviews houden (indien mogelijk)",
         children: [
-          { title: "Gesprek houden" },
+          { title: "Gesprek houden", done: true },
           { title: "Samenvatten", missed: true },
         ],
       },
-      { title: "Visueel ontwerp opstarten/maken" },
-      { title: "Check met Pim inplannen alvast" },
+      { title: "Visueel ontwerp opstarten/maken", done: true },
+      { title: "Check met Pim inplannen alvast", done: true },
+    ],
+  },
+  {
+    title: "Week 21-04 tot 28-04",
+    isWeek: true,
+    children: [
+      { title: "Visueel ontwerp verifiëren met oa Annelies", done: true },
+      { title: "Eerste check hebben met Pim", done: true },
+      {
+        title: "Interviews houden vervolg (indien mogelijk)",
+        done: true,
+        children: [{ title: "Gesprek houden" }, { title: "Samenvatten" }],
+      },
     ],
   },
 ];
