@@ -1,6 +1,7 @@
-import React from "react";
 import Layout from "../pageElements/Layout";
 import AudioPlayer from "../pageElements/audioPlayer";
+import { planning } from "../planningdata";
+import PlanningTree from "../pageElements/planningTree";
 
 export const title = "Bijlagen";
 
@@ -13,6 +14,12 @@ const Bijlagen = () => {
         onderzoek dat niet in zijn volledighijd op deze site staat. U kunt dit
         hier als nog beluisteren of bekijken.
       </p>
+      <h3>Stage planning</h3>
+      <p>
+        Hier vind je mijn planning die ik heb gemaakt tijdens mijn stage
+        periode.
+      </p>
+      <PlanningTree nodes={planning} />
       <h3>Interviews (met collega's):</h3>
       <AudioPlayer
         fileName="interviews/Aimee(20-03-2025-9am).mp3"
