@@ -73,4 +73,190 @@ export const planning = [
       },
     ],
   },
+  {
+    title: "Week 28-04 tot 04-05",
+    isWeek: true,
+    children: [
+      { title: "Stakeholder analyse doen", done: true },
+      {
+        title: "Tweede iteratie visueel ontwerp/interactieve versie",
+        done: true,
+      },
+      { title: "Interviews samenvattingen afmaken", missed: true },
+      {
+        title: "Website elementen vullen",
+        children: [
+          { title: "Probleemstelling en onderzoeksvraag", missed: true },
+          {
+            title: "Bespreken  (in portfolio) ontwerp proces portfolio site",
+            missed: true,
+          },
+          { title: "Visueel ontwerp versie 2 toevoegen", done: true },
+          { title: "Feedback pim iteratie 1", done: true },
+        ],
+      },
+      {
+        title: "Laatste interviews inplannen",
+        done: true,
+      },
+      {
+        title: "Laatste interviews potentieel houden",
+        missed: true,
+      },
+      {
+        title: "Gesprek plannen met pim bespreken ontwerp 2",
+        done: true,
+      },
+    ],
+  },
+  {
+    title: "Week 05-05 tot 11-05",
+    isWeek: true,
+    children: [
+      { title: "Laatste interviews potentieel houden", done: true },
+      { title: "Interviews samenvattingen afmaken", done: true },
+      { title: "Ontwerp 2 bespreken met Pim", done: true },
+      {
+        title: "Website elementen vullen",
+        children: [
+          {
+            title: "Bespreken  (in portfolio) ontwerp proces portfolio site",
+            missed: true,
+          },
+          { title: "Probleemstelling en onderzoeksvraag", done: true },
+          {
+            title: "Interviews toevoegen",
+            done: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Week 12-05 tot 18-05",
+    isWeek: true,
+    children: [
+      {
+        title: "Klikbare prototype maken (eerste verse)",
+        done: true,
+        children: [
+          {
+            title: "Eerste audio opnames regelen met Pim",
+          },
+          {
+            title:
+              "Mogelijke klantend bespreken die ik kan interviewen met pim",
+          },
+        ],
+      },
+      {
+        title: "Desk onderzoek doen naar onderzoeksvragen (zie portfolio)",
+        done: true,
+        children: [
+          {
+            title:
+              "Vraag toevoegen over welke tools/technieken ik best kan gebruiken.",
+          },
+        ],
+      },
+      { title: "Afspraken plannen met klanten DT", missed: true },
+      {
+        title: "Opzetten programmeeromgeving voor dit project",
+        missed: true,
+        children: [
+          {
+            title: "Onderzoek doen naar eventuele pluggins die nodig zijn",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Week 19-05 tot 25-05",
+    isWeek: true,
+    children: [
+      { title: "Desk onderzoek afronden" },
+      {
+        title: "Afspraken plannen met klanten DT (afstemmen met Annelies)",
+        children: [
+          {
+            title: "Opstellen format 5 vragen methode",
+          },
+        ],
+      },
+      {
+        title: "Opzetten programmeer omgeving project",
+        children: [
+          {
+            title: "Onderzoek naar plugins en andere technieken",
+          },
+        ],
+      },
+      {
+        title: "Verrantwoording schrijven",
+        children: [
+          {
+            title: "Ontbrekende onderdelen vullen",
+          },
+          {
+            title: "Second opinion over portfolio site ourders (20-05)",
+          },
+          {
+            title: "Second opinion docenten (22-05)",
+          },
+        ],
+      },
+      {
+        title: "Geinterviewden informeren over testen week 02-06 tot 08-06",
+        children: [
+          {
+            title: "Vragen wie bij DT quicks scan kan doen POC",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Week 26-05 tot 01-06",
+    isWeek: true,
+    children: [
+      { title: "Uitwerken klanten feedback (zo ver aanwezig)" },
+      { title: "Verder opzetten programmeer omgeving (eerste functies)" },
+      { title: "Verwerken feedback (Docenten)" },
+      {
+        title: "Rest van DT vragen voor opanme Audio introductie",
+        children: [
+          {
+            title: "Schrijven van instructies.",
+          },
+          { title: "Opname kantoor video (regelen/opnemen)" },
+          {
+            title:
+              "Opnamen introductie kantoor en normen/waarden DT (meer definitieve versie)",
+          },
+          {
+            title: "Onderzoeken of alternatief voor audio nodig is",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Week 02-06 tot 08-06",
+    isWeek: true,
+    children: [
+      { title: "Afmaken proof of concept" },
+      { title: "Geinterviewden spreken en testen poc" },
+      { title: "Resultaten quick scan verwerken" },
+      { title: "Resultaten tests verwerken" },
+      {
+        title: "Portfolio aanvullen",
+        children: [
+          {
+            title: "Second opinion ouders",
+          },
+        ],
+      },
+    ],
+  },
 ];
