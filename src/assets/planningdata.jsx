@@ -200,6 +200,7 @@ export const planning = [
           },
           {
             title: "Second opinion over portfolio site ourders (20-05)",
+            done: true,
           },
           {
             title: "Second opinion docenten (22-05)",

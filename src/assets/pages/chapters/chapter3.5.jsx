@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Welke pagina's zijn geschikt voor een audio ervaring?";
+export const title = "Welke pagina's zijn geschikt voor een audioervaring?";
 
 const Chapter3_5 = () => {
   const sources = (

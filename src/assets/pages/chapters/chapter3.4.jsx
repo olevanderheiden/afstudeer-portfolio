@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Hoe zorgen we er voor dat de ervaring insprireerd?";
+export const title = "Hoe zorgen we ervoor dat de ervaring inspireert?";
 
 const Chapter3_4 = () => {
   const sources = (

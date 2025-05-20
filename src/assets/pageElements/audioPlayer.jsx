@@ -178,7 +178,7 @@ const AudioPlayer = ({ fileName, title }) => {
 
       {/* Playback rate controls*/}
       <div className="playback-rate-controls">
-        <label htmlFor="playbackRate">Afspeel snelheid:</label>
+        <label htmlFor="playbackRate">Afspeelsnelheid:</label>
         <select
           id="playbackRate"
           value={globalPlaybackRate}

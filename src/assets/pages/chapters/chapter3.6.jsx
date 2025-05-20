@@ -2,7 +2,8 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "welke tools zijn meest geschickt voor deze applicatie?";
+export const title =
+  "Welke tools zijn het meest geschikt voor deze applicatie?";
 
 const Chapter3_6 = () => {
   const sources = (

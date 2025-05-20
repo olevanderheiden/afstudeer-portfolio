@@ -2,6 +2,7 @@ import Layout from "../pageElements/Layout";
 import AudioPlayer from "../pageElements/audioPlayer";
 import { planning } from "../planningdata";
 import PlanningTree from "../pageElements/planningTree";
+import "../../styles/planningTree.css";
 
 export const title = "Bijlagen";
 
@@ -17,7 +18,10 @@ const Bijlagen = () => {
       <h3>Stage planning</h3>
       <p>
         Hier vind je mijn planning die ik heb gemaakt tijdens mijn stage
-        periode.
+        periode.Grijs <span className="planning-done">doorgestreepte</span>{" "}
+        tekst. Betekend dat ik de (deel)taak in kwestie heb afgerond.{" "}
+        <span className="planning-missed">Rodetekst</span> betekend dat ik het
+        niet optijd af had en het doorschuif naar de volgende week.
       </p>
       <PlanningTree nodes={planning} />
       <h3>Interviews (met collega's):</h3>

@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Doelgroep & stakeholders";
+export const title = "Doelgroep en stakeholders";
 
 const Chapter1_3 = () => {
   const tableHeaders = [
@@ -23,7 +23,7 @@ const Chapter1_3 = () => {
 
   const tableRows = [
     {
-      stakeholder: "Digitaal Toegankelijk",
+      stakeholder: "Digitaal Toegankelijk (DT)",
       impact: "Hoog",
       invloed: "Hoog",
       details: [
@@ -42,14 +42,14 @@ const Chapter1_3 = () => {
       ],
     },
     {
-      stakeholder: "Arbeids zoekende",
+      stakeholder: "Arbeidszoekende",
       impact: "Hoog",
       invloed: "Middel",
       details: [
         {
-          belang: "Site kunnen navigeren",
+          belang: "Op site kunnen navigeren",
           bijdrage:
-            "Testen van de website/pagina zowel op gebruikviendelijkheid als effectiviteit is het overbrengen van de bedrijf visie en cultuur",
+            "Testen van de website/ pagina, zowel op gebruiksviendelijkheid als effectiviteit is het overbrengen van de bedrijfsvisie en cultuur",
         },
         {
           belang:
@@ -57,26 +57,26 @@ const Chapter1_3 = () => {
           bijdrage: "Feedback geven verstrekte informatie",
         },
         {
-          belang: "Een beeld vormen van of DT bij hun past als werkgever",
-          bijdrage: "Voorstellen van verbetingen en aanvullingen",
+          belang: "Een beeld vormen of DT bij hun past als werkgever",
+          bijdrage: "Voorstellen van verbeteringen en aanvullingen",
         },
       ],
     },
     {
-      stakeholder: "Audio gebruikers",
+      stakeholder: "Audiogebruikers",
       impact: "Middel",
       invloed: "Middel",
       details: [
         {
-          belang: "Site kunnen navigeren",
+          belang: "Op site kunnen navigeren",
           bijdrage: "Feedback geven op toegankelijkheid",
         },
         {
-          belang: "Goede audio ervaring meekrijgen",
+          belang: "Goede audioervaring meekrijgen",
           bijdrage: "Testen van audiofunctionaliteit",
         },
         {
-          belang: "Een gelijke ervaring met ziende gebruikers",
+          belang: "Een gelijke ervaring als ziende gebruikers",
           bijdrage: "Gebruikservaring delen",
         },
       ],
@@ -87,7 +87,7 @@ const Chapter1_3 = () => {
       invloed: "Laag",
       details: [
         {
-          belang: "Website navigeren zonder dingen te missen",
+          belang: "Op de website navigeren zonder dingen te missen",
           bijdrage: "Feedback geven op ontwerp",
         },
         {
@@ -133,15 +133,19 @@ const Chapter1_3 = () => {
 
   const content = (
     <div>
-      <h2>Doelgroep & Stakeholders</h2>
-      <p>Hier vind je alles over mijn stakeholder en doelgroep onderzoek.</p>
+      <h2>Doelgroep en stakeholders</h2>
+      <p>Hier vind je alles over mijn stakeholders en doelgroeponderzoek.</p>
       <h3>Primaire doelgroep</h3>
       <p>
-        De primaire doelgroep van dit product zijn werkzoekenden die wellicht
-        bij Digitaal Toegankelijk willen werken. De overons pagina geeft deze
-        mensen een goed beeld van de sfeer, cultuur en het team van Digitaal
-        Toegankelijk. En deze informatie op deze manier presenteren toont aan
-        hoe veel waarde Digitaal Toegankelijk hecht aan toegankelijkheid.
+        De primaire doelgroep zijn de klanten van Digitaal Toegankelijk (onder
+        andere bedrijven die hun website laten testen op toegankelijkheid). We
+        willen dat zij naar aanleiding van dit product geïnspireerd raken en de
+        toegevoegde waarde gaan inzien van goed audiogebruik op hun eigen
+        websites en applicaties. De 'Over ons pagina' van Digitaal Toegankelijk
+        geeft deze mensen een goed voorbeeld van de functionele inzet van audio
+        op een website. Door deze informatie op een auditieve manier te
+        presenteren, geeft Digitaal Toegankelijk tevens aan hoe het zelf hecht
+        aan toegankelijkheid.
       </p>
       <h3>Stakeholder Tabel</h3>
       <div className="table-container">
@@ -170,7 +174,7 @@ const Chapter1_3 = () => {
       <AudioPlayer
         fileName={"test.mp3"}
         title={
-          "Extre verduidelijking en beargumentering bij de stakholder tabel (comingsoon)"
+          "Extra verduidelijking en beargumentering bij de stakeholder-tabel (comingsoon)"
         }
       />
     </div>
