@@ -49,7 +49,7 @@ const Chapter2_2 = () => {
       <h3>Ontwerp proces afstudeer project</h3>
       <AudioPlayer
         fileName="content/chapter2/2.2uitLegOnwerpSchets1.mp3"
-        title="Uitleg van mijn gedachte proces tijdens het maken van de eerste schets (coming soon)"
+        title="Uitleg van mijn gedachte proces tijdens het maken van de eerste schets"
       />
       <ImageElement
         src="content/chapter2/prototype1DrawnPrototype.png"
