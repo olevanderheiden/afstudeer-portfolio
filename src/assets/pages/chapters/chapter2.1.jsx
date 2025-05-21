@@ -38,6 +38,11 @@ const Chapter2_1 = () => {
         fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"
         title="Inzichten uit de interviews met gebruikers 11-05-2025"
       />
+      <h3>Testen met Doelgroep (Klikbaar prototype 1)</h3>
+      <AudioPlayer
+        fileName="2.1vijfVragenMethodeOnderbouwing.mp3"
+        title="Onderbouwing 5 vragen methode"
+      />
       <h3>Desk research</h3>
       <p>
         Hier vind je al mijn desk research. Je vind hier de conclusies die ik
