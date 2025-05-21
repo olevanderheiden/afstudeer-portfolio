@@ -39,6 +39,13 @@ const Chapter2_2 = () => {
         Het middelste gedeelte van de pagina is waar de daadwerkelijke content van de pagina te zien is. Dit kunnen afbeeldingen, teksten of audio bestanden zijn.
         De rechter kant bevat een lijst van gebruikte bronnen bij ieder hoofstuk. Als laatste de sectie onder aan de pagina is de footer met hier in vooral een copyright icon en referenctie wie dze site heeft gemaakt. "
       />
+      <ImageElement
+        src="content/chapter2/audOntwerpPaginaOnderzoeken.png"
+        title="Aud ontwerp voor het redesign (beluister audio opname voor meer details)"
+        alt="Een afbeelding die het aude ontwerp laat zien van de portfolio website.
+      Objecten hebben heel veel wit ruimte en zijn daardoor klein en haast onleesbaar
+      voor lezers!"
+      />
       <h3>Ontwerp proces afstudeer project</h3>
       <AudioPlayer
         fileName="content/chapter2/2.2uitLegOnwerpSchets1.mp3"
