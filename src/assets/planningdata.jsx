@@ -181,6 +181,7 @@ export const planning = [
         children: [
           {
             title: "Opstellen format 5 vragen methode",
+            done: true,
           },
         ],
       },
@@ -189,6 +190,7 @@ export const planning = [
         children: [
           {
             title: "Onderzoek naar plugins en andere technieken",
+            done: true,
           },
         ],
       },
@@ -204,14 +206,19 @@ export const planning = [
           },
           {
             title: "Second opinion docenten (22-05)",
+            done: true,
           },
         ],
       },
       {
-        title: "Geinterviewden informeren over testen week 02-06 tot 08-06",
+        title: "Voorberijding op laatste feedback in week 02-06 tot 08-06",
+        done: true,
         children: [
           {
-            title: "Vragen wie bij DT quicks scan kan doen POC",
+            title: "Vragen wie bij DT quick scan kan doen POC",
+          },
+          {
+            title: "Geinterviewden informeren over testen week 02-06 tot 08-06",
           },
         ],
       },
@@ -247,7 +254,17 @@ export const planning = [
     isWeek: true,
     children: [
       { title: "Afmaken proof of concept" },
-      { title: "Geinterviewden spreken en testen poc" },
+      {
+        title: "Geinterviewden spreken en testen poc",
+        children: [
+          {
+            title: "Testen met Mauro (05-06 15:00 t/m 16:00)",
+          },
+          {
+            title: "Testen met Sanne (06-06 11 t/m 12)",
+          },
+        ],
+      },
       { title: "Resultaten quick scan verwerken" },
       { title: "Resultaten tests verwerken" },
       {
