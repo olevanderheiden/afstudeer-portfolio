@@ -1,3 +1,5 @@
+import { title } from "./pages/notFound";
+
 export const planning = [
   {
     title: "Week 07-04 tot 13–04",
@@ -258,7 +260,13 @@ export const planning = [
         title: "Geinterviewden spreken en testen poc",
         children: [
           {
+            title: "Testen met Kim (04-06 11:00 t/m 12:00)",
+          },
+          {
             title: "Testen met Mauro (05-06 15:00 t/m 16:00)",
+          },
+          {
+            title: "Testen met Carmen 05-06 16:00 t/m 17:00",
           },
           {
             title: "Testen met Sanne (06-06 11 t/m 12)",
