@@ -221,6 +221,7 @@ export const planning = [
           },
           {
             title: "Geinterviewden informeren over testen week 02-06 tot 08-06",
+            done: true,
           },
         ],
       },
@@ -231,7 +232,10 @@ export const planning = [
     isWeek: true,
     children: [
       { title: "Uitwerken klanten feedback (zo ver aanwezig)" },
-      { title: "Verder opzetten programmeer omgeving (eerste functies)" },
+      {
+        title: "Verder opzetten programmeer omgeving (eerste functies)",
+        done: true,
+      },
       { title: "Verwerken feedback (Docenten)" },
       {
         title: "Rest van DT vragen voor opanme Audio introductie",

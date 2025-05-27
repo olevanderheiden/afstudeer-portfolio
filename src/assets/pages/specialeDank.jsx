@@ -33,11 +33,15 @@ const specialeDank = () => {
       </ul>
       <h3>Digitale en physieke toegankelijkheid:</h3>
       <ul>
-        <li>Aimee</li>
-        <li>Dana</li>
-        <li>Emma</li>
-        <li>Jo</li>
-        <li>Pim</li>
+        <li>Aimee Chaves</li>
+        <li>David van Dam</li>
+        <li>Emma van Dormalen</li>
+        <li>Marieke de Hoop</li>
+        <li>Dana de Jong</li>
+        <li>Robert Keus</li>
+        <li>Pim Teuwisse</li>
+        <li>Laure Tolsma</li>
+        <li>Jojanneke Vonk</li>
       </ul>
       <h3>Geinterviewden en testers:</h3>
       <ul>
