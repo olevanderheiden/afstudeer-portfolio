@@ -53,6 +53,7 @@ const specialeDank = () => {
       </ul>
       <h3>Overige dank</h3>
       <ul>
+        <li>Anna Nasi</li>
         <li>Ron Wolgen</li>
       </ul>
     </div>
