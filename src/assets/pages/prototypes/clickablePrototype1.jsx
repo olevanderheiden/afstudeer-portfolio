@@ -242,11 +242,11 @@ const ClickablePrototype1 = () => {
       </div>
 
       {/* Back Button */}
-      {!isInIframe && (
+      {/* {!isInIframe && (
         <button className="back-button" onClick={() => navigate("/")}>
           Terug naar Portfolio
         </button>
-      )}
+      )} */}
 
       {/* Main Content */}
       <main>
