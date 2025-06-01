@@ -270,10 +270,10 @@ export const planning = [
             title: "Testen met Mireille(04-06 12:30 t/m 13:30)",
           },
           {
-            title: "Testen met Mauro (05-06 15:00 t/m 16:00)",
+            title: "Testen met Carmen 05-06 13:00 t/m 14:00",
           },
           {
-            title: "Testen met Carmen 05-06 16:00 t/m 17:00",
+            title: "Testen met Mauro (05-06 15:00 t/m 16:00)",
           },
           {
             title: "Testen met Sanne (06-06 11 t/m 12)",
