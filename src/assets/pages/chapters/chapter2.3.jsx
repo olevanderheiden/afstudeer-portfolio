@@ -134,8 +134,11 @@ const Chapter2_3 = () => {
         alleen realischische maar ook praktsiche manier voor mij en het bedrijf
         te make. Mijn gekozen opties vind je in de tabel hier onder:
       </p>
-      {/* --- Table inserted below this line --- */}
       <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
+      <IframeElement
+        src="https://olevanderheiden.github.io/afstudeerProject"
+        title="Proof of concept (Eind Product)"
+      />
     </div>
   );
 

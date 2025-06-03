@@ -210,18 +210,18 @@ th {
 /* Styling for iframe elements */
 .iframe-element {
   display: block;
-  width: 100%; /* Ensure the iframe scales with the container */
-  max-width: 100%; /* Allow it to take the full width on smaller screens */
-  height: auto; /* Maintain aspect ratio */
+  width: 100%;
+  max-width: 100%;
+  min-height: 1080px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin: 20px auto; /* Center the iframe */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
-
-/* Responsive styles for iframe */
 @media (max-width: 768px) {
   .iframe-element {
-    height: 400px; /* Set a default height for smaller screens */
+    min-height: 400px;
+    height: 400px;
   }
 }
