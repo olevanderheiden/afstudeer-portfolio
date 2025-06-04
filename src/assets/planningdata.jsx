@@ -259,15 +259,17 @@ export const planning = [
     title: "Week 02-06 tot 08-06",
     isWeek: true,
     children: [
-      { title: "Afmaken proof of concept" },
+      { title: "Afmaken proof of concept", done: true },
       {
         title: "Geinterviewden spreken en testen poc",
         children: [
           {
             title: "Testen met Kim (04-06 11:00 t/m 12:00)",
+            done: true,
           },
           {
             title: "Testen met Mireille(04-06 12:30 t/m 13:30)",
+            done: true,
           },
           {
             title: "Testen met Carmen 05-06 13:00 t/m 14:00",
