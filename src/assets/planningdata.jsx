@@ -273,9 +273,11 @@ export const planning = [
           },
           {
             title: "Testen met Carmen 05-06 13:00 t/m 14:00",
+            done: true,
           },
           {
             title: "Testen met Mauro (05-06 15:00 t/m 16:00)",
+            done: true,
           },
           {
             title: "Testen met Sanne (06-06 11 t/m 12)",
