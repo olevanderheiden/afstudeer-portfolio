@@ -281,6 +281,7 @@ export const planning = [
           },
           {
             title: "Testen met Sanne (06-06 11 t/m 12)",
+            done: true,
           },
         ],
       },
