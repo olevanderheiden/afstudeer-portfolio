@@ -1,10 +1,12 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
+import { useNavigate } from "react-router-dom";
 
 export const title = "Onderzoeksvragen";
 
 const Chapter3 = () => {
+  const navigate = useNavigate();
   const sources = (
     <>
       <li>Source 1</li>
@@ -17,10 +19,9 @@ const Chapter3 = () => {
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Introductie hoofstuk 2 (comingsoon)"
+        fileName="content/chapter3/3.introductie.mp3"
+        title="Introductie hoofstuk 3"
       />
-      <p>Chapter 0 is coming here!</p>
     </div>
   );
 
