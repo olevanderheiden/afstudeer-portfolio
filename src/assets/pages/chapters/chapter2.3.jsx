@@ -135,9 +135,25 @@ const Chapter2_3 = () => {
         te make. Mijn gekozen opties vind je in de tabel hier onder:
       </p>
       <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
+      <p>
+        Ik vond het erg belangrijk om met de audio gebruikers te kunnen testen.
+        Daar voor het ik een live versie gebouwt die je hier onder vind. De
+        feedback punten die ik heb gekregen van de audio gebruikers vind je
+        terug in het deel hoofdstuk <a href="chapter2.4">Ondernemen</a>
+      </p>
       <IframeElement
-        src="https://olevanderheiden.github.io/afstudeerProject"
-        title="Proof of concept (Eind Product)"
+        src="https://olevanderheiden.github.io/afstudeerProjectAudioTestVersion/"
+        title="Proof of concept (Test versie)"
+      />
+      <p>
+        Hier vind je mijn uiteindelijke proof of concept in zijn live versie.
+        Deze versie bevat de verbeteringen die ik heb gemaakt op basis van de
+        feedback die ik heb gekregen van audio gebruikers als ook de klanten van
+        DT.
+      </p>
+      <IframeElement
+        src="https://olevanderheiden.github.io/afstudeerProject/"
+        title="Proof of concept (Eind versie)"
       />
     </div>
   );
