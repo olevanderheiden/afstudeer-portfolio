@@ -17,10 +17,16 @@ const Chapter3_3 = () => {
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Antwoord deelvraag 3 (coming soon"
+        fileName="content/chapter3/3.3.antwoordDeelvraag3.mp3"
+        title="Antwoord deelvraag 3"
       />
-      <p>Info over deel vraag 3 komt hier</p>
+      <p>
+        Read speaker is recentelijk ook gebruik gaan maken voor AI stemmen voor
+        hun voorlees functionaliteit. Hoewel dit meer natuurlijk klinkend lees
+        ervaringen geeft is dit nog erg merkbaar. Daar naast is het ook niet erg
+        sociaal wenseljk Ai stemmen te gebruiken. Dit is nog een nadeel voor het
+        gebruik van dit alternatief
+      </p>
     </div>
   );
 

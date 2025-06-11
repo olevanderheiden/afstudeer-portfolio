@@ -1,4 +1,13 @@
 {
+  "/chapter1.1": [
+    {
+      "author": "Digitaal Toegankelijk",
+      "year": "2019",
+      "title": "Over ons",
+      "publisher": "Digitaal Toegankelijk",
+      "url": "https://digitaaltoegankelijk.nl/ons-verhaal/"
+    }
+  ],
   "/chapter1.3": [
     {
       "year": "2015, maart 9",
@@ -68,13 +77,25 @@
       "url": "https://ig.ft.com/generative-ai/"
     }
   ],
-  "/chapter1.1": [
+  "/chapter3.3": [
     {
-      "author": "Digitaal Toegankelijk",
-      "year": "2019",
-      "title": "Over ons",
-      "publisher": "Digitaal Toegankelijk",
-      "url": "https://digitaaltoegankelijk.nl/ons-verhaal/"
+      "publisher": "OrCam Techologies",
+      "year": "2024, februari 21",
+      "title": "OrCam MyEye 3 Pro—Revolutionize Your Vision with Cutting-Edge AI Technology.",
+      "url": "https://www.orcam.com/en-us/orcam-myeye-3-pro"
+    },
+    {
+      "publisher": "Read speaker",
+      "year": "Geraadpleegd 2025, juni 11",
+      "title": "Text to Speech with 200+ Realistic AI Voices in 50+ languages. (z.d.).",
+      "url": "https://www.readspeaker.com/"
+    },
+    {
+      "Author": "Microsoft",
+      "year": "2025, march",
+      "title": "Complete guide to Narrator.",
+      "publisher": "Microsoft Support",
+      "url": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1"
     }
   ]
 }
