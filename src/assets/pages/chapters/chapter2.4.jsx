@@ -21,6 +21,16 @@ const Chapter2_4 = () => {
           communiceert daar duidelijk en regelmatig over.
         </li>
       </ul>
+
+      <h3>Waarom heb ik voor deze tools en technieken gekozen?</h3>
+      <p>
+        IK heb uitgebrijd onderzoek gedaan naar welke ontwikkel omgeving ik het
+        beste kon gebruiken voor het maken van mijn proof of concept. De
+        volledige vergelijking tabel kan je vinden in de{" "}
+        <a href="chapter2.3">ontwikkel pagina 2.3</a>
+      </p>
+
+      <h3>Testen met stakeholders</h3>
       <p>
         Ik heb tijdens het ontwikkelen van mijn project contact gehouden met een
         aantal stakeholders. Dit waren DT mijn opdracht gever, audio gebruikers
