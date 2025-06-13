@@ -28,7 +28,7 @@ const Chapter2_2 = () => {
       <h3>Ontwerp proces portfolio website</h3>
       <p>Informatie over de portfolio website komt hier....</p>
       <AudioPlayer
-        fileName="content/chapter2/2.2PortfolioSiteTour.mp3"
+        fileName="content/chapter2/2.2PortfolioSiteTourV2.mp3"
         title="Porfolio website tour en uitleg van design keuzes"
       />
       <ImageElement
