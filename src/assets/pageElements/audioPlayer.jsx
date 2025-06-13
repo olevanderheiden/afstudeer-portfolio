@@ -127,7 +127,7 @@ const AudioPlayer = ({ fileName, title }) => {
       setIsTranscribing,
       (transcriptionText) => {
         setTranscription(transcriptionText);
-        setIsTranscriptionVisible(true); // Automatically show transcription
+        setIsTranscriptionVisible(true);
       }
     );
   };

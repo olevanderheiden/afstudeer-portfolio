@@ -116,9 +116,20 @@ const formatTranscriptionWithSpeakers = (utterances) => {
     return map;
   }, {});
 
+  // Helper to split text into paragraphs every N sentences
+  function splitIntoParagraphs(text, sentencesPerParagraph = 3) {
+    // Split text into sentences (simple regex, can be improved)
+    const sentences = text.match(/[^.!?]+[.!?]+/g) || [text];
+    const paragraphs = [];
+    for (let i = 0; i < sentences.length; i += sentencesPerParagraph) {
+      paragraphs.push(sentences.slice(i, i + sentencesPerParagraph).join(" "));
+    }
+    return paragraphs;
+  }
+
   return utterances
     .map((utterance) => {
-      // Replace terms in the text with links in case that the text contains terms that are in the terms.json file
+      // Replace terms in the text with links
       const linkedText = utterance.text.replace(
         new RegExp(`\\b(${Object.keys(termMap).join("|")})\\b`, "gi"),
         (match) =>
@@ -127,8 +138,14 @@ const formatTranscriptionWithSpeakers = (utterances) => {
           )}" target="_blank">${termMap[match.toLowerCase()]}</a>`
       );
 
-      // Return the speaker and the linked text
-      return `<strong>${utterance.speaker}:</strong><br>${linkedText}`;
+      // Split into paragraphs
+      const paragraphs = splitIntoParagraphs(linkedText, 3);
+
+      // Return speaker and paragraphs
+      return `<strong>${utterance.speaker}:</strong><br>${paragraphs
+        .map((p) => p.trim())
+        .filter(Boolean)
+        .join("<br><br>")}`;
     })
     .join("<br><br>");
 };
