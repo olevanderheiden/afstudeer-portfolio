@@ -5,7 +5,7 @@ import AudioPlayer from "../pageElements/audioPlayer";
 const HomePage = () => {
   const content = (
     <div>
-      <h2>Welkom op de afstudeerportfolio van Ole van der Heiden</h2>
+      <h2>Welkom op het afstudeerportfolio van Ole van der Heiden</h2>
       <p>
         Dit portfolio is grotendeels in audiovorm opgesteld. Ik heb deze keuze
         bewust gemaakt, omdat audio goed past bij mijn onderzoek. Graag geef ik

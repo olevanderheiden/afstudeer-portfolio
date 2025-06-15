@@ -5,7 +5,7 @@ import "../../styles/layout.css";
 const Header = () => {
   return (
     <header className="header">
-      <h1>Afstudeer Portfolio</h1>
+      <h1>Afstudeerportfolio</h1>
       <nav>
         <ul>
           <li>

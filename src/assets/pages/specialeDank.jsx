@@ -9,11 +9,11 @@ const specialeDank = () => {
     <div>
       <h2>Speciale dank</h2>
       <p>
-        Deze stage zou niet mogelijk zijn geweest zonder de hulp van een aantal
-        mensen. Dank jullie wel voor alle ondersteuning, hulp en aanmodiging. Ik
-        ben jullie euwig dankbaar.
+        Dit portfolio zou niet mogelijk zijn geweest zonder de hulp van een
+        aantal mensen. Dank jullie wel voor alle ondersteuning, hulp en
+        aanmoediging. Ik ben jullie eeuwig dankbaar.
       </p>
-      <h3>Stage begeleiding:</h3>
+      <h3>Stagebegeleiding:</h3>
       <ul>
         <li>Peter Teunis</li>
         <li>Annelies Verhelst</li>
@@ -31,7 +31,7 @@ const specialeDank = () => {
         <li>Kalle van der Heiden</li>
         <li>Jantien Walraad</li>
       </ul>
-      <h3>Digitale en physieke toegankelijkheid:</h3>
+      <h3>Digitale en fysieke toegankelijkheid:</h3>
       <ul>
         <li>Aimee Chaves</li>
         <li>David van Dam</li>
@@ -39,11 +39,11 @@ const specialeDank = () => {
         <li>Marieke de Hoop</li>
         <li>Dana de Jong</li>
         <li>Robert Keus</li>
-        <li>Pim Teuwisse</li>
+        <li>Pim Teeuwisse</li>
         <li>Laure Tolsma</li>
         <li>Jojanneke Vonk</li>
       </ul>
-      <h3>Geinterviewden en testers:</h3>
+      <h3>Geïnterviewden en testers:</h3>
       <ul>
         <li>Sanne Brand</li>
         <li>Carmen Denhaven</li>

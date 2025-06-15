@@ -49,7 +49,7 @@ const Chapter1_3 = () => {
         {
           belang: "Op site kunnen navigeren",
           bijdrage:
-            "Testen van de website/ pagina, zowel op gebruiksviendelijkheid als effectiviteit is het overbrengen van de bedrijfsvisie en cultuur",
+            "Testen van de website/ pagina, zowel op gebruiksviendelijkheid als effectiviteit in het overbrengen van de bedrijfsvisie en cultuur",
         },
         {
           belang:
@@ -174,7 +174,7 @@ const Chapter1_3 = () => {
       <AudioPlayer
         fileName={"test.mp3"}
         title={
-          "Extra verduidelijking en beargumentering bij de stakeholder-tabel (comingsoon)"
+          "Extra verduidelijking en beargumentatie bij de stakeholder-tabel (coming soon)"
         }
       />
     </div>

@@ -13,10 +13,13 @@ const Chapter1_2 = () => {
       </p>
       <h3>Probleemstelling</h3>
       <p>
-        Veel bedrijven en organisaties hebben weinig kennis of ervaring met het
-        maken van toegankelijke websites en apps. Hierdoor wordt dit vaak gezien
-        als een extra kostenpost met weinig tot geen voordeel voor het bedrijf.
-        De Europese unie heeft met de{" "}
+        Veel bedrijven en organisaties hebben weinig kennis van of ervaring met
+        het maken van toegankelijke websites en apps. Ook hebben ze niet altijd
+        zicht op het aantal mensen met een beperking dat hun website bezoekt en
+        de (gebrekkige) toegankelijkheid van hun websites of apps voor deze
+        mensen. Hierdoor wordt het toegankelijk maken van websites en apps vaak
+        gezien als een extra kostenpost die weinig tot geen voordeel voor het
+        bedrijf oplevert. De Europese unie heeft met de{" "}
         <a href="begrippen?search=EAA">EAA (European Accessibility Act)</a> een
         wetgeving aangenomen die bedrijven verplicht om hun websites en apps
         toegankelijk te maken. Deze wet wordt in juni 2025 van kracht. Het is
@@ -36,20 +39,20 @@ const Chapter1_2 = () => {
           Wat houdt een "goed vormgegeven site/ app voor audiogebruikers" in?
         </li>
         <li>
-          Welke alternatieven voor deze audioervaring zijn er al en wat kunnen
+          Welke alternatieven voor deze audio-ervaring zijn er al en wat kunnen
           we hiervan leren?
         </li>
         <li>
-          Voegt een goede audioervaring daadwerkelijk iets toe wat huidige
+          Voegt een goede audio-ervaring daadwerkelijk iets toe wat huidige
           hulpmiddelen niet bieden?
         </li>
         <li>
-          Hoe kunnen we de audioervaring zo presenteren, dat het als inspirerend
-          voorbeeld kan dienen voor bedrijven?
+          Hoe kunnen we de audio-ervaring zo presenteren, dat het als
+          inspirerend voorbeeld kan dienen voor bedrijven?
         </li>
         <li>
           Welke pagina of type pagina's kunnen het best gebruikt worden voor een
-          audioervaring?
+          audio-ervaring?
         </li>
       </ul>
       <h3>Ontwerpcriteria (moscow principe)</h3>
