@@ -16,53 +16,53 @@ const tableRows = [
   {
     naam: "React Frontend + WordPress Backend (Headless)",
     beschrijving:
-      "De tour en weergaven van de website worden gedaan door React en de backend en het beheren van de onderdelen wordt gedaan in wordpress",
+      "De tour en weergaven van de website worden gedaan door React en de backend en het beheren van de onderdelen wordt gedaan in Wordpress",
     voordelen: [
-      "Content kan zonder programmeer kennis worden beheerd.",
+      "Content kan zonder programmeerkennis worden beheerd.",
       "Content beheren is simpel te beveiligen",
-      "Ik heb volledige controle over hoe aller er uit gaat zien.",
-      "Het maken van tour functies is makkelijk op te zetten met mijn kennis.",
+      "Ik heb volledige controle over hoe alles er uit gaat zien.",
+      "Het maken van tourfuncties is makkelijk op te zetten met mijn kennis.",
       "Er is veel documentatie aanwezig om dit te kunnen maken en onderhouden",
-      "Front en backend zijn netjes gescheiden wat goed is voor maintainability.",
+      "Frontend en backend zijn netjes gescheiden wat goed is voor maintainability.",
     ],
     nadelen: [
-      "Meer voor en installatie werk",
+      "Meer voor- en installatiewerk",
       "React moet los worden gestart ofwel handmatig of met Wordpress plugins zoals: WP Headless of wp React Starter",
-      "Project moet op server gezet worden die mysql ondersteund.",
-      "Door de scheiding van back en front-end kan er wellicht verwarring ontstaan",
+      "Project moet op server gezet worden die MySQL ondersteunt.",
+      "Door de scheiding van backend en frontend kan er wellicht verwarring ontstaan",
     ],
     voorkeur: "1",
   },
   {
     naam: "Wordpress (vanilla)",
     beschrijving:
-      "Alle functionaliteit van de tour tot de content wordt gedaan in wordpress",
+      "Alle functionaliteit van de tour tot de content wordt gedaan in Wordpress",
     voordelen: [
       "Content bewerken is simpel",
       "Geen losse deployment zoals met React.",
       "Minder installatie en opzet werk.",
-      "Alles is in 1 systeem",
+      "Alles is in 1 systeem ondergebracht",
     ],
     nadelen: [
       "Minder flexibiliteit",
       "Ingewikkelde logica is moeilijker te maken en zwaarder voor de website wat voor vertraging kan zorgen.",
-      "Minder geschikt als dit op grote schaal gebruikt wil worden.",
-      "Maken van custom plugin is wellicht nodig, en daar heb ik weinig ervaring mee.",
+      "Minder geschikt als dit op grote schaal gebruikt moet worden.",
+      "Maken van custom plugins is wellicht nodig en daar heb ik weinig ervaring mee.",
     ],
     voorkeur: "2",
   },
   {
-    naam: "Custom (van de grond op)",
+    naam: "Custom (van scratch)",
     beschrijving:
-      "Ik maak mijn eigen front en backend voor deze functionaliteit.",
+      "Ik maak mijn eigen frontend en backend voor deze functionaliteit.",
     voordelen: [
       "Enorm veel flexibiliteit.",
-      "Veem mogelijkheden qua werking van de audio tour en makkelijk aantonen van innovatie.",
+      "Veel mogelijkheden qua werking van de audiotour en makkelijk aantonen van innovatie.",
     ],
     nadelen: [
-      "Enorm veel voor en installatie werk",
-      "Onderhouden door niet programmeurs kan moeilijk zijn zeker als ik daar niet op focus!",
-      "Heel veel programmeer werk door het hele proces",
+      "Enorm veel voor- en installatiewerk",
+      "Onderhouden door niet programmeurs kan moeilijk zijn, zeker als ik daar niet op focus!",
+      "Heel veel programmeerwerk door het hele proces",
       "Sluit niet aan op de bestaande systemen",
     ],
     voorkeur: "4",
@@ -70,11 +70,11 @@ const tableRows = [
   {
     naam: "React (vanilla)",
     beschrijving:
-      "Alle functionaliteit zowel front als backend wordt gedaan in React",
+      "Alle functionaliteit zowel frontend als backend wordt gedaan in React",
     voordelen: [
-      "Weinig installatie werk",
+      "Weinig installatiewerk",
       "Functionaliteiten makkelijk te bouwen",
-      "Werkt zonder MYSQL Server",
+      "Werkt zonder MySQL Server",
       "Geen extra deployment stappen",
     ],
     nadelen: [
@@ -120,26 +120,26 @@ const Chapter2_3 = () => {
           uit je conceptontwerp.
         </li>
         <li>
-          Implementeren, Testen en opleveren: Je levert een iteratief ontwikkeld
+          Implementeren, testen en opleveren: Je levert een iteratief ontwikkeld
           prototype op volgens de bedrijfsstandaarden. Je kunt de correcte
           werking garanderen.
         </li>
       </ul>
       <p>Over het ontwikkelproces</p>
       <IframeElement src="prototype1" title="klikbare prototype 1" />
-      <h3>Onderzoek naar ontwikkel tools</h3>
+      <h3>Onderzoek naar ontwikkeltools</h3>
       <p>
-        Voor het maken van een eerste semi professionele versie. Heb ik
-        onderzoek gedaan naar verschillende manieren om het project op een niet
-        alleen realischische maar ook praktsiche manier voor mij en het bedrijf
-        te make. Mijn gekozen opties vind je in de tabel hier onder:
+        Voor het maken van een eerste semi-professionele versie heb ik onderzoek
+        gedaan naar verschillende manieren om het project op een zowel
+        realistische als ook praktische manier voor mij en het bedrijf te maken.
+        Mijn gekozen opties vind je in de tabel hieronder:
       </p>
       <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
       <p>
-        Ik vond het erg belangrijk om met de audio gebruikers te kunnen testen.
-        Daar voor het ik een live versie gebouwt die je hier onder vind. De
-        feedback punten die ik heb gekregen van de audio gebruikers vind je
-        terug in het deel hoofdstuk <a href="chapter2.4">Ondernemen</a>
+        Ik vond het erg belangrijk om met de audiogebruikers te kunnen testen.
+        Daarvoor het ik een live versie gebouwd die je hieronder vindt. De
+        feedbackpunten die ik heb gekregen van de audiogebruikers vind je terug
+        in het deelhoofdstuk <a href="chapter2.4">Ondernemen</a>
       </p>
       <IframeElement
         src="https://olevanderheiden.github.io/afstudeerProjectAudioTestVersion/"
@@ -148,8 +148,8 @@ const Chapter2_3 = () => {
       <p>
         Hier vind je mijn uiteindelijke proof of concept in zijn live versie.
         Deze versie bevat de verbeteringen die ik heb gemaakt op basis van de
-        feedback die ik heb gekregen van audio gebruikers als ook de klanten van
-        DT.
+        feedback die ik heb gekregen van audiogebruikers als ook de klanten van
+        Digitaal Toegankelijk.
       </p>
       <IframeElement
         src="https://olevanderheiden.github.io/afstudeerProject/"
