@@ -1,14 +1,17 @@
 import { useEffect } from "react";
 
-//This hook automatically updates the displayed title of the page in the browser based on the title provided by the page
-//Most pages will only export a title variable that is then used in the Layout component to set the title of the page
-//However this hook can also be used by the pages that do not use the Layout component in that case the funtion must be called inside
-//the component that needs to set the title (such as the page itself)
-
-const useUpdateTitle = (pageTitle) => {
+// Accepts pageTitle, location, and chapters array
+const useUpdateTitle = (pageTitle, location, chapters) => {
   useEffect(() => {
-    document.title = pageTitle || "Afstudeer Portfolio";
-  }, [pageTitle]);
+    let fullTitle = pageTitle || "Afstudeer Portfolio";
+    if (location && chapters) {
+      const chapter = chapters.find((c) => c.path === location.pathname);
+      if (chapter && chapter.chapterNumber) {
+        fullTitle = `${chapter.chapterNumber} - ${pageTitle}`;
+      }
+    }
+    document.title = fullTitle;
+  }, [pageTitle, location, chapters]);
 };
 
 export default useUpdateTitle;

@@ -10,14 +10,15 @@ import { chapters } from "../logic/navLogic";
 import "../../styles/layout.css";
 
 const Layout = ({ content, pageTitle }) => {
-  useUpdateTitle(pageTitle);
-
   const location = useLocation();
   const navigate = useNavigate();
   const [sources, setSources] = useState(null);
 
+  useUpdateTitle(pageTitle, location, chapters);
+
   useEffect(() => {
     // Load sources for the current path
+    window.scrollTo(0, 0);
     const currentSources = sourcesData[location.pathname] || null;
     setSources(currentSources);
   }, [location.pathname]);
