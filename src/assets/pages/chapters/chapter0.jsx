@@ -9,14 +9,12 @@ const Chapter0 = () => {
   const content = (
     <div>
       <h2>Hoofdstuk 0: Introducties</h2>
-      <p>
-        In deze introductie vind je een overzicht van wat je in de verschillende
-        hoofdstukken kan verwachten tevens vind je hier het ontwerp process van
-        mijn portfolio website (de site waar u momenteel bent).
-      </p>
       <h3>Introductie stage project</h3>
       {/* Include the AudioPlayer component here */}
-      <AudioPlayer fileName="test.mp3" title="Introducties (coming soon)" />
+      <AudioPlayer
+        fileName="content/chapter0/0.introductie.mp3"
+        title="Introducties"
+      />
       <h3>Ontwerp en bouw van de portfolio website</h3>
 
       <AudioPlayer
