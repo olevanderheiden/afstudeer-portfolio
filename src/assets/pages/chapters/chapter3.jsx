@@ -3,7 +3,7 @@ import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 import { useNavigate } from "react-router-dom";
 
-export const title = "Het product";
+export const title = "Onderzoeksvragen";
 
 const Chapter3 = () => {
   const navigate = useNavigate();

@@ -6,13 +6,12 @@ export const title = "Inleiding";
 const Chapter1 = () => {
   const content = (
     <div>
+      <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Chapter 1: Introductie (coming soon)"
+        fileName="content/chapter1/1.introductie.mp3"
+        title="Hoofdstuk 1: Introductie"
       />
-      <h2>Chapter 1</h2>
-      <p>Chapter 1 is coming here!</p>
     </div>
   );
 

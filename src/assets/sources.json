@@ -69,12 +69,27 @@
       "url": "https://decorrespondent.nl/11570/deze-journalistieke-verhalen-kun-je-beluisteren-en-zo-doe-je-dat/1966095b-9e56-0715-1b4a-d43c3724b242"
     }
   ],
-  "/chapter2.2": [
+  "/chapter3.2": [
     {
-      "author": "A Nikkei Company",
-      "year": "2023, september 12",
-      "title": "Generative AI exists because of the transformer.",
-      "url": "https://ig.ft.com/generative-ai/"
+      "author": "Jongers, T. ’S.",
+      "publisher": "De Correspondent",
+      "year": "2025, Maart 25",
+      "title": "Wat zeven parkeerboetes me leerden over het verval van de rechtsstaat",
+      "url": "https://decorrespondent.nl/15977/wat-zeven-parkeerboetes-me-leerden-over-het-verval-van-de-rechtsstaat/5a1936be-a8e4-0c13-0f16-ffe27d84948f"
+    },
+    {
+      "author": "Levi van Dam",
+      "publisher": "De Correspondent",
+      "year": "2024, december 16",
+      "title": "Mentale problemen horen bij het leven. Maar dat vraagt om meer dan therapie. ",
+      "url": "https://soundcloud.com/decorrespondentleestvoor/levi-van-dam-mentale-problemen-horen-bij-het-leven-maar-dat-vraagt-om-meer-dan-therapie"
+    },
+    {
+      "author": "Sprengers, S., & Prantl, J.",
+      "publisher": "De Correspondent",
+      "year": "2020, september 8",
+      "title": "Deze journalistieke verhalen kun je beluisteren (en zo doe je dat).",
+      "url": "https://decorrespondent.nl/11570/deze-journalistieke-verhalen-kun-je-beluisteren-en-zo-doe-je-dat/1966095b-9e56-0715-1b4a-d43c3724b242"
     }
   ],
   "/chapter3.3": [
@@ -96,6 +111,15 @@
       "title": "Complete guide to Narrator.",
       "publisher": "Microsoft Support",
       "url": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1"
+    }
+  ],
+
+  "/chapter4.2": [
+    {
+      "author": "A Nikkei Company",
+      "year": "2023, september 12",
+      "title": "Generative AI exists because of the transformer.",
+      "url": "https://ig.ft.com/generative-ai/"
     }
   ]
 }
