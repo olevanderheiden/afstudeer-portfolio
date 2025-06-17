@@ -7,7 +7,7 @@ export const title = "Onderzoeken";
 const Chapter2_1 = () => {
   const content = (
     <div>
-      <h2>Onderzoek</h2>
+      <h2>{title}</h2>
       <ul>
         <li>
           Onderzoeken: Je onderbouwt je analyse en relevantie van het
@@ -20,30 +20,11 @@ const Chapter2_1 = () => {
           deelvragen en hoofdvraag.
         </li>
       </ul>
-      <p>
-        In dit deel hoofdstuk vind u alle bevindingen die ik gedaan heb tijdens
-        mijn onderzoek. Ik introduceer hier ook de geïnterviewden en tevens mijn
-        onderzoek methode
-      </p>
-      <h3>Audio gebruiker interviews</h3>
       <AudioPlayer
-        fileName="content/chapter2/2.1introInterviewAudioGebruikers.mp3"
-        title="Introductie onderzoek opset, vragenlijst en mail format"
+        fileName="content/chapter2/2.1.onderzoeken.mp3"
+        title="Wat heb ik gedaan voor onderzoeken?"
       />
-      <AudioPlayer
-        fileName="content/chapter2/2.1Introductie geinterviewden  (Complete versie 09-05-2025).mp3"
-        title="Introductie geinterviewden 09-05-2025"
-      />
-      <AudioPlayer
-        fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"
-        title="Inzichten uit de interviews met gebruikers 11-05-2025"
-      />
-      <h3>Testen met Doelgroep (Klikbaar prototype 1)</h3>
-      <AudioPlayer
-        fileName="2.1vijfVragenMethodeOnderbouwing.mp3"
-        title="Onderbouwing 5 vragen methode"
-      />
-      <h3>Desk research</h3>
+      <h3>Desk research (tijdelijk) </h3>
       <p>
         Hier vind je al mijn desk research. Je vind hier de conclusies die ik
         hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere
