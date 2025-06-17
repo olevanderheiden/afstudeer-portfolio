@@ -69,14 +69,6 @@
       "url": "https://decorrespondent.nl/11570/deze-journalistieke-verhalen-kun-je-beluisteren-en-zo-doe-je-dat/1966095b-9e56-0715-1b4a-d43c3724b242"
     }
   ],
-  "/chapter2.2": [
-    {
-      "author": "A Nikkei Company",
-      "year": "2023, september 12",
-      "title": "Generative AI exists because of the transformer.",
-      "url": "https://ig.ft.com/generative-ai/"
-    }
-  ],
   "/chapter3.3": [
     {
       "publisher": "OrCam Techologies",
@@ -96,6 +88,15 @@
       "title": "Complete guide to Narrator.",
       "publisher": "Microsoft Support",
       "url": "https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1"
+    }
+  ],
+
+  "/chapter4.1": [
+    {
+      "author": "A Nikkei Company",
+      "year": "2023, september 12",
+      "title": "Generative AI exists because of the transformer.",
+      "url": "https://ig.ft.com/generative-ai/"
     }
   ]
 }
