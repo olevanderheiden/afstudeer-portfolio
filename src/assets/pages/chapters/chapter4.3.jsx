@@ -109,7 +109,7 @@ const renderRow = (row) => (
 
 export const title = "Onderzoek ontwikkel tools en technieken";
 
-const Chapter3_9 = () => {
+const Chapter4_3 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
@@ -126,4 +126,4 @@ const Chapter3_9 = () => {
   return <Layout content={content} pageTitle={title} />;
 };
 
-export default Chapter3_9;
+export default Chapter4_3;

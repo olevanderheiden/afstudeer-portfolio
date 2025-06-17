@@ -5,7 +5,7 @@ import IframeElement from "../../pageElements/iframeElement";
 
 export const title = "Iteratie 3 Eerste werkende versie van de applicatie";
 
-const Chapter3_10 = () => {
+const Chapter4_4 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
@@ -30,4 +30,4 @@ const Chapter3_10 = () => {
   return <Layout content={content} pageTitle={title} />;
 };
 
-export default Chapter3_10;
+export default Chapter4_4;

@@ -5,7 +5,7 @@ import IframeElement from "../../pageElements/iframeElement";
 
 export const title = "Iteratie 2 Klikbare Prototype";
 
-const Chapter3_8 = () => {
+const Chapter4_2 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
@@ -20,4 +20,4 @@ const Chapter3_8 = () => {
   return <Layout content={content} pageTitle={title} />;
 };
 
-export default Chapter3_8;
+export default Chapter4_2;

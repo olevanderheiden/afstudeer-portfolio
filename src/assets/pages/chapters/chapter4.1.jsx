@@ -5,7 +5,7 @@ import ImageElement from "../../pageElements/imageElement";
 
 export const title = "Iteratie 1 ontwerp schetsen";
 
-const Chapter3_7 = () => {
+const Chapter4_1 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
@@ -46,4 +46,4 @@ const Chapter3_7 = () => {
   return <Layout content={content} pageTitle={title} />;
 };
 
-export default Chapter3_7;
+export default Chapter4_1;

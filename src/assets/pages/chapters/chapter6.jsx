@@ -2,22 +2,29 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Iteratie 4 proof of concept";
+export const title = "Aanbevelingen";
 
-const Chapter3_11 = () => {
+const Chapter6 = () => {
+  const sources = (
+    <>
+      <li>Source 1</li>
+      <li>Source 2</li>
+    </>
+  );
+
   const content = (
     <div>
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
         fileName="test.mp3"
-        title="Voor onderzoek naar doelgroep (coming soon"
+        title="Mijn aanbevelingen voor doorontwikkeling (comingsoon)"
       />
-      <p>Inleven content komtie hier</p>
+      <p>Chapter 0 is coming here!</p>
     </div>
   );
 
   return <Layout content={content} sources={sources} pageTitle={title} />;
 };
 
-export default Chapter3_11;
+export default Chapter6;
