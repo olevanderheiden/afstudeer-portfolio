@@ -1,44 +1,178 @@
 import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
-import ImageElement from "../../pageElements/imageElement";
+import Table from "../../pageElements/table";
 
-export const title = "Iteratie 1 ontwerp schetsen";
+export const title = "Inleven en eerste interviews audio gebruikers";
+
+const stakeholders = [
+  {
+    stakeholder: "Digitaal Toegankelijk",
+    belang: (
+      <ul>
+        <li>Bedrijf goed presenteren</li>
+        <li>product verkopen</li>
+        <li>belang van audio tonen</li>
+      </ul>
+    ),
+    positief: (
+      <ul>
+        <li>Presenteren al inovatief en toegankelijk</li>
+        <li>Voorbeeld zijn voor andere bedrijven</li>
+      </ul>
+    ),
+    negatief: (
+      <ul>
+        <li>Extra werk voor medewerkers</li>
+        <li>Site onderhouden kost tijd/geld</li>
+      </ul>
+    ),
+  },
+  {
+    stakeholder: "Arbeids zoekende",
+    belang: (
+      <ul>
+        <li>sfeer/cultuur/team leren kennen</li>
+        <li>Beoordelen of DT bij hen past</li>
+        <li>Een nieuwe manier van kennis maken met een werkgever</li>
+      </ul>
+    ),
+    positief: (
+      <ul>
+        <li>Het krijgen van een completer beeld van de opdracht gever</li>
+        <li>Nieuwe manier van kennis verkrijgen over DT</li>
+      </ul>
+    ),
+    negatief: (
+      <ul>
+        <li>Lang luisteren kan vermoeiend zijn</li>
+        <li>Speficieke informatie kan minder snel opgezocht worden</li>
+        <li>Auditieve input kan overweldigend zijn.</li>
+      </ul>
+    ),
+  },
+  {
+    stakeholder: "Audio gebruikers",
+    belang: (
+      <ul>
+        <li>Identieke informatie krijgen als ziende gebruikers</li>
+        <li>Website kunnen navigeren op een auditief vriendelijkere manier</li>
+      </ul>
+    ),
+    positief: (
+      <ul>
+        <li>completer beeld van de sfeer en cultuur bij DT.</li>
+        <li>Meer gelijkwaardige ervaring met ziende web gebruikers.</li>
+        <li>Een voorbeeld van hoe audio ervaringen kunnen werken.</li>
+      </ul>
+    ),
+    negatief: (
+      <ul>
+        <li>
+          Terug vinden van informatie kan moeilijker zijn, Omdat je niet kan
+          scrollen.
+        </li>
+        <li>Lang luisteren kan vermoeiend zijn.</li>
+        <li>Te veel informatie gegeven kan overweldigend zijn.</li>
+      </ul>
+    ),
+  },
+  {
+    stakeholder: "Ziende gebruikers",
+    belang: (
+      <ul>
+        <li>Website navigeren zonder dingen te missen</li>
+        <li>informatie opdoen</li>
+      </ul>
+    ),
+    positief: (
+      <ul>
+        <li>Informatie op een nieuwe manier ontvangen</li>
+        <li>Leren hoe audio gebruikers het web navigeren</li>
+        <li>Meer variatie in presentatievormen</li>
+      </ul>
+    ),
+    negatief: (
+      <ul>
+        <li>Audio kan overweldigend zijn als je dat niet gewend bent.</li>
+        <li>
+          Het terug vinden van informatie kan moeilijker zijn doordat je er niet
+          meer doorheen kan scrollen.
+        </li>
+        <li>
+          Het lang luisteren kan vermoeiend zijn. En daar door kan er informatie
+          gemist worden.
+        </li>
+      </ul>
+    ),
+  },
+  {
+    stakeholder: "Klanten van DT",
+    belang: (
+      <ul>
+        <li>
+          Toegankelijke en gebruiksvriendelijke website voor hun eigen klanten
+        </li>
+        <li>Wil goed over komen bij hun eigen klanten</li>
+      </ul>
+    ),
+    positief: (
+      <ul>
+        <li>Een voorbeeld hebben om te kunnen volgen.</li>
+        <li>Een nieuwe methode om zich zelf te presenteren.</li>
+      </ul>
+    ),
+    negatief: (
+      <ul>
+        <li>
+          Het maken en onderhouden van de audio ervaring kost tijd en geld.
+        </li>
+        <li>Onderzoek doen naar audio ervaringenkost tijd en geld.</li>
+      </ul>
+    ),
+  },
+];
+
+const tableHeaders = [
+  "Stakeholder",
+  "Belang(en)",
+  "Positieve gevolg(en)",
+  "Negatieve gevolg(en)",
+];
 
 const Chapter4_1 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
+      <h3>Stakeholder analyse</h3>
       <AudioPlayer
-        fileName="content/chapter2/2.2uitLegOnwerpSchets1.mp3"
-        title="Uitleg van mijn gedachteproces tijdens het maken van de eerste schets"
+        fileName="content/chapter4/4.1onderbouwingStakeholderAnalyse.mp3"
+        title="Onderbouwing stakeholder analyse (coming soon)"
       />
-      <ImageElement
-        src="content/chapter2/prototype1DrawnPrototype.png"
-        title="Prototype 1 low fidelity prototype 1 (figma pagina ontwerp)"
-        alt="Een afbeelding die de algemene layout van de over ons pagina laat zien. Er is nog geen gebruik gemaakt van kleuren of echte foto's. Er is een balk met navigatie opties aanwezig. Daaronder zijn er velden om afbeeldingen van verschillende afdelingen binnen Digitaal Toegankelijk te laten zien. Onder deze sectie vind je twee afbeeldingen naast elkaar die het kantoor van Digitaal Toegankelijk laten zien. Zowel de onder- als bovenverdieping. Als laatste sectie boven de footer vind je nog twee afbeeldingen die het werk van Digitaal Toegankelijk laten zien met een voor en na afbeelding."
+      <Table
+        headers={tableHeaders}
+        rows={stakeholders}
+        renderRow={(row) => (
+          <tr key={row.stakeholder}>
+            <td>{row.stakeholder}</td>
+            <td>{row.belang}</td>
+            <td>{row.positief}</td>
+            <td>{row.negatief}</td>
+          </tr>
+        )}
       />
-      <h4>Feedback ontvangen tijdens terugkomdag</h4>
-      <p>
-        Na het maken van dit eerste prototype heb ik de mogelijkheid gehad om
-        tijdens een terugkomdag op school mijn concept met een van de docenten
-        te bespreken. Dit was een erg waardevolle ervaring. Ik kreeg hierdoor de
-        tip om te kijken naar websites die meer content tonen terwijl je scrolt.
-        Iets vergelijkbaars zou ik namelijk ook kunnen doen met mijn audio
-        ervaring, door meer content te tonen terwijl de audio naar verschillende
-        setcties van de audio ervaring scrolt. Hoe haalbaar dit is zal nog
-        moeten blijken, maar het is wel een idee dat zowel mij als mijn
-        stagebedrijf erg aanspreekt. Het voorbeeld wat hier als inspiratie
-        diende vindt u in de bronnenlijst aan de rechterkant van deze pagina.
-      </p>
+      <h3>Interviews met audiogebruikers</h3>
       <AudioPlayer
-        fileName="content/chapter2/2.2InterviewPim.mp3"
-        title="Feedback op schets 1 door Pim"
+        fileName="content/chapter2/2.1introInterviewAudioGebruikers.mp3"
+        title="Introductie onderzoek opset, vragenlijst en mail format"
       />
-      <ImageElement
-        src="content/chapter2/prototype2DrawnPrototype.png"
-        title="Prototype 2 low fidelity prototype 2 (figma pagina ontwerp) Aangepast na feedback"
-        alt="Een afbeelding die de geüpdate layout laat zien die is ontstaan na de feedback van Pim. De sectie over verschillende afdelingen is vervangen door secties over verschillende werknemers van Digitaal Toegankelijk. Dit maakt de ervaring meer persoonlijk. Ook de sectie over projecten is vervangen door een segment over de filosofie van Digitaal Toegankelijk. De layout is anderzijds onveranderd. Lees de alt tekst van de vorige versie voor meer uitleg."
+      <AudioPlayer
+        fileName="content/chapter2/2.1Introductie geinterviewden  (Complete versie 09-05-2025).mp3"
+        title="Introductie geinterviewden 09-05-2025"
+      />
+      <AudioPlayer
+        fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"
+        title="Inzichten uit de interviews met gebruikers 11-05-2025"
       />
     </div>
   );
