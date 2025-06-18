@@ -3,7 +3,7 @@
   "homepage": "https://olevanderheiden.github.io/afstudeer-portfolio",
   "description": "A portfolio website for my graduation project.",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
