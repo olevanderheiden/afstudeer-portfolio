@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Het prdocuct";
+export const title = "Het product";
 
 const Chapter4 = () => {
   const sources = (
