@@ -121,8 +121,8 @@ const Chapter4_4 = () => {
       </p>
       <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
       <AudioPlayer
-        fileName="content/chapter4/4.4beargumenterenOnderzoek.mp3"
-        title="Onderbouwing onderozek  naar tools en technieken (coming soon)"
+        fileName="content/chapter4/4.4.ontwikkelTools.mp3"
+        title="Onderbouwing onderozek  naar tools en technieken"
       />
     </div>
   );
