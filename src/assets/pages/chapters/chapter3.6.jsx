@@ -18,10 +18,14 @@ const Chapter3_6 = () => {
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Antwoord deelvraag 6 (coming soon"
+        fileName="content/chapter3/3.6.antwoordDeelvraag6.mp3"
+        title="Antwoord deelvraag 6"
       />
-      <p>Info over deel vraag 6 komt hier</p>
+      <p>
+        De tabel en een meer uitgebreide uitleg van de voor en nadelen van de
+        verschillende mogelijke tools vind je in{" "}
+        <a href="chapter4.4">Hoofdstuk 4.4</a>
+      </p>
     </div>
   );
 
