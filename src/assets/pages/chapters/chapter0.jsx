@@ -8,7 +8,7 @@ export const title = "Introductie";
 const Chapter0 = () => {
   const content = (
     <div>
-      <h2>Hoofdstuk 0: Introducties</h2>
+      <h2>{title}</h2>
       <h3>Introductie stage project</h3>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
@@ -39,7 +39,7 @@ const Chapter0 = () => {
     </div>
   );
 
-  return <Layout content={content} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Chapter0;
