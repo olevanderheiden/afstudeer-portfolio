@@ -119,11 +119,11 @@ const Chapter4_4 = () => {
         realistische als ook praktische manier voor mij en het bedrijf te maken.
         Mijn gekozen opties vind je in de tabel hieronder:
       </p>
-      <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
       <AudioPlayer
         fileName="content/chapter4/4.4.ontwikkelTools.mp3"
         title="Onderbouwing onderozek  naar tools en technieken"
       />
+      <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
     </div>
   );
 

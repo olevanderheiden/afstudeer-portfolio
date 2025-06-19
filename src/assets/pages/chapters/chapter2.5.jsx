@@ -21,7 +21,7 @@ const Chapter2_5 = () => {
       </ul>
       <AudioPlayer
         fileName="content/chapter2/2.5.betrokken.mp3"
-        title="Wat heb ik gedaan voor betrokken?"
+        title="Wat heb ik gedaan voor betrokken? (coming soon)"
       />
     </div>
   );

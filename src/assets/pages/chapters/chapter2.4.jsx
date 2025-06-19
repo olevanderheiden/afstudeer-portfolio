@@ -23,7 +23,7 @@ const Chapter2_4 = () => {
       </ul>
       <AudioPlayer
         fileName="content/chapter2/2.4ondernemen.mp3"
-        title="Wat heb ik gedaan voor ondernemen?"
+        title="Wat heb ik gedaan voor ondernemen? (coming soon)"
       />
     </div>
   );

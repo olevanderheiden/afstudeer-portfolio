@@ -148,6 +148,12 @@ const Chapter1_3 = () => {
         aan toegankelijkheid.
       </p>
       <h3>Stakeholder Tabel</h3>
+      <AudioPlayer
+        fileName={"test.mp3"}
+        title={
+          "Extra verduidelijking en beargumentatie bij de stakeholder-tabel (coming soon)"
+        }
+      />
       <div className="table-container">
         <table>
           <thead>
@@ -171,12 +177,6 @@ const Chapter1_3 = () => {
           <tbody>{tableRows.map((row, index) => renderRow(row))}</tbody>
         </table>
       </div>
-      <AudioPlayer
-        fileName={"test.mp3"}
-        title={
-          "Extra verduidelijking en beargumentatie bij de stakeholder-tabel (coming soon)"
-        }
-      />
     </div>
   );
 
