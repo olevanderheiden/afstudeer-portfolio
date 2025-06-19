@@ -17,10 +17,14 @@ const Chapter3_5 = () => {
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Antwoord deelvraag 5 (coming soon"
+        fileName="content/chapter3/3.5.meestGeschicktePagina.mp3"
+        title="Antwoord deelvraag 5"
       />
-      <p>Info over deel vraag 2 komt hier</p>
+      <p>
+        Je kan het volledige gesprek waar in ik heb besloten welke pagina we
+        gaan doen voor de audio ervaring in de bijlagen. Onder het kopje
+        "Overige gesprekken" in het bestand "Gesprek met Pim en Jo (07-04-2025)"{" "}
+      </p>
     </div>
   );
 
