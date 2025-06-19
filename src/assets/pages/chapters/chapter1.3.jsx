@@ -149,9 +149,9 @@ const Chapter1_3 = () => {
       </p>
       <h3>Stakeholder Tabel</h3>
       <AudioPlayer
-        fileName={"test.mp3"}
+        fileName={"content/chapter1/1.3.verduidelijkingSakeholdersTabel.mp3"}
         title={
-          "Extra verduidelijking en beargumentatie bij de stakeholder-tabel (coming soon)"
+          "Extra verduidelijking en beargumentatie bij de stakeholder-tabel"
         }
       />
       <div className="table-container">
