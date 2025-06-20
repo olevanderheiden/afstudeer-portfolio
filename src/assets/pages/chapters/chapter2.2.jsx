@@ -1,5 +1,6 @@
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
+import ImageElement from "../../pageElements/imageElement";
 
 export const title = "Ontwerpen";
 
@@ -21,8 +22,13 @@ const Chapter2_2 = () => {
         </li>
       </ul>
       <AudioPlayer
-        fileName="content/chapter2/2.2.ontwerpen.mp3"
-        title="Wat heb ik gedaan voor ontwerpen? (coming soon)"
+        fileName="content/chapter2/2.2.WatHebIkGedaanVoorOntwerpen.mp3"
+        title="Wat heb ik gedaan voor ontwerpen?"
+      />
+      <ImageElement
+        src="content/chapter2/2.2.persona.png"
+        title="Persona Martin de Vries (klanten van Digitaal Toegankelijk)"
+        alt="Persona van Martin de Vries, 42-jarige man in marketing en websitebeheer. Praktisch, kostenbewust, weinig kennis van digitale toegankelijkheid. Gericht op efficiëntie en minimale klachten, met frustratie over mogelijke kosten en regelgeving."
       />
     </div>
   );
