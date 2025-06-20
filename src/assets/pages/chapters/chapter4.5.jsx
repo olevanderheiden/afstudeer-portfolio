@@ -26,7 +26,7 @@ const Chapter4_5 = () => {
       <h3>Feedback van de audiogebruikers</h3>
       <AudioPlayer
         fileName="content/chapter2/2.4testenAudioGebruikersProofOfConcept.mp3"
-        title="Test resultaten van testen met Audio gebruikers"
+        title="Test resultaten van testen met Audio gebruikers (5 testers)"
       />
       <h3>
         Feedback van auditor bij Digitaal Toegankelijk omtrent toegankelijkheid

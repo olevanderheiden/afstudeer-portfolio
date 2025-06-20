@@ -21,9 +21,23 @@ const Chapter2_3 = () => {
         </li>
       </ul>
       <AudioPlayer
-        fileName="content/chapter2/2.3.ontwikkelen.mp3"
-        title="Wat heb ik gedaan voor ontwikkelen? (coming soon)"
+        fileName="content/chapter2/2.3.Ontwikkelen.mp3"
+        title="Wat heb ik gedaan voor ontwikkelen?"
       />
+      <p>
+        De lijst met moscow prioriteiten die ik heb opgespeld met mijn stage
+        opracht gever Digitaal Toegankelijk is te vinden op pagina{" "}
+        <a href="chapter1.2">1.2 Probleem stelling en onderzoek vraag</a>.
+      </p>
+      <p>
+        Mijn technische analyse is de vinden op pagina{" "}
+        <a href="chapter4.4">4.4 Onderzoek ontwikkel tools en technieken</a>.
+      </p>
+      <p>
+        Mijn verschillende prototypes zijn te vinde in{" "}
+        <a href="chapter4">Hoofstuk 4: Het product</a> en de deel hoofdstukken
+        daar in.
+      </p>
     </div>
   );
 
