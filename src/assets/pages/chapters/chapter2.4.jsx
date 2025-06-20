@@ -22,9 +22,14 @@ const Chapter2_4 = () => {
         </li>
       </ul>
       <AudioPlayer
-        fileName="content/chapter2/2.4ondernemen.mp3"
-        title="Wat heb ik gedaan voor ondernemen? (coming soon)"
+        fileName="content/chapter2/2.4.ondernemen.mp3"
+        title="Wat heb ik gedaan voor ondernemen?"
       />
+      <p>
+        Voor meer over mijn contact met stakeholders en experts, zie{" "}
+        <a href="chapter2.5">Hoofdstuk 2.5</a> en gedurende{" "}
+        <a href="chapter4">Hoofdstuk 4</a>.
+      </p>
     </div>
   );
 
