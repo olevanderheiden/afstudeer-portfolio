@@ -147,7 +147,7 @@ const Chapter4_1 = () => {
       <h3>Analyse postieve en negatieve gevolgen</h3>
       <AudioPlayer
         fileName="content/chapter4/4.1.onderbouwingGevolgenTabel.mp3"
-        title="Onderbouwing positieve en negatieve gevolgen (coming soon)"
+        title="Onderbouwing positieve en negatieve gevolgen"
       />
       <Table
         headers={tableHeaders}
