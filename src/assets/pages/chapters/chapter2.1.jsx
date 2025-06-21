@@ -21,10 +21,21 @@ const Chapter2_1 = () => {
         </li>
       </ul>
       <AudioPlayer
-        fileName="content/chapter2/2.1.onderzoeken.mp3"
+        fileName="content/chapter2/chapter2.1.Onderzoeken.mp3"
         title="Wat heb ik gedaan voor onderzoeken?"
       />
-      <h3>Desk research (tijdelijk) </h3>
+      <p>
+        Voor het lezen over de onderzoek vragen kan je gaan naar{" "}
+        <a href="chapter1.2">
+          {" "}
+          Hoofdstuk 1.2: Probleemstelling en onderzoeksvraag
+        </a>
+      </p>
+      <p>
+        Voor het antwoord op alle deelvragen kan je gaan naar{" "}
+        <a href="chapter3"> Hoofdstuk 3: Onderzoeksvragen</a>
+      </p>
+      {/* <h3>Desk research (tijdelijk) </h3>
       <p>
         Hier vind je al mijn desk research. Je vind hier de conclusies die ik
         hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere
@@ -123,7 +134,7 @@ const Chapter2_1 = () => {
         besloten dat ik voor nu mijn audio ervaring zal maken in een systeem
         waar mee ik goed bekend ben. De pagina zal voor nu een op zich zelf
         staande pagina zijn.
-      </p>
+      </p> */}
     </div>
   );
 

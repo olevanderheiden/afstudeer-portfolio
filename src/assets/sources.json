@@ -141,5 +141,19 @@
       "title": "Generative AI exists because of the transformer.",
       "url": "https://ig.ft.com/generative-ai/"
     }
+  ],
+  "/chapter4.4": [
+    {
+      "author": "Snipcart",
+      "year": "2022, maart 21",
+      "title": "How to Use WordPress with React [WP REST API Tutorial].",
+      "url": "https://snipcart.com/blog/reactjs-wordpress-rest-api-example"
+    },
+    {
+      "author": "Vitejs",
+      "year": "2025, mei 5",
+      "title": "Getting Started. (z.d.). ",
+      "url": "https://vite.dev/guide/"
+    }
   ]
 }

@@ -144,10 +144,10 @@ const Chapter4_1 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
-      <h3>Stakeholder analyse</h3>
+      <h3>Analyse postieve en negatieve gevolgen</h3>
       <AudioPlayer
-        fileName="content/chapter4/4.1onderbouwingStakeholderAnalyse.mp3"
-        title="Onderbouwing stakeholder analyse (coming soon)"
+        fileName="content/chapter4/4.1.onderbouwingGevolgenTabel.mp3"
+        title="Onderbouwing positieve en negatieve gevolgen (coming soon)"
       />
       <Table
         headers={tableHeaders}
