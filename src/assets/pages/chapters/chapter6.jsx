@@ -20,7 +20,6 @@ const Chapter6 = () => {
         fileName="test.mp3"
         title="Mijn aanbevelingen voor doorontwikkeling (comingsoon)"
       />
-      <p>Chapter 0 is coming here!</p>
     </div>
   );
 

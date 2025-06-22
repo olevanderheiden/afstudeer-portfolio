@@ -24,7 +24,7 @@ const Chapter1_2 = () => {
         wetgeving aangenomen die bedrijven verplicht om hun websites en apps
         toegankelijk te maken. Deze wet wordt in juni 2025 van kracht. Het is
         daarom belangrijk dat bedrijven het belang en de voordelen van
-        toegankelijke websites gaan inzien,zodat alle gebruikers zonder hinder
+        toegankelijke websites gaan inzien, zodat alle gebruikers zonder hinder
         gebruik kunnen maken van websites.
       </p>
       <h3>Onderzoeksvraag en deelvragen</h3>
@@ -34,6 +34,11 @@ const Chapter1_2 = () => {
         voor audiogebruikers klinkt?
       </p>
       <h3>Deelvragen</h3>
+      <p>
+        De formulering van de deelvragen wijkt in hoofdstuk 3 van de portfolio
+        website enigszins af in verband met de beperkte ruimte in de
+        navigatiebalk.
+      </p>
       <ul>
         <li>
           Wat houdt een "goed vormgegeven site/ app voor audiogebruikers" in?
@@ -56,6 +61,10 @@ const Chapter1_2 = () => {
         </li>
       </ul>
       <h3>Ontwerpcriteria (moscow principe)</h3>
+      <p>
+        Onderstaande ontwerpcriteria zijn opgesteld in overleg met de
+        opdrachtgever.
+      </p>
       <h4>Must</h4>
       <ul>
         <li>
@@ -106,7 +115,7 @@ const Chapter1_2 = () => {
         <li>
           Compatible maken met alle mogelijke sites als plug-in of overlay.
         </li>
-        <li>Maken van volledig nieuwe audio API/tools</li>
+        <li>Maken van volledig nieuwe audio API/tools.</li>
       </ul>
     </div>
   );

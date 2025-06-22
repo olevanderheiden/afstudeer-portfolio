@@ -25,7 +25,7 @@ const Chapter2_1 = () => {
         title="Wat heb ik gedaan voor onderzoeken?"
       />
       <p>
-        Voor het lezen over de onderzoek vragen kan je gaan naar{" "}
+        Voor het lezen over de onderzoeksvragen kan je gaan naar{" "}
         <a href="chapter1.2">
           {" "}
           Hoofdstuk 1.2: Probleemstelling en onderzoeksvraag

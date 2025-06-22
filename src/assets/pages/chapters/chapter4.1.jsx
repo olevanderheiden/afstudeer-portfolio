@@ -11,8 +11,8 @@ const stakeholders = [
     belang: (
       <ul>
         <li>Bedrijf goed presenteren</li>
-        <li>product verkopen</li>
-        <li>belang van audio tonen</li>
+        <li>Product verkopen</li>
+        <li>Belang van audio tonen</li>
       </ul>
     ),
     positief: (
@@ -32,21 +32,21 @@ const stakeholders = [
     stakeholder: "Arbeids zoekende",
     belang: (
       <ul>
-        <li>sfeer/cultuur/team leren kennen</li>
+        <li>Sfeer/cultuur/team leren kennen</li>
         <li>Beoordelen of DT bij hen past</li>
-        <li>Een nieuwe manier van kennis maken met een werkgever</li>
+        <li>Een nieuwe manier van kennismaken met een werkgever</li>
       </ul>
     ),
     positief: (
       <ul>
-        <li>Het krijgen van een completer beeld van de opdracht gever</li>
+        <li>Het krijgen van een completer beeld van de opdrachtgever</li>
         <li>Nieuwe manier van kennis verkrijgen over DT</li>
       </ul>
     ),
     negatief: (
       <ul>
         <li>Lang luisteren kan vermoeiend zijn</li>
-        <li>Speficieke informatie kan minder snel opgezocht worden</li>
+        <li>Specifieke informatie kan minder snel opgezocht worden</li>
         <li>Auditieve input kan overweldigend zijn.</li>
       </ul>
     ),
@@ -61,15 +61,15 @@ const stakeholders = [
     ),
     positief: (
       <ul>
-        <li>completer beeld van de sfeer en cultuur bij DT.</li>
-        <li>Meer gelijkwaardige ervaring met ziende web gebruikers.</li>
+        <li>Completer beeld van de sfeer en cultuur bij DT.</li>
+        <li>Meer gelijkwaardige ervaring met ziende webgebruikers.</li>
         <li>Een voorbeeld van hoe audio ervaringen kunnen werken.</li>
       </ul>
     ),
     negatief: (
       <ul>
         <li>
-          Terug vinden van informatie kan moeilijker zijn, Omdat je niet kan
+          Terugvinden van informatie kan moeilijker zijn, omdat je niet kan
           scrollen.
         </li>
         <li>Lang luisteren kan vermoeiend zijn.</li>
@@ -82,7 +82,7 @@ const stakeholders = [
     belang: (
       <ul>
         <li>Website navigeren zonder dingen te missen</li>
-        <li>informatie opdoen</li>
+        <li>Informatie opdoen</li>
       </ul>
     ),
     positief: (
@@ -96,11 +96,11 @@ const stakeholders = [
       <ul>
         <li>Audio kan overweldigend zijn als je dat niet gewend bent.</li>
         <li>
-          Het terug vinden van informatie kan moeilijker zijn doordat je er niet
+          Het terugvinden van informatie kan moeilijker zijn doordat je er niet
           meer doorheen kan scrollen.
         </li>
         <li>
-          Het lang luisteren kan vermoeiend zijn. En daar door kan er informatie
+          Het lang luisteren kan vermoeiend zijn. En daardoor kan er informatie
           gemist worden.
         </li>
       </ul>
@@ -113,13 +113,13 @@ const stakeholders = [
         <li>
           Toegankelijke en gebruiksvriendelijke website voor hun eigen klanten
         </li>
-        <li>Wil goed over komen bij hun eigen klanten</li>
+        <li>Wil goed overkomen bij hun eigen klanten</li>
       </ul>
     ),
     positief: (
       <ul>
         <li>Een voorbeeld hebben om te kunnen volgen.</li>
-        <li>Een nieuwe methode om zich zelf te presenteren.</li>
+        <li>Een nieuwe methode om zichzelf te presenteren.</li>
       </ul>
     ),
     negatief: (
@@ -127,7 +127,7 @@ const stakeholders = [
         <li>
           Het maken en onderhouden van de audio ervaring kost tijd en geld.
         </li>
-        <li>Onderzoek doen naar audio ervaringenkost tijd en geld.</li>
+        <li>Onderzoek doen naar audio ervaringen kost tijd en geld.</li>
       </ul>
     ),
   },
@@ -144,7 +144,7 @@ const Chapter4_1 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
-      <h3>Analyse postieve en negatieve gevolgen</h3>
+      <h3>Analyse positieve en negatieve gevolgen</h3>
       <AudioPlayer
         fileName="content/chapter4/4.1.onderbouwingGevolgenTabel.mp3"
         title="Onderbouwing positieve en negatieve gevolgen"
@@ -164,11 +164,11 @@ const Chapter4_1 = () => {
       <h3>Interviews met audiogebruikers</h3>
       <AudioPlayer
         fileName="content/chapter2/2.1introInterviewAudioGebruikers.mp3"
-        title="Introductie onderzoek opset, vragenlijst en mail format"
+        title="Introductie onderzoeksopzet, vragenlijst en mail format"
       />
       <AudioPlayer
-        fileName="content/chapter2/2.1Introductie geinterviewden  (Complete versie 09-05-2025).mp3"
-        title="Introductie geinterviewden 09-05-2025"
+        fileName="content/chapter2/2.1Introductie geïnterviewden  (Complete versie 09-05-2025).mp3"
+        title="Introductie geïnterviewden 09-05-2025"
       />
       <AudioPlayer
         fileName="content/chapter2/2.1inzichtenAudioGebruikerInterviews(11-05-2025).mp3"

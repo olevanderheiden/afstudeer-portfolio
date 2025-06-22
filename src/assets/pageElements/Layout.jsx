@@ -47,7 +47,7 @@ const Layout = ({ content, pageTitle }) => {
         {/* Sources on the right (optional) */}
         {sources && (
           <aside className="layout-sources">
-            <h3>Bronnen lijst</h3>
+            <h3>Bronnenlijst</h3>
             <SourceList sources={sources} />
           </aside>
         )}

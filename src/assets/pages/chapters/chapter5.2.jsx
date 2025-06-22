@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
-export const title = "Zelf reflectie";
+export const title = "Zelfreflectie";
 
 const Chapter5_2 = () => {
   const content = (
@@ -11,7 +11,7 @@ const Chapter5_2 = () => {
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
         fileName="content/chapter5/5.2.reflectie.mp3"
-        title="STARR Reflectie"
+        title="STARR reflectie"
       />
     </div>
   );

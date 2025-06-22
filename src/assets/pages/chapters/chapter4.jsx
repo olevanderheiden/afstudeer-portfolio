@@ -18,7 +18,7 @@ const Chapter4 = () => {
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
         fileName="content/chapter4/4.intro.mp3"
-        title="Itroductie Hoofdstuk 4"
+        title="Introductie Hoofdstuk 4"
       />
     </div>
   );

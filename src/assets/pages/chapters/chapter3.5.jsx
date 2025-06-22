@@ -21,8 +21,8 @@ const Chapter3_5 = () => {
         title="Antwoord deelvraag 5"
       />
       <p>
-        Je kan het volledige gesprek waar in ik heb besloten welke pagina we
-        gaan doen voor de audio ervaring in de bijlagen. Onder het kopje
+        Je kan het volledige gesprek waarin ik heb besloten welke pagina we gaan
+        doen voor de audio-ervaring in de bijlagen vinden onder het kopje
         "Overige gesprekken" in het bestand "Gesprek met Pim en Jo (07-04-2025)"{" "}
       </p>
     </div>

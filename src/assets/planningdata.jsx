@@ -9,9 +9,9 @@ export const planning = [
         title: "Portfolio concept uitwerken",
         children: [
           {
-            title: "Lay-out vast stellen",
+            title: "Lay-out vaststellen",
             children: [
-              { title: "Deel hoofdstukken mogelijk maken", done: true },
+              { title: "Deelhoofdstukken mogelijk maken", done: true },
               { title: "Structuur vaststellen", done: true },
               {
                 title: "Noodzakelijke features portfolio site vaststellen",
@@ -29,7 +29,7 @@ export const planning = [
         children: [
           { title: "Eigen contacten benaderen", done: true },
           {
-            title: "Contacten van digitaal toegankelijk benaderen.",
+            title: "Contacten van Digitaal Toegankelijk benaderen.",
             missed: true,
           },
         ],
@@ -49,8 +49,8 @@ export const planning = [
     isWeek: true,
     children: [
       { title: "Onderzoeksmethode schrijven", done: true },
-      { title: "Interview vragen vaststellen", done: true },
-      { title: "Stakeholder analyse doen", done: true },
+      { title: "Interviewvragen vaststellen", done: true },
+      { title: "Stakeholderanalyse doen", done: true },
       {
         title: "Interviews houden (indien mogelijk)",
         children: [
@@ -59,7 +59,7 @@ export const planning = [
         ],
       },
       { title: "Visueel ontwerp opstarten/maken", done: true },
-      { title: "Check met Pim inplannen alvast", done: true },
+      { title: "Check met Pim alvast inplannen", done: true },
     ],
   },
   {
@@ -79,7 +79,7 @@ export const planning = [
     title: "Week 28-04 tot 04-05",
     isWeek: true,
     children: [
-      { title: "Stakeholder analyse doen", done: true },
+      { title: "Stakeholderanalyse doen", done: true },
       {
         title: "Tweede iteratie visueel ontwerp/interactieve versie",
         done: true,
@@ -90,11 +90,11 @@ export const planning = [
         children: [
           { title: "Probleemstelling en onderzoeksvraag", missed: true },
           {
-            title: "Bespreken  (in portfolio) ontwerp proces portfolio site",
+            title: "Bespreken (in portfolio) ontwerpproces portfolio site",
             missed: true,
           },
           { title: "Visueel ontwerp versie 2 toevoegen", done: true },
-          { title: "Feedback pim iteratie 1", done: true },
+          { title: "Feedback Pim iteratie 1", done: true },
         ],
       },
       {
@@ -106,7 +106,7 @@ export const planning = [
         missed: true,
       },
       {
-        title: "Gesprek plannen met pim bespreken ontwerp 2",
+        title: "Gesprek plannen met Pim bespreken ontwerp 2",
         done: true,
       },
     ],
@@ -122,7 +122,7 @@ export const planning = [
         title: "Website elementen vullen",
         children: [
           {
-            title: "Bespreken  (in portfolio) ontwerp proces portfolio site",
+            title: "Bespreken (in portfolio) ontwerpproces portfolio site",
             missed: true,
           },
           { title: "Probleemstelling en onderzoeksvraag", done: true },
@@ -139,25 +139,24 @@ export const planning = [
     isWeek: true,
     children: [
       {
-        title: "Klikbare prototype maken (eerste verse)",
+        title: "Klikbare prototype maken (eerste versie)",
         done: true,
         children: [
           {
             title: "Eerste audio opnames regelen met Pim",
           },
           {
-            title:
-              "Mogelijke klantend bespreken die ik kan interviewen met pim",
+            title: "Mogelijke klanten bespreken die ik kan interviewen met Pim",
           },
         ],
       },
       {
-        title: "Desk onderzoek doen naar onderzoeksvragen (zie portfolio)",
+        title: "Deskonderzoek doen naar onderzoeksvragen (zie portfolio)",
         done: true,
         children: [
           {
             title:
-              "Vraag toevoegen over welke tools/technieken ik best kan gebruiken.",
+              "Vraag toevoegen over welke tools/technieken ik het best kan gebruiken.",
           },
         ],
       },
@@ -167,7 +166,7 @@ export const planning = [
         missed: true,
         children: [
           {
-            title: "Onderzoek doen naar eventuele pluggins die nodig zijn",
+            title: "Onderzoek doen naar eventuele plugins die nodig zijn",
           },
         ],
       },
@@ -177,7 +176,7 @@ export const planning = [
     title: "Week 19-05 tot 25-05",
     isWeek: true,
     children: [
-      { title: "Desk onderzoek afronden" },
+      { title: "Deskonderzoek afronden" },
       {
         title: "Afspraken plannen met klanten DT (afstemmen met Annelies)",
         children: [
@@ -188,7 +187,7 @@ export const planning = [
         ],
       },
       {
-        title: "Opzetten programmeer omgeving project",
+        title: "Opzetten programmeeromgeving project",
         children: [
           {
             title: "Onderzoek naar plugins en andere technieken",
@@ -197,13 +196,13 @@ export const planning = [
         ],
       },
       {
-        title: "Verrantwoording schrijven",
+        title: "Verantwoording schrijven",
         children: [
           {
             title: "Ontbrekende onderdelen vullen",
           },
           {
-            title: "Second opinion over portfolio site ourders (20-05)",
+            title: "Second opinion over portfolio site ouders (20-05)",
             done: true,
           },
           {
@@ -213,14 +212,14 @@ export const planning = [
         ],
       },
       {
-        title: "Voorberijding op laatste feedback in week 02-06 tot 08-06",
+        title: "Voorbereiding op laatste feedback in week 02-06 tot 08-06",
         done: true,
         children: [
           {
-            title: "Vragen wie bij DT quick scan kan doen POC",
+            title: "Vragen wie bij DT quickscan kan doen POC",
           },
           {
-            title: "Geinterviewden informeren over testen week 02-06 tot 08-06",
+            title: "Geïnterviewden informeren over testen week 02-06 tot 08-06",
             done: true,
           },
         ],
@@ -231,19 +230,19 @@ export const planning = [
     title: "Week 26-05 tot 01-06",
     isWeek: true,
     children: [
-      { title: "Uitwerken klanten feedback (zo ver aanwezig)" },
+      { title: "Uitwerken klanten feedback (zover aanwezig)" },
       {
-        title: "Verder opzetten programmeer omgeving (eerste functies)",
+        title: "Verder opzetten programmeeromgeving (eerste functies)",
         done: true,
       },
       { title: "Verwerken feedback (Docenten)" },
       {
-        title: "Rest van DT vragen voor opanme Audio introductie",
+        title: "Rest van DT vragen voor opname audio introductie",
         children: [
           {
             title: "Schrijven van instructies.",
           },
-          { title: "Opname kantoor video (regelen/opnemen)" },
+          { title: "Opname kantoorvideo (regelen/opnemen)" },
           {
             title:
               "Opnamen introductie kantoor en normen/waarden DT (meer definitieve versie)",
@@ -261,18 +260,18 @@ export const planning = [
     children: [
       { title: "Afmaken proof of concept", done: true },
       {
-        title: "Geinterviewden spreken en testen poc",
+        title: "Geïnterviewden spreken en testen POC",
         children: [
           {
             title: "Testen met Kim (04-06 11:00 t/m 12:00)",
             done: true,
           },
           {
-            title: "Testen met Mireille(04-06 12:30 t/m 13:30)",
+            title: "Testen met Mireille (04-06 12:30 t/m 13:30)",
             done: true,
           },
           {
-            title: "Testen met Carmen 05-06 13:00 t/m 14:00",
+            title: "Testen met Carmen (05-06 13:00 t/m 14:00)",
             done: true,
           },
           {
@@ -285,7 +284,7 @@ export const planning = [
           },
         ],
       },
-      { title: "Resultaten quick scan verwerken" },
+      { title: "Resultaten quickscan verwerken" },
       { title: "Resultaten tests verwerken" },
       {
         title: "Portfolio aanvullen",

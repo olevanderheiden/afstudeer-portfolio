@@ -134,7 +134,7 @@ const Chapter1_3 = () => {
   const content = (
     <div>
       <h2>Doelgroep en stakeholders</h2>
-      <p>Hier vind je alles over mijn stakeholders en doelgroeponderzoek.</p>
+      <p>Hier vind je alles over mijn stakeholders- en doelgroeponderzoek.</p>
       <h3>Primaire doelgroep</h3>
       <p>
         De primaire doelgroep zijn de klanten van Digitaal Toegankelijk (onder
@@ -147,7 +147,7 @@ const Chapter1_3 = () => {
         presenteren, geeft Digitaal Toegankelijk tevens aan hoe het zelf hecht
         aan toegankelijkheid.
       </p>
-      <h3>Stakeholder Tabel</h3>
+      <h3>Stakeholder tabel</h3>
       <AudioPlayer
         fileName={"content/chapter1/1.3.verduidelijkingSakeholdersTabel.mp3"}
         title={

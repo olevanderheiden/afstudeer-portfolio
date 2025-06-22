@@ -9,7 +9,7 @@ const Chapter1_4 = () => {
       <h2>{title}</h2>
       <AudioPlayer
         fileName={"content/chapter1/1.4.onderzoekMethoden.mp3"}
-        title={"Gebruikte onderzoek methodes"}
+        title={"Gebruikte onderzoeksmethoden"}
       />
     </div>
   );

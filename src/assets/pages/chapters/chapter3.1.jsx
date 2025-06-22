@@ -12,7 +12,6 @@ const Chapter3_1 = () => {
         fileName="content/chapter3/3.1.WatIsEenGoedOntwerpVoorAudioGebruikers.mp3"
         title="Antwoord deelvraag 1"
       />
-      <p>Info over deel vraag 1 komt hier</p>
     </div>
   );
 

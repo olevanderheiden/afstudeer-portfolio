@@ -7,8 +7,8 @@ const HomePage = () => {
     <div>
       <h2>Welkom op het afstudeerportfolio van Ole van der Heiden</h2>
       <p>
-        Het portfolio is voor het over grote deel in audio vorm opgenomen. U
-        kunt hier onder horen hoe dit in de praktijk werkt.
+        Het portfolio is voor het overgrote deel in audio vorm opgenomen. U kunt
+        hieronder horen hoe dit in de praktijk werkt.
       </p>
       <AudioPlayer fileName="content/home/homeV2.mp3" title="Homepage intro" />
     </div>

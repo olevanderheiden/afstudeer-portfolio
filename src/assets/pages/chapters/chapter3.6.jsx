@@ -22,7 +22,7 @@ const Chapter3_6 = () => {
         title="Antwoord deelvraag 6"
       />
       <p>
-        De tabel en een meer uitgebreide uitleg van de voor en nadelen van de
+        De tabel en een meer uitgebreide uitleg van de voor- en nadelen van de
         verschillende mogelijke tools vind je in{" "}
         <a href="chapter4.4">Hoofdstuk 4.4</a>
       </p>

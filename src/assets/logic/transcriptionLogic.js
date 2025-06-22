@@ -27,7 +27,7 @@ export const toggleTranscription = async (
   // If no stored transcription, proceed with the API call
   setIsTranscribing(true);
   setTranscription(
-    "Transscriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft..."
+    "Transcriptie wordt geladen. Dit kan een paar minuten duren. Een moment geduld alstublieft..."
   );
 
   // Check if the audio file exists on the server (audio files can only be transsribed if they are included in the build on GitHub Pages, local files won't work)
@@ -80,7 +80,7 @@ export const toggleTranscription = async (
     console.error("Error transcribing audio:", error);
     setTranscription(
       error.message === "Audio file not found on the server"
-        ? "Transcriptie is niet beschickbaar omdat het bestand niet kan worden gevonden op de server."
+        ? "Transcriptie is niet beschikbaar omdat het bestand niet kan worden gevonden op de server."
         : "Fout bij het transcriberen van audio."
     );
   } finally {

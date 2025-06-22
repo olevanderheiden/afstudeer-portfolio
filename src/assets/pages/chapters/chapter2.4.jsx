@@ -11,7 +11,7 @@ const Chapter2_4 = () => {
       <ul>
         <li>
           Ondernemende houding en vaardigheden: Je hebt steekhoudende argumenten
-          die -voor het bedrijf- de meerwaarde van jouw product aantonen ten
+          die voor het bedrijf de meerwaarde van jouw product aantonen ten
           opzichte van in het werkveld gebruikte alternatieven.
         </li>
         <li>
@@ -26,8 +26,8 @@ const Chapter2_4 = () => {
         title="Wat heb ik gedaan voor ondernemen?"
       />
       <p>
-        Voor meer over mijn contact met stakeholders en experts, zie{" "}
-        <a href="chapter2.5">Hoofdstuk 2.5</a> en gedurende{" "}
+        Voor meer informatie over mijn contact met stakeholders en experts, zie{" "}
+        <a href="chapter2.5">Hoofdstuk 2.5</a> en{" "}
         <a href="chapter4">Hoofdstuk 4</a>.
       </p>
     </div>

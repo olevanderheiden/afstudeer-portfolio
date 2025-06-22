@@ -12,17 +12,17 @@ const Chapter4_6 = () => {
       <p>
         Hier vind je mijn uiteindelijke proof of concept in zijn live versie.
         Deze versie bevat de verbeteringen die ik heb gemaakt op basis van de
-        feedback die ik heb gekregen van audiogebruikers als ook de klanten van
+        feedback die ik heb gekregen van audio gebruikers als ook de klanten van
         Digitaal Toegankelijk.
       </p>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
         fileName="test.mp3"
-        title="Onderbouwing eind versie (coming soon"
+        title="Onderbouwing eindversie (coming soon"
       />
       <IframeElement
         src="https://olevanderheiden.github.io/afstudeerProject/"
-        title="Proof of concept (Eind versie)"
+        title="Proof of concept (Eindversie)"
       />
     </div>
   );

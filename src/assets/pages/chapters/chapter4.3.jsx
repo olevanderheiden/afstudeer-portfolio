@@ -17,7 +17,7 @@ const Chapter4_3 = () => {
       <h2>Testen met klanten van Digitaal Toegankelijk</h2>
       <AudioPlayer
         fileName="content/chapter4/4.3.testenMetKlanten.mp3"
-        title="Test resultaten bespreken"
+        title="Testresultaten bespreken"
       />
     </div>
   );

@@ -20,7 +20,6 @@ const Chapter5 = () => {
         fileName="content/chapter5/5.intro.mp3"
         title="Hoofdstuk 5 intro"
       />
-      <p>Chapter 0 is coming here!</p>
     </div>
   );
 

@@ -35,7 +35,7 @@ const tableRows = [
   {
     naam: "Wordpress (vanilla)",
     beschrijving:
-      "Alle functionaliteit van de tour tot de content wordt gedaan in Wordpress",
+      "Alle functionaliteiten van de tour tot de content worden gedaan in Wordpress",
     voordelen: [
       "Content bewerken is simpel",
       "Geen losse deployment zoals met React.",
@@ -107,7 +107,7 @@ const renderRow = (row) => (
   </tr>
 );
 
-export const title = "Onderzoek ontwikkel tools en technieken";
+export const title = "Onderzoek ontwikkeltools en -technieken";
 
 const Chapter4_4 = () => {
   const content = (
@@ -121,7 +121,7 @@ const Chapter4_4 = () => {
       </p>
       <AudioPlayer
         fileName="content/chapter4/4.4.ontwikkelTools.mp3"
-        title="Onderbouwing onderozek  naar tools en technieken"
+        title="Onderbouwing onderzoek naar tools en technieken"
       />
       <Table headers={tableHeaders} rows={tableRows} renderRow={renderRow} />
     </div>

@@ -9,7 +9,7 @@ const Chapter0 = () => {
   const content = (
     <div>
       <h2>{title}</h2>
-      <h3>Introductie stage project</h3>
+      <h3>Introductie stageproject</h3>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
         fileName="content/chapter0/0.introductie.mp3"
@@ -23,7 +23,7 @@ const Chapter0 = () => {
       />
       <ImageElement
         src="content/chapter2/PortfolioSiteEersteOntwerpSchets.png"
-        title="Portfolio website ontwerpschets gemaakt April 2025"
+        title="Portfolio website ontwerpschets gemaakt april 2025"
         alt="Dit is de ontwerpschets die ik gemaakt heb voor mijn porfolio website. Het is een hele ruwe schets zonder kleur of content op de website. Er is een menubalk bovenin met pagina's zoals: Home, Bronnen en begrippen, Aan
         de linkerkant is een lijst van hoofdstukken te zien waarmee je naar de verschillende hoofdstukken van het portfolio kan nagiveren.
         Het middelste gedeelte van de pagina is waar de daadwerkelijke content van de pagina te zien is. Dit kunnen afbeeldingen, teksten of audiobestanden zijn.

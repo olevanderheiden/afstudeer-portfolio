@@ -12,16 +12,17 @@ const Bijlagen = () => {
       <h2>Bijlagen</h2>
       <p>
         Tijdens mijn stage heb ik een groot aantal interviews gedaan en extra
-        onderzoek dat niet in zijn volledighijd op deze site staat. U kunt dit
-        hier als nog beluisteren of bekijken.
+        onderzoek dat niet in zijn volledigheid op deze site staat. U kunt dit
+        hier alsnog beluisteren of bekijken.
       </p>
       <h3>Stage planning</h3>
       <p>
-        Hier vind je mijn planning die ik heb gemaakt tijdens mijn stage
-        periode.Grijs <span className="planning-done">doorgestreepte</span>{" "}
-        tekst. Betekend dat ik de (deel)taak in kwestie heb afgerond.{" "}
-        <span className="planning-missed">Rodetekst</span> betekend dat ik het
-        niet optijd af had en het doorschuif naar de volgende week.
+        Hier vind je de planning die ik heb gemaakt tijdens mijn
+        stageperiode.Grijze{" "}
+        <span className="planning-done">doorgestreepte</span> tekst betekent dat
+        ik de (deel)taak in kwestie heb afgerond.{" "}
+        <span className="planning-missed">Rode tekst</span> betekent dat ik het
+        niet op tijd af had en het doorschuif naar de volgende week.
       </p>
       <PlanningTree nodes={planning} />
       <h3>Interviews (met collega's):</h3>
@@ -58,20 +59,20 @@ const Bijlagen = () => {
         fileName="interviews/Mauro(08-05-2025).mp3"
         title="Interview Mauro 08-05-2025"
       />
-      <h3>Begeleiding gesprekken</h3>
+      <h3>Begeleidingsgesprekken</h3>
       <AudioPlayer
         fileName="begeleiding/GesprekStageBegeleider(20-03-25).mp3"
-        title="Begeleiding gesprek (20-03-2025)"
+        title="Begeleidingsgesprek (20-03-2025)"
       />
       <AudioPlayer
         fileName="begeleiding/Progressie gesprek peter (20-02-25).mp3"
-        title="Progressie geprek met Peter (20-02-2025)"
+        title="Progressiegesprek met Peter (20-02-2025)"
       />
 
       <h3>Overige gesprekken:</h3>
       <AudioPlayer
-        fileName="overigeGesprekken/super dure consultant onderzoek ideën.mp3"
-        title="Super dure consultant onderzoek ideën (01-04-2025)"
+        fileName="overigeGesprekken/super dure consultant onderzoeksideeën.mp3"
+        title="Super dure consultant onderzoeksideeën (01-04-2025)"
       />
       <AudioPlayer
         fileName="overigeGesprekken/Gesprek  pim en jo (07-04-25).mp3"
@@ -79,7 +80,7 @@ const Bijlagen = () => {
       />
       <AudioPlayer
         fileName="overigeGesprekken/ontwerpSchetsBesprekenPim(25-04-2025).mp3"
-        title="Ontwerp schets bespreken met Pim (25-04-2025)"
+        title="Ontwerpschets bespreken met Pim (25-04-2025)"
       />
     </div>
   );

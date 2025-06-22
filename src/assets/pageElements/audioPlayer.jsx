@@ -198,12 +198,12 @@ const AudioPlayer = ({ fileName, title }) => {
       {showWarning && (
         <div className="warning">
           <strong>Let op:</strong> Deze transcriptie maakt gebruik van
-          generative AI. Het is hierdoor niet alleen potentieel onnauwkeurig,
+          generatieve AI. Het is hierdoor niet alleen potentieel onnauwkeurig,
           maar kan ook een grote invloed hebben op het milieu,
           klimaatverandering en de werkgelegenheid in creatieve sectoren. De
-          maker van deze website staat niet achter het gebruik van generative AI
-          en is niet verantwoordelijk voor de gevolgen die deze transcriptie kan
-          hebben! Gebruik dit dus op eigen risico.
+          maker van deze website staat niet achter het gebruik van generatieve
+          AI en is niet verantwoordelijk voor de gevolgen die deze transcriptie
+          kan hebben! Gebruik dit dus op eigen risico.
         </div>
       )}
       {!transcription && (
@@ -212,7 +212,7 @@ const AudioPlayer = ({ fileName, title }) => {
           className={`transcription-button ${isTranscribing ? "loading" : ""}`}
           disabled={isTranscribing}
         >
-          {isTranscribing ? "Transcriberen..." : "Start Transscriptie"}
+          {isTranscribing ? "Transcriberen..." : "Start transcriptie"}
         </button>
       )}
       {transcription && isTranscriptionVisible && (
@@ -221,7 +221,7 @@ const AudioPlayer = ({ fileName, title }) => {
             onClick={() => setIsTranscriptionVisible(false)}
             className="transcription-button"
           >
-            Sluit Transscriptie
+            Sluit transcriptie
           </button>
           <div
             dangerouslySetInnerHTML={{ __html: transcription }}
@@ -243,7 +243,7 @@ const AudioPlayer = ({ fileName, title }) => {
             marginTop: "10px",
           }}
         >
-          Toon Transscriptie
+          Toon transcriptie
         </button>
       )}
     </div>

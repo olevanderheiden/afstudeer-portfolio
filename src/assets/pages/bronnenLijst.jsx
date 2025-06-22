@@ -3,7 +3,7 @@ import Layout from "../pageElements/Layout";
 import SourceList from "../pageElements/sourceList";
 import sourcesData from "../sources.json";
 
-export const title = "Bronnen Lijst";
+export const title = "Bronnenlijst";
 
 const BronnenLijst = () => {
   // Flatten all sources into a single array
@@ -21,16 +21,16 @@ const BronnenLijst = () => {
 
   const content = (
     <div>
-      <h2>Bronnen Lijst</h2>
+      <h2>Bronnenlijst</h2>
       <p>
-        Alle bronnen die tijdens dit portfolio worden gebruikt over de
-        verschillende pagina's worden hier getoond:
+        Alle bronnen die ik heb geraadpleegd bij het uitvoeren van mijn opdracht
+        en het samenstellen van mijn portfolio worden hier getoond:
       </p>
       <SourceList sources={uniqueSources} />
     </div>
   );
 
-  return <Layout content={content} pageTitle="Bronnen Lijst" />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default BronnenLijst;

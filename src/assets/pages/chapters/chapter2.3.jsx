@@ -25,18 +25,18 @@ const Chapter2_3 = () => {
         title="Wat heb ik gedaan voor ontwikkelen?"
       />
       <p>
-        De lijst met moscow prioriteiten die ik heb opgespeld met mijn stage
-        opracht gever Digitaal Toegankelijk is te vinden op pagina{" "}
-        <a href="chapter1.2">1.2 Probleem stelling en onderzoek vraag</a>.
+        De lijst met moscow prioriteiten die ik heb opgesteld met mijn stage
+        opdrachtgever Digitaal Toegankelijk is te vinden op pagina{" "}
+        <a href="chapter1.2">1.2 Probleemstelling en onderzoeksvraag</a>.
       </p>
       <p>
-        Mijn technische analyse is de vinden op pagina{" "}
-        <a href="chapter4.4">4.4 Onderzoek ontwikkel tools en technieken</a>.
+        Mijn technische analyse is te vinden op pagina{" "}
+        <a href="chapter4.4">4.4 Onderzoek ontwikkeltools en technieken</a>.
       </p>
       <p>
-        Mijn verschillende prototypes zijn te vinde in{" "}
-        <a href="chapter4">Hoofstuk 4: Het product</a> en de deel hoofdstukken
-        daar in.
+        Mijn verschillende prototypes zijn te vinden in{" "}
+        <a href="chapter4">Hoofstuk 4: Het product</a> en de deelhoofdstukken
+        daarin.
       </p>
     </div>
   );

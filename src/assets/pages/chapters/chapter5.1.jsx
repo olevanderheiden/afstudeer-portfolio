@@ -9,8 +9,7 @@ const Chapter5_1 = () => {
     <div>
       <h2>{title}</h2>
       {/* Include the AudioPlayer component here */}
-      <AudioPlayer fileName="test.mp3" title="Eind conclusies (coming soon)" />
-      <p>Chapter 0 is coming here!</p>
+      <AudioPlayer fileName="test.mp3" title="Eindconclusies (coming soon)" />
     </div>
   );
 
