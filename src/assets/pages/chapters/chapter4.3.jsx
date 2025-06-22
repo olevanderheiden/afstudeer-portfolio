@@ -10,14 +10,14 @@ const Chapter4_3 = () => {
     <div>
       <h2>{title}</h2>
       <AudioPlayer
-        fileName="test.mp3"
-        title="Beargumentering klikbare prototype (coming soon"
+        fileName="content/chapter4/4.3.beargumenteringKlikbarePrototype.mp3"
+        title="Beargumentering klikbare prototype"
       />
       <IframeElement src="prototype1" title="klikbare prototype 1" />
       <h2>Testen met klanten van Digitaal Toegankelijk</h2>
       <AudioPlayer
-        fileName="content/chapter4/4.3TestenMetKlantenDigitaalToegankelijk.mp3"
-        title="Test resultaten bespreken (coming soon)"
+        fileName="content/chapter4/4.3.testenMetKlanten.mp3"
+        title="Test resultaten bespreken"
       />
     </div>
   );

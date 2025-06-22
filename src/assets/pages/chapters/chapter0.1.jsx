@@ -16,8 +16,10 @@ const Chapter0_1 = () => {
     <div>
       <h2>Samenvatting</h2>
       {/* Include the AudioPlayer component here */}
-      <AudioPlayer fileName="test.mp3" title="Samenvatting (coming Soon)" />
-      <p>Chapter 0 is coming here!</p>
+      <AudioPlayer
+        fileName="content/chapter0/0.1.Samenvatting.mp3"
+        title="Samenvatting"
+      />
     </div>
   );
 

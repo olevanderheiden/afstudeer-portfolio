@@ -18,7 +18,7 @@ const Chapter2_1 = () => {
       <p>Chapter 2 is coming here!</p>
       <AudioPlayer
         fileName={"content/chapter2/2.introductie.mp3"}
-        title={"Introductie Hoofdstuk 2 (comingsoon)"}
+        title={"Introductie Hoofdstuk 2"}
       />
     </div>
   );
