@@ -3,7 +3,7 @@ import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 import Table from "../../pageElements/table";
 
-export const title = "Inleven en eerste interviews audio gebruikers";
+export const title = "Inleven en eerste interviews audiogebruikers";
 
 const stakeholders = [
   {
@@ -17,7 +17,7 @@ const stakeholders = [
     ),
     positief: (
       <ul>
-        <li>Presenteren al inovatief en toegankelijk</li>
+        <li>Presenteren al innovatief en toegankelijk</li>
         <li>Voorbeeld zijn voor andere bedrijven</li>
       </ul>
     ),
@@ -29,7 +29,7 @@ const stakeholders = [
     ),
   },
   {
-    stakeholder: "Arbeids zoekende",
+    stakeholder: "Werkzoekende",
     belang: (
       <ul>
         <li>Sfeer/cultuur/team leren kennen</li>
@@ -52,7 +52,7 @@ const stakeholders = [
     ),
   },
   {
-    stakeholder: "Audio gebruikers",
+    stakeholder: "Audiogebruikers",
     belang: (
       <ul>
         <li>Identieke informatie krijgen als ziende gebruikers</li>
@@ -63,7 +63,7 @@ const stakeholders = [
       <ul>
         <li>Completer beeld van de sfeer en cultuur bij DT.</li>
         <li>Meer gelijkwaardige ervaring met ziende webgebruikers.</li>
-        <li>Een voorbeeld van hoe audio ervaringen kunnen werken.</li>
+        <li>Een voorbeeld van hoe audio-ervaringen kunnen werken.</li>
       </ul>
     ),
     negatief: (
@@ -73,7 +73,7 @@ const stakeholders = [
           scrollen.
         </li>
         <li>Lang luisteren kan vermoeiend zijn.</li>
-        <li>Te veel informatie gegeven kan overweldigend zijn.</li>
+        <li>Te veel informatie geven kan overweldigend zijn.</li>
       </ul>
     ),
   },
@@ -88,7 +88,7 @@ const stakeholders = [
     positief: (
       <ul>
         <li>Informatie op een nieuwe manier ontvangen</li>
-        <li>Leren hoe audio gebruikers het web navigeren</li>
+        <li>Leren hoe audiogebruikers het web navigeren</li>
         <li>Meer variatie in presentatievormen</li>
       </ul>
     ),
@@ -125,9 +125,9 @@ const stakeholders = [
     negatief: (
       <ul>
         <li>
-          Het maken en onderhouden van de audio ervaring kost tijd en geld.
+          Het maken en onderhouden van de audio-ervaring kost tijd en geld.
         </li>
-        <li>Onderzoek doen naar audio ervaringen kost tijd en geld.</li>
+        <li>Onderzoek doen naar audio-ervaringen kost tijd en geld.</li>
       </ul>
     ),
   },
@@ -164,7 +164,7 @@ const Chapter4_1 = () => {
       <h3>Interviews met audiogebruikers</h3>
       <AudioPlayer
         fileName="content/chapter2/2.1introInterviewAudioGebruikers.mp3"
-        title="Introductie onderzoeksopzet, vragenlijst en mail format"
+        title="Introductie onderzoeksopzet, vragenlijst en opzet e-mail"
       />
       <AudioPlayer
         fileName="content/chapter2/2.1Introductie geïnterviewden  (Complete versie 09-05-2025).mp3"

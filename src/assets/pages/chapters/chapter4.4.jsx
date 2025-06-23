@@ -60,7 +60,7 @@ const tableRows = [
     ],
     nadelen: [
       "Enorm veel voor- en installatiewerk",
-      "Onderhouden door niet programmeurs kan moeilijk zijn, zeker als ik daar niet op focus!",
+      "Onderhoud door mensen die geen programmeur zijn kan moeilijk zijn, zeker als ik daar niet op focus!",
       "Heel veel programmeerwerk door het hele proces",
       "Sluit niet aan op de bestaande systemen",
     ],

@@ -12,7 +12,7 @@ const Bijlagen = () => {
       <h2>Bijlagen</h2>
       <p>
         Tijdens mijn stage heb ik een groot aantal interviews gedaan en extra
-        onderzoek dat niet in zijn volledigheid op deze site staat. U kunt dit
+        onderzoek dat niet in zijn volledigheid op deze site staat. Je kunt dit
         hier alsnog beluisteren of bekijken.
       </p>
       <h3>Stage planning</h3>
@@ -38,7 +38,7 @@ const Bijlagen = () => {
         fileName="interviews/Emma(20-03-2025-2pm).mp3"
         title="Interview Emma 20-02-2025"
       />
-      <h3>Interviews (met audio gebruikers):</h3>
+      <h3>Interviews (met audiogebruikers):</h3>
       <AudioPlayer
         fileName="interviews/Carmen (16-04-2025).mp3"
         title="Interview Carmen 16-04-2025"

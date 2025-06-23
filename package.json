@@ -1,9 +1,9 @@
 {
   "name": "afstudeer-portfolio",
   "homepage": "https://olevanderheiden.github.io/afstudeer-portfolio",
-  "description": "A portfolio website for my graduation project.",
+  "description": "A portfoliowebsite for my graduation project.",
   "private": true,
-  "version": "1.0.13",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

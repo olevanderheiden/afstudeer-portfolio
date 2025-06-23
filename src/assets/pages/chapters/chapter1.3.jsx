@@ -49,7 +49,7 @@ const Chapter1_3 = () => {
         {
           belang: "Op site kunnen navigeren",
           bijdrage:
-            "Testen van de website/ pagina, zowel op gebruiksviendelijkheid als effectiviteit in het overbrengen van de bedrijfsvisie en cultuur",
+            "Testen van de website/pagina, zowel op gebruiksvriendelijkheid als effectiviteit in het overbrengen van de bedrijfsvisie en cultuur",
         },
         {
           belang:
@@ -72,7 +72,7 @@ const Chapter1_3 = () => {
           bijdrage: "Feedback geven op toegankelijkheid",
         },
         {
-          belang: "Goede audioervaring meekrijgen",
+          belang: "Goede audio-ervaring meekrijgen",
           bijdrage: "Testen van audiofunctionaliteit",
         },
         {
@@ -141,13 +141,13 @@ const Chapter1_3 = () => {
         andere bedrijven die hun website laten testen op toegankelijkheid). We
         willen dat zij naar aanleiding van dit product geïnspireerd raken en de
         toegevoegde waarde gaan inzien van goed audiogebruik op hun eigen
-        websites en applicaties. De 'Over ons pagina' van Digitaal Toegankelijk
+        websites en applicaties. De 'Over ons' pagina van Digitaal Toegankelijk
         geeft deze mensen een goed voorbeeld van de functionele inzet van audio
         op een website. Door deze informatie op een auditieve manier te
         presenteren, geeft Digitaal Toegankelijk tevens aan hoe het zelf hecht
         aan toegankelijkheid.
       </p>
-      <h3>Stakeholder tabel</h3>
+      <h3>Stakeholder-tabel</h3>
       <AudioPlayer
         fileName={"content/chapter1/1.3.verduidelijkingSakeholdersTabel.mp3"}
         title={

@@ -14,7 +14,7 @@ export const planning = [
               { title: "Deelhoofdstukken mogelijk maken", done: true },
               { title: "Structuur vaststellen", done: true },
               {
-                title: "Noodzakelijke features portfolio site vaststellen",
+                title: "Noodzakelijke features portfoliowebsite vaststellen",
                 done: true,
               },
               { title: "Inleiding schrijven", missed: true },
@@ -25,7 +25,7 @@ export const planning = [
         ],
       },
       {
-        title: "Interviews met audio gebruikers uitzetten.",
+        title: "Interviews met audiogebruikers uitzetten.",
         children: [
           { title: "Eigen contacten benaderen", done: true },
           {
@@ -90,7 +90,7 @@ export const planning = [
         children: [
           { title: "Probleemstelling en onderzoeksvraag", missed: true },
           {
-            title: "Bespreken (in portfolio) ontwerpproces portfolio site",
+            title: "Bespreken (in portfolio) ontwerpproces portfoliowebsite",
             missed: true,
           },
           { title: "Visueel ontwerp versie 2 toevoegen", done: true },
@@ -122,7 +122,7 @@ export const planning = [
         title: "Website elementen vullen",
         children: [
           {
-            title: "Bespreken (in portfolio) ontwerpproces portfolio site",
+            title: "Bespreken (in portfolio) ontwerpproces portfoliowebsite",
             missed: true,
           },
           { title: "Probleemstelling en onderzoeksvraag", done: true },
@@ -143,7 +143,7 @@ export const planning = [
         done: true,
         children: [
           {
-            title: "Eerste audio opnames regelen met Pim",
+            title: "Eerste audio-opnames regelen met Pim",
           },
           {
             title: "Mogelijke klanten bespreken die ik kan interviewen met Pim",
@@ -202,7 +202,7 @@ export const planning = [
             title: "Ontbrekende onderdelen vullen",
           },
           {
-            title: "Second opinion over portfolio site ouders (20-05)",
+            title: "Second opinion over portfoliowebsite ouders (20-05)",
             done: true,
           },
           {

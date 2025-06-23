@@ -1,5 +1,3 @@
-import React from "react";
-
 const SourceList = ({ sources }) => {
   if (!sources || sources.length === 0) {
     return <p>No sources available.</p>;

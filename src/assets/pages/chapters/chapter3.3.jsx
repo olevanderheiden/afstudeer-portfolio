@@ -13,11 +13,11 @@ const Chapter3_3 = () => {
         title="Antwoord deelvraag 3"
       />
       <p>
-        Read speaker is recentelijk ook gebruik gaan maken voor AI stemmen voor
-        hun voorlees functionaliteit. Hoewel dit meer natuurlijk klinkende
-        leeservaringen geeft, is dit nog erg merkbaar. Daarnaast is het voor
-        Digitaal Toegankelijk niet wenselijk AI stemmen te gebruiken. Dit is nog
-        een nadeel voor het gebruik van dit alternatief
+        ReadSpeaker is recentelijk ook gebruik gaan maken van AI-stemmen voor
+        hun voorleesfunctionaliteit. Hoewel dit meer natuurlijk klinkende
+        leeservaringen geeft, is het nog erg merkbaar dat het AI-stemmen zijn.
+        Daarnaast is het voor Digitaal Toegankelijk niet wenselijk AI-stemmen te
+        gebruiken. Dit is nog een nadeel voor het gebruik van dit alternatief
       </p>
     </div>
   );

@@ -1,4 +1,3 @@
-import React from "react";
 import Layout from "../pageElements/Layout";
 import SourceList from "../pageElements/sourceList";
 import sourcesData from "../sources.json";

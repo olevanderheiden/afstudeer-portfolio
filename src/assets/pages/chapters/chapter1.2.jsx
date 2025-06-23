@@ -19,7 +19,7 @@ const Chapter1_2 = () => {
         de (gebrekkige) toegankelijkheid van hun websites of apps voor deze
         mensen. Hierdoor wordt het toegankelijk maken van websites en apps vaak
         gezien als een extra kostenpost die weinig tot geen voordeel voor het
-        bedrijf oplevert. De Europese unie heeft met de{" "}
+        bedrijf oplevert. De Europese Unie heeft met de{" "}
         <a href="begrippen?search=EAA">EAA (European Accessibility Act)</a> een
         wetgeving aangenomen die bedrijven verplicht om hun websites en apps
         toegankelijk te maken. Deze wet wordt in juni 2025 van kracht. Het is
@@ -29,19 +29,19 @@ const Chapter1_2 = () => {
       </p>
       <h3>Onderzoeksvraag en deelvragen</h3>
       <p>
-        De hoofdvraag van mijn onderzoek is: Hoe kunnen we klanten (van Digitaal
-        Toegankelijk) laten ervaren hoe een super goed vormgegeven site/ app
-        voor audiogebruikers klinkt?
+        De hoofdvraag van mijn onderzoek is: "Hoe kunnen we klanten (van
+        Digitaal Toegankelijk) laten ervaren hoe een super goed vormgegeven
+        site/ app voor audiogebruikers klinkt?"
       </p>
       <h3>Deelvragen</h3>
       <p>
-        De formulering van de deelvragen wijkt in hoofdstuk 3 van de portfolio
-        website enigszins af in verband met de beperkte ruimte in de
-        navigatiebalk.
+        De geformuleerde deelvragen in het menu aan de linkerkant van dit
+        portfolio wijken enigszins af van de officiële deelvragen, vanwege
+        beperkte ruimte. Hieronder de officiële deelvragen.
       </p>
       <ul>
         <li>
-          Wat houdt een "goed vormgegeven site/ app voor audiogebruikers" in?
+          Wat houdt een "goed vormgegeven site/app voor audiogebruikers" in?
         </li>
         <li>
           Welke alternatieven voor deze audio-ervaring zijn er al en wat kunnen
@@ -60,7 +60,7 @@ const Chapter1_2 = () => {
           audio-ervaring?
         </li>
       </ul>
-      <h3>Ontwerpcriteria (moscow principe)</h3>
+      <h3>Ontwerpcriteria (MoSCoW principe)</h3>
       <p>
         Onderstaande ontwerpcriteria zijn opgesteld in overleg met de
         opdrachtgever.

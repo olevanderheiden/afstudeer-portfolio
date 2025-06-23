@@ -1,17 +1,9 @@
-import React from "react";
 import Layout from "../../pageElements/Layout";
 import AudioPlayer from "../../pageElements/audioPlayer";
 
 export const title = "Welke pagina's zijn geschikt voor een audioervaring?";
 
 const Chapter3_5 = () => {
-  const sources = (
-    <>
-      <li>Source 1</li>
-      <li>Source 2</li>
-    </>
-  );
-
   const content = (
     <div>
       <h2>{title}</h2>
@@ -28,7 +20,7 @@ const Chapter3_5 = () => {
     </div>
   );
 
-  return <Layout content={content} sources={sources} pageTitle={title} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Chapter3_5;

@@ -1,4 +1,3 @@
-import React from "react";
 import "../../index.css";
 
 //Image Element component that displays images in astyling consistent with the rest of the app

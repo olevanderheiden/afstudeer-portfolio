@@ -5,13 +5,6 @@ import AudioPlayer from "../../pageElements/audioPlayer";
 export const title = "Het product";
 
 const Chapter4 = () => {
-  const sources = (
-    <>
-      <li>Source 1</li>
-      <li>Source 2</li>
-    </>
-  );
-
   const content = (
     <div>
       <h2>{title}</h2>
@@ -23,7 +16,7 @@ const Chapter4 = () => {
     </div>
   );
 
-  return <Layout content={content} sources={sources} pageTitle={title} />;
+  return <Layout content={content} pageTitle={title} />;
 };
 
 export default Chapter4;

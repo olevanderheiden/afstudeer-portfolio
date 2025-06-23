@@ -52,7 +52,7 @@ const Begrippenlijst = () => {
   const content = (
     <div>
       <h2>Begrippenlijst</h2>
-      <p>Hieronder vindt u een lijst van termen en hun uitleg.</p>
+      <p>Hieronder vind je een lijst van termen en hun uitleg.</p>
 
       {/* Search Input */}
       <div style={{ marginBottom: "20px" }}>

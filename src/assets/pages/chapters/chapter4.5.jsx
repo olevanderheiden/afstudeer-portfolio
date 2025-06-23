@@ -17,7 +17,7 @@ const Chapter4_5 = () => {
       </p>
       <AudioPlayer
         fileName="content/chapter4/4.5.beargumenterenTestVersie.mp3"
-        title="Beargumentering test versie"
+        title="Beargumentering testversie"
       />
       <IframeElement
         src="https://olevanderheiden.github.io/afstudeerProjectAudioTestVersion/"
@@ -26,7 +26,7 @@ const Chapter4_5 = () => {
       <h3>Feedback van de audiogebruikers</h3>
       <AudioPlayer
         fileName="content/chapter2/2.4testenAudioGebruikersProofOfConcept.mp3"
-        title="Testresultaten van testen met audio gebruikers (5 testers)"
+        title="Testresultaten van testen met audiogebruikers (5 testers)"
       />
       <h3>
         Feedback van auditor bij Digitaal Toegankelijk omtrent toegankelijkheid

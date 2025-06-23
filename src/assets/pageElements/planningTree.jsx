@@ -1,4 +1,3 @@
-import React from "react";
 import "./../../styles/planningTree.css";
 
 const PlanningTree = ({ nodes, level = 0 }) => {

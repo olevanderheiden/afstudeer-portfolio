@@ -18,8 +18,8 @@ export const chapters = Object.keys(modules)
     return {
       path: `/chapter${chapterNumber}`,
       name: isSubchapter
-        ? `${chapterNumber}: ${title}` // Subchapter format
-        : `Hoofdstuk ${chapterNumber}: ${title}`, // Main chapter format
+        ? `${chapterNumber} ${title}` // Subchapter format
+        : `Hoofdstuk ${chapterNumber} ${title}`, // Main chapter format
       component,
       chapterNumber,
       isSubchapter,

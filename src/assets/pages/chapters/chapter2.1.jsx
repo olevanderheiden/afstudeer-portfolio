@@ -41,10 +41,10 @@ const Chapter2_1 = () => {
         hier uit heb getrokken. In hoofdstuk 3 beantwoord ik ook iedere
         deelvraag op een individuele basis.
       </p>
-      <h4>Wat is een goed ontwerp voor audio gebruikers?</h4>
+      <h4>Wat is een goed ontwerp voor audiogebruikers?</h4>
       <p>
         Zoals je hebt kunnen horen in de interviews. Zijn er een aantal dingen
-        die belangrijkzijn voor audio gebruikers. War er belangrijk wordt
+        die belangrijkzijn voor audiogebruikers. War er belangrijk wordt
         gevonden verschilt per persoon. Maar is ook afhankelijk van wat voor
         audio ervaring je aanbied. Zo is het overbrengen van enkel informatie
         vaak makkelijker te doen in tekstvorm. Dit heeft te maken met het feit

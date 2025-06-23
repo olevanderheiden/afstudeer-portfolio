@@ -25,8 +25,8 @@ const Chapter2_3 = () => {
         title="Wat heb ik gedaan voor ontwikkelen?"
       />
       <p>
-        De lijst met moscow prioriteiten die ik heb opgesteld met mijn stage
-        opdrachtgever Digitaal Toegankelijk is te vinden op pagina{" "}
+        De lijst met MoSCoW-prioriteiten, die ik heb opgesteld met mijn
+        opdrachtgever Digitaal Toegankelijk, is te vinden op pagina{" "}
         <a href="chapter1.2">1.2 Probleemstelling en onderzoeksvraag</a>.
       </p>
       <p>
