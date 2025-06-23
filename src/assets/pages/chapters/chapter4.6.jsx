@@ -17,13 +17,28 @@ const Chapter4_6 = () => {
       </p>
       {/* Include the AudioPlayer component here */}
       <AudioPlayer
-        fileName="test.mp3"
-        title="Onderbouwing eindversie (coming soon"
+        fileName="content/chapter4/4.6.onderbouwingEindVersie.mp3"
+        title="Onderbouwing eindversie"
       />
       <IframeElement
-        src="https://olevanderheiden.github.io/afstudeerProject/"
-        title="Proof of concept (Eindversie)"
+        src="https://olevanderheiden.github.io/afstudeerProjectFinalPortfolioVersion/"
+        title="Proof of concept (Eindversie) (Build datum: 16-06-2025)"
       />
+      <p>
+        Dit is de laatse versie die ik heb gemaakt voor de deadline van mijn
+        afstudeer portfolio. Ik heb echter nog een aantal weken de tijd om nog
+        wat verbeteringen of nieuwe features toe te voegen. om te zorgen dat het
+        proof of concept wat hier wordt getoond niet instrijd is met wat ik
+        vertel in de onderbouwing hier boven, is het proof of concept wat hier
+        wordt getoond op een eigen github repository geplaatst. Ik hoop nog wat
+        verbeteringen te kunnen demonstreren tijdens de presentatie van mijn
+        afstudeer project. De meest recente versie van het proof of concept. is
+        te vinden op deze{" "}
+        <a href="https://olevanderheiden.github.io/afstudeerProject/">
+          Github pages pagina
+        </a>
+        .
+      </p>
     </div>
   );
 
