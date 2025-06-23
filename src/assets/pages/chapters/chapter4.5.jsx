@@ -16,8 +16,8 @@ const Chapter4_5 = () => {
         hieronder ook terug.
       </p>
       <AudioPlayer
-        fileName="content/chapter4/4.5beargumenterenTestVersie.mp3"
-        title="Beargumentering test versie (coming soon)"
+        fileName="content/chapter4/4.5.beargumenterenTestVersie.mp3"
+        title="Beargumentering test versie"
       />
       <IframeElement
         src="https://olevanderheiden.github.io/afstudeerProjectAudioTestVersion/"
@@ -32,8 +32,8 @@ const Chapter4_5 = () => {
         Feedback van auditor bij Digitaal Toegankelijk omtrent toegankelijkheid
       </h3>
       <AudioPlayer
-        fileName="content/chapter4/4.5feedbackAuditorDigitaalToegankelijk.mp3"
-        title="Feedback op toegankelijkheid van de applicatie (coming soon)"
+        fileName="content/chapter4/4.5.feedbackOpToegankelijkheid.mp3"
+        title="Feedback op toegankelijkheid van de applicatie"
       />
     </div>
   );
